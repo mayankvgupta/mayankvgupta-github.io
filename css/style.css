@@ -74,14 +74,21 @@ ul,
 ol {
 	padding: 0;
 	margin: 0;
+	margin-left: 50px;
 }
 
+figcaption{
+	font-size: 15px;
+	font-style: italic;
+	font-weight: 200;
+}
 /*---------------------
 	Helper CSS
 -----------------------*/
 .sub-order-list li{
 	color: #868686;
 	font-size: 14px;
+	line-height: 2.2;
 }
 .spad {
 	padding-top: 50px;
@@ -130,9 +137,13 @@ ol {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center 0;
-	background-color: #464646;
 }
 
+.img-center{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
 /*------------------------
   Common Elements
 --------------------------*/
@@ -252,7 +263,7 @@ ol {
 }
 
 .site-btn.light:after {
-	background: #fff;
+	/* background: #fff; */
 }
 
 .site-btn.light:hover {
@@ -524,8 +535,9 @@ ol {
 	padding-top: 5px;
 	color: #fff;
 	display: inline-block;
-	letter-spacing: 7px;
+	letter-spacing: 10px;
 	font-weight: 100;
+	font-size: 25px;
 }
 
 .search-top {
@@ -1365,6 +1377,9 @@ ol {
 	height: 560px;
 }
 
+.h3-subhead{
+	font-size: 25px;
+}
 
 /*---------------------
 	Responsive 
