@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>HALO - Photography Portfolio Template</title>
+	<title>Placemaking Week Website Redesign - Mayank Gupta</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="HALO photography portfolio template">
 	<meta name="keywords" content="photography, portfolio, onepage, creative, html">
@@ -36,22 +36,22 @@
 
 	<!-- Header section start -->
 	<header class="header-section sp-pad">
-		<h3 class="site-logo">HALO</h3>
-		<form class="search-top">
+		<h3 class="site-logo">MAYANK GUPTA</h3>
+		<!-- <form class="search-top">
 			<button class="se-btn"><i class="fa fa-search"></i></button>
 			<input type="text" placeholder="Search.....">
-		</form>
+		</form> -->
 		<div class="nav-switch">
 			<i class="fa fa-bars"></i>
 		</div>
 		<nav class="main-menu">
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">about us</a></li>
-				<!-- <li><a href="#">Services</a></li> -->
 				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="about.html">about</a></li>
+				<!-- <li><a href="#">Services</a></li> -->
+				<!-- <li><a href="blog.html">Blog</a></li> -->
+				<li><a href="contact.html">Resume</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -59,9 +59,9 @@
 
 
 	<!-- Page top section start -->
-	<div class="page-top-area set-bg" data-setbg="img/headers-bg/3.jpg">
+	<div class="page-top-area sp-pad">
 		<div class="breadcrumb-area">
-			<a href="index.html">Home</a> / <span>Portfolio</span>
+			<a href="index.html">Home</a> / <span><a href="portfolio.html">Portfolio</a></span>
 		</div>
 	</div>
 	<!-- Page top section end -->
@@ -71,12 +71,12 @@
 	<section class="single-work-section sp-pad spad">
 		<div class="container-fluid p-0">
 			<div class="work-slider owl-carousel">
-				<div class="ws-item set-bg" data-setbg="img/work-slider/1.jpg"></div>
-				<div class="ws-item set-bg" data-setbg="img/work-slider/2.jpg"></div>
+				<div class="ws-item set-bg" data-setbg="img/placemaking-week/mockup-1.png"></div>
+				<!-- <div class="ws-item set-bg" data-setbg="img/work-slider/2.jpg"></div> -->
 			</div>
 			<div class="row">
 				<div class="col-xl-5">
-					<ul class="work-info-list">
+					<ul class="work-info-list" style="margin-left: 0px;">
 						<li>
 							<span>Client:</span>
 							<h4>Project for Public Spaces’ (worked with CDX)</h4>
@@ -154,6 +154,12 @@
 					<h4 class="sp-title">Research + Design + Test + Iterate</h4>
 					<p>We combined the qualitative data from the 15 in person interviews and 10 usability tests and the quantitative data from the questionarre to gain a deeper understanding of user needs. This helped us broaden our prespective to cater to a larger demographic and further improve the user experience.  </p>
 				</div>
+				<div class="col-xl-10 offset-xl-1">
+					<figure>
+					<img src="img/placemaking-week/process.png" alt="the process for research explained with icons">
+					<figcaption>The Process Explained</figcaption>
+				</figure>
+				</div>
 			</div>
 
 			<!-- User Group -->
@@ -175,11 +181,29 @@
 					<span class="sp-sub-title">Understanding the User</span>
 					<h4 class="sp-title">Online Questionarre, Interviews & Remote User Testing</h4>
 					<p>In order to better understand the user needs and concerns we conducted a user survey along with interviews and tested the exisiting website (<a href="https://placemakingweek.org" target="_blank">placemakingweek.org</a>).</p>
+				</div>
+				<div class="col-xl-4 offset-xl-2 align-self-center">
 					<h4>Questionarre</h4>
 					<p>An online questionarre was designed to collect quantitative about the preferences, demographics, tech backgrounds and experiences with conferences of our potential user group. This was filled by a total of 20 participants.</p>
+				</div>
+				<div class="col-xl-4">
+					<figure>
+						<img src="img/placemaking-week/questionarre.png">
+						<figcaption>65% of the participants didn't go to conferences</figcaption>
+					</figure>
+				</div>
+				<div class="w-100" style="margin-bottom: 50px;"></div>
+				<div class="col-xl-4 offset-xl-2 align-self-center">
 					<h4>Observation Study</h4>
 					<p>I conducted an observation study with 3 potential users to learn more about the user behaviors and patterns. The study aimed at understanding how the users interact with the website and discover information. While conducting the study participants were asked to think aloud, this helped us better understand the thought process of the user.</p>
 				</div>
+				<div class="col-xl-4">
+					<figure>
+						<img src="img/placemaking-week/observation-study.png" style="margin-bottom: 10px;">
+						<figcaption>Notes from observation study</figcaption>
+					</figure>
+				</div>
+				<div class="w-100"></div>
 			</div>
 
 			<!-- Insights -->
@@ -188,7 +212,7 @@
 					<span class="sp-sub-title">Key Insights</span>
 					<h4 class="sp-title">Inconsistent Navigation & Too much text!</h4>
 					<p>The users were overwhelmed by the amount of text on the pages and the inconsitency in navigation menu. Following insights were revealed:</p>
-					<ol style="list-style-type: none;">
+					<ol style="list-style-type: none; margin: 0px 0px 30px;">
 						<li>
 							<h4>Landing page is not Informative</h4>
 							<p>The landing page is text heavy and doesn't entice the user. 2 of the 3 observation study participants reported that they wouldn’t want to attend the conference based on the first impression of the website.</p>
@@ -200,7 +224,7 @@
 						<li>
 							<h4>Text heavy website</h4>
 							<p>The users were not sure whether reading through all the content is gonna help them find what they are looking for.</p>
-							<p style="font-size: 20px; font-weight: 100; color: #e63946; text-align: center;">"[This is] too much text, I am not gonna read through all of this."</p>
+							<p style="font-size: 20px; font-weight: 100; color: #e63946; text-align: center;">"[This is] too much text, I am not gonna read through all of this."<br/></p><em>~Observation Study Participant</em>
 						</li>
 					</ol>
 					<span class="sp-sub-title">Persona</span>
@@ -224,7 +248,7 @@
 					<h4 class="sp-title">Card Sorting</h4>
 					<p>For our card sort, we defined 38 cards based on a combination of previous user input,terminology used from the current Placemaking Week website, and
 						terminology used by other well-known conferences. The card sort was conducted using 38 cards with 11 participants.</p>
-					<p><span style="font-weight: 800;">Although the card sosrt partially failed, as we got 61 different categories at the end of it. This revealed a general confusion amongst the users with our labelling.</span></p>
+					<p><span style="font-weight: 800;">Although the card sort partially failed, as we got 61 different categories at the end of it. This revealed a general confusion amongst the users with our labelling.</span></p>
 					<figure>
 						<div class="img-center col-xl-10 offset-xl-1"><img src="img/placemaking-week/card-sorting-matrix.png"></div>
 						<figcaption>Similarity matrix after the card sort</figcaption>
@@ -268,25 +292,35 @@
 
 			<!-- Wireframing and Prototyping -->
 			<div class="row">
-				<div class="col-xl-8 offset-xl-2">
+				<div class="col-xl-8 offset-xl-2 ">
 					<span class="sp-sub-title">Prototyping</span>
 					<h4 class="sp-title">Task Flows</h4>
 					<p>Based on the user persona and goals we defined two task flows.</p>
-					<div><img src=""></div>
+					<div class="col-xl-8 offset-xl-2"><img src="img/placemaking-week/task-flow.jpg"></div>
 					<h4 class="sp-title">Mind Mapping</h4>
 					<p>We sketched some initial wireframes to mind map our ideas about the generic layout of the website.</p>
 					<div><img src=""></div>
 				</div>
+				
 				<div class="col-xl-8 offset-xl-2">
 					<span class="sp-sub-title">Wireframing</span>
 					<h4 class="sp-title">Paper Prototype</h4>
+				</div>
+				<div class="col-xl-4 offset-xl-2">
 					<p>In order to verify our ideas we made some paper prototypes and tested them with potential users. The idea was to conduct the tests in persona, but due to the COVID situation we had to digitize our prototypes and test them remotely. Every team member was responsible for sketching one section, I was responsible for the header and footer sections. I drew 2 iterations for the header and 3 for the footer.</p>
-					<div><img src=""></div>
 					<p>We tested both the tasks using the paper prototypes with 5 users. We gained some useful insights to futher improve our designs. </p>
-					<ul class="sub-order-list">
+					<ul class="sub-order-list" style="margin-bottom: 30px;"> 
 						<li>Users expected that clicking on the picture of the speaker would load more information.</li>
 						<li>The order of the navigation menu was confusing for some users, as they expected to see "About" button first.</li>
 					</ul>
+				</div>	
+				<div class="col-xl-4 align-self-center">
+					<figure>
+					<img src="img/placemaking-week/paper-prototype.jpg" alt="sketches of headers and footers">
+					<figcaption>Initial Sketches</figcaption>
+					</figure>
+				</div>
+					
 				</div>
 			</div>
 
@@ -320,6 +354,21 @@
 				<div class="w-100" style="margin-bottom: 60px;"></div>
 			</div>
 			
+			<!-- High Fidelity Design -->
+			<div class="row">
+				<div class="col-xl-8 offset-xl-2">
+					<span class="sp-sub-title">High Fidelity Prototype</span>
+					<h4 class="sp-title">Consistently Convinient</h4>
+					<p>After an extensive research, a few iterations and a million end moment tweaks we finally came up with the high fidelity designs. We made a few adjustments until the very last moment of the client presentation. We redesigned a total of three pages for desktop and mobile platforms.</p>
+				</div>
+				<div class="col-xl-10 offset-xl-1">
+					<figure>
+					<img src="img/placemaking-week/final-high-fidelity-screens.png">
+					<figcaption>THE FINAL AVATAR</figcaption>
+					</figure>
+				</div>
+			</div>
+
 			<!-- Template -->
 			<div class="row">
 				<div class="col-xl-8 offset-xl-2">

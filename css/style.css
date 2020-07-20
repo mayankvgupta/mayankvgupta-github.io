@@ -110,7 +110,7 @@ figcaption{
 .sp-title {
 	font-size: 30px;
 	font-weight: 700;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	margin-bottom: 25px;
 	letter-spacing: 3px;
 }
@@ -135,7 +135,7 @@ figcaption{
 
 .set-bg {
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center 0;
 }
 
@@ -529,13 +529,14 @@ figcaption{
 	z-index: 111;
 	padding-top: 40px;
 	padding-bottom: 20px;
+	background-color: #222121;
 }
 
 .site-logo {
 	padding-top: 5px;
 	color: #fff;
 	display: inline-block;
-	letter-spacing: 10px;
+	letter-spacing: 5px;
 	font-weight: 100;
 	font-size: 25px;
 }
@@ -733,15 +734,27 @@ figcaption{
 }
 
 .hs-item .hs-des {
+	display: inline-block;
 	color: #fff;
-	font-size: 50px;
+	font-size: 35px;
 	font-weight: 300;
-	line-height: 1.4;
+	line-height: 0.5em;
 	position: relative;
 	left: 150px;
 	opacity: 0;
+	word-spacing: 15px;
+	/* vertical-align: middle; */
+	/* padding-top: 10px; */
 }
-
+.hs-des-small{
+	display: inline-block;
+	font-weight: 600;
+	font-size: 50px;
+	vertical-align: middle;
+	line-height: 0.8em;
+	padding-bottom: 10px;
+	word-spacing: 0px;
+}
 .owl-item.active .hs-item .hs-title,
 .owl-item.active .hs-item .hs-des {
 	left: 0;
@@ -829,9 +842,10 @@ figcaption{
 }
 
 .portfolio-info h5 {
+	font-size: 20px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	color: #fff;
+	color: #222121;
 	z-index: 9;
 	position: relative;
 	margin-bottom: 10px;
@@ -839,7 +853,7 @@ figcaption{
 
 .portfolio-info p {
 	font-size: 14px;
-	color: #fff;
+	color: #222121;
 	z-index: 9;
 	position: relative;
 	letter-spacing: 1px;
@@ -1058,7 +1072,7 @@ figcaption{
 ========================*/
 
 .page-top-area {
-	height: 300px;
+	height: 200px;
 	position: relative;
 }
 
@@ -1069,7 +1083,7 @@ figcaption{
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: #000;
+	/* background: #000; */
 	opacity: 0.7;
 }
 
@@ -1078,14 +1092,14 @@ figcaption{
 	left: 150px;
 	bottom: 35px;
 	z-index: 2;
-	color: #fff;
+	color: #222121;
 }
 
 .breadcrumb-area a,
 .breadcrumb-area span {
-	color: #fff;
+	color: #222121;
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 600;
 	margin-right: 15px;
 	margin-left: 10px;
@@ -1316,9 +1330,7 @@ figcaption{
 /*---------------------
 	Single work Page
 -----------------------*/
-.work-slider {
-	margin-bottom: 150px;
-}
+
 
 .work-slider .ws-item {
 	height: 660px;
@@ -1396,6 +1408,9 @@ figcaption{
 	.services-text {
 		left: 80px;
 	}
+	.work-slider {
+		margin-bottom: 100px;
+	}
 }
 
 @media only screen and (max-width: 1510px) {
@@ -1418,6 +1433,12 @@ figcaption{
 	.progress-section .circle-progress:after {
 		display: none;
 	}
+	.work-slider {
+	margin-bottom: 100px;
+	}
+	.work-slider {
+		margin-bottom: 100px;
+	}
 }
 
 @media only screen and (max-width: 1366px) {
@@ -1433,6 +1454,9 @@ figcaption{
 		left: 20px;
 		top: 20px;
 		padding-top: 165px;
+	}
+	.work-slider {
+		margin-bottom: 100px;
 	}
 }
 
@@ -1481,6 +1505,10 @@ figcaption{
 	}
 	.worknav.wn-next .wn-thumb {
 		float: none;
+	}
+	.work-slider {
+		margin-bottom: 0px;
+		height: 500px;
 	}
 }
 
@@ -1563,6 +1591,10 @@ figcaption{
 	.blog-thumb {
 		height: 550px;
 	}
+	.work-slider {
+		margin-bottom: 0px;
+		height: 500px;
+	}
 }
 
 /* Large Mobile :480px. */
@@ -1598,6 +1630,9 @@ figcaption{
 	}
 	.main-menu ul li a:after {
 		left: 35px;
+	}
+	.page-top-area{
+		height: 150px;
 	}
 	.hero-slider .owl-nav {
 		right: 50px;
@@ -1682,7 +1717,13 @@ figcaption{
 		float: none;
 	}
 	.work-slider .ws-item {
-		height: 400px;
+		height: 250px;
+	}
+	.work-slider{
+		margin-bottom: 30px;
+	}
+	.breadcrumb-area{
+		bottom: 10px;
 	}
 	.blog-thumb {
 		height: 400px;
