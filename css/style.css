@@ -82,6 +82,16 @@ figcaption{
 	font-style: italic;
 	font-weight: 200;
 }
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+  }
 /*---------------------
 	Helper CSS
 -----------------------*/
@@ -135,7 +145,7 @@ figcaption{
 
 .set-bg {
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-position: center 0;
 }
 
@@ -804,7 +814,8 @@ figcaption{
 }
 
 .single-portfolio.sm-wide {
-	width: 22.222222%;
+	/* width: 22.222222%; */
+	width: 25%;
 }
 
 .single-portfolio:hover .portfolio-info {
@@ -1066,6 +1077,10 @@ figcaption{
 	margin-right: 0;
 }
 
+.footer-section .social{
+	color: #fff;
+	opacity: 0.5;
+}
 /*---------------------
 	Other Pages
 -----------------------
@@ -1456,7 +1471,7 @@ figcaption{
 		padding-top: 165px;
 	}
 	.work-slider {
-		margin-bottom: 100px;
+		margin-bottom: 50px;
 	}
 }
 
@@ -1507,7 +1522,7 @@ figcaption{
 		float: none;
 	}
 	.work-slider {
-		margin-bottom: 0px;
+		margin-bottom: 100px;
 		height: 500px;
 	}
 }
@@ -1592,8 +1607,8 @@ figcaption{
 		height: 550px;
 	}
 	.work-slider {
-		margin-bottom: 0px;
-		height: 500px;
+		margin-bottom: 50px;
+		height: 400px;
 	}
 }
 

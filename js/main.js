@@ -6,6 +6,12 @@
  ====================================*/
 
 
+//disabling click on images:
+(function($){
+	$(document).on('contextmenu', 'img', function() {
+		return false;
+	})
+  })(jQuery);
 
 'use strict';
 
