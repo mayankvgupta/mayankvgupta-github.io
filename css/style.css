@@ -1073,8 +1073,8 @@ figcaption{
 	margin-right: 40px;
 }
 
-.footer-section .social a:last-child {
-	margin-right: 0;
+.footer-section .social a:nth-child(4) {
+	margin-right: 0px;
 }
 
 .footer-section .social{
