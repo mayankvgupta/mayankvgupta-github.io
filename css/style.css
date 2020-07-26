@@ -794,6 +794,13 @@ figcaption{
 	margin-bottom: 50px;
 }
 
+.intro-section a{
+	color: #cc1847;
+}
+
+.intro-section .site-btn{
+	color: #222121;
+}
 /*---------------------
 	Portfolio section
 -----------------------*/
@@ -1775,4 +1782,3 @@ figcaption{
 		font-size: 33px;
 	}
 }
-

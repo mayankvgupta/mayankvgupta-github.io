@@ -157,7 +157,9 @@ $(window).on('load', function() {
 		e.preventDefault();
 	});
 
+//Gallery
 
 
 })(jQuery);
+
 
