@@ -895,6 +895,19 @@ figcaption{
 	color: #111;
 }
 
+/* --------------------
+	Fun Section
+-----------------------*/
+.single-portfolio-fun {
+	height: 400px;
+	width: 33.33%;
+	position: relative;
+	float: left;
+	display: block;
+	background-position: center center;
+	background-size: contain;
+}
+
 /*---------------------
 	Milestones section
 -----------------------*/
