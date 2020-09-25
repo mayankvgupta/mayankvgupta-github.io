@@ -12,7 +12,8 @@
 html,
 body {
 	height: 100%;
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1,
@@ -24,7 +25,8 @@ h6 {
 	color: #222121;
 	margin: 0;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -247,8 +249,8 @@ figcaption{
 	font-weight: 600;
 	padding: 20px 60px;
 	color: #222121;
-	background-color: transparent;
-	border: 2px solid;
+	background-color: #fbbe4a;
+	/* border: 2px solid; */
 	border-radius: 50px;
 	cursor: pointer;
 	text-align: center;
@@ -1394,8 +1396,8 @@ figcaption{
 
 .work-info-list li {
 	display: block;
-	width: 50%;
-	margin-bottom: 30px;
+	width: 100%;
+	margin-bottom: 20px;
 	float: left;
 }
 
@@ -1403,7 +1405,7 @@ figcaption{
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #e63946;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 	display: block;
 	letter-spacing: 1px;
 	font-weight: 600;
