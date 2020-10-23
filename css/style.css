@@ -1547,6 +1547,9 @@ figcaption{
 		margin-bottom: 100px;
 		height: 500px;
 	}
+	.intro-text{
+		width: 50%;
+	}
 }
 
 /* Tablet :768px. */
@@ -1631,6 +1634,9 @@ figcaption{
 	.work-slider {
 		margin-bottom: 50px;
 		height: 400px;
+	}
+	.intro-text{
+		width: 50%;
 	}
 }
 
@@ -1764,6 +1770,10 @@ figcaption{
 	}
 	.blog-thumb {
 		height: 400px;
+	}
+	.reverse-order{
+		display: flex;
+		flex-direction: column-reverse;
 	}
 }
 
