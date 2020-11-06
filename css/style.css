@@ -50,7 +50,7 @@ h5 {
 }
 
 p {
-	font-size: 14.2px;
+	font-size: 16px;
 	color: #868686;
 	line-height: 2.2;
 }
@@ -83,6 +83,7 @@ figcaption{
 	font-size: 15px;
 	font-style: italic;
 	font-weight: 200;
+	text-align: center;
 }
 
 .noselect {
@@ -99,7 +100,7 @@ figcaption{
 -----------------------*/
 .sub-order-list li{
 	color: #868686;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 2.2;
 }
 .spad {
@@ -254,6 +255,7 @@ figcaption{
 	border-radius: 50px;
 	cursor: pointer;
 	text-align: center;
+	margin: 0 0 1rem;
 	/* border-top: 2px solid #222121;
 	border-bottom: 2px solid #222121; */
 }
@@ -274,7 +276,7 @@ figcaption{
 	border-bottom: 2px solid #fff;
 }
 
-.site-btn.light:after {
+.site-btn .light:after {
 	/* background: #fff; */
 }
 
