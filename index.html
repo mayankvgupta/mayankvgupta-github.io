@@ -197,7 +197,7 @@ footer a:hover{color:var(--v);}
 .about-portrait{overflow:hidden;min-height:460px;border:1px solid var(--dark-line);}
 .about-portrait img{width:100%;height:100%;object-fit:cover;display:block;}
 .timeline{padding:64px 0;}
-.timeline-inner{max-width:var(--mw);margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+.timeline-inner{max-width:var(--mw);margin:0 auto;padding:0 48px;}
 .tl-col{position:relative;padding-left:28px;}
 .tl-col::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:1.5px;background:var(--line2);}
 .tl-item{position:relative;padding-bottom:32px;}
@@ -310,10 +310,9 @@ footer a:hover{color:var(--v);}
     <div class="nav-links" id="nav-links">
       <span class="nav-link active" data-page="home" onclick="showPage('home');closeNav()">Work</span>
       <span class="nav-link" data-page="about" onclick="showPage('about');closeNav()">About</span>
-      <span class="nav-link" data-page="writing" onclick="showPage('writing');closeNav()">Writing</span>
       <span class="nav-link" data-page="resume" onclick="showPage('resume');closeNav()">Resume</span>
     </div>
-    <span class="nav-cta" onclick="showPage('about')">Get in touch ↗</span>
+    <a class="nav-cta" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
     <div class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </div>
@@ -328,7 +327,7 @@ footer a:hover{color:var(--v);}
 
   <section class="hero dark-band">
     <div class="hero-inner">
-      <div class="hero-kicker"><span class="label">Portfolio · 2019–2025</span></div>
+      <div class="hero-kicker"><span class="label">Portfolio · 2019–Present</span></div>
       <h1>
         A UX designer &amp; researcher working at the intersection of
         <em>accessibility, systems &amp; people.</em>
@@ -500,86 +499,6 @@ footer a:hover{color:var(--v);}
     </div>
   </div>
 
-  <!-- Skills & Craft -->
-  <div class="wrap" style="margin-top:16px;">
-    <div class="sec-divider" style="border-top:1px solid var(--line);">
-      <span class="sd-title">Skills &amp; Craft</span>
-      <span class="sd-count">— What I bring</span>
-    </div>
-  </div>
-  <div class="wrap" style="padding-top:32px;padding-bottom:56px;border-bottom:1px solid var(--line);">
-    <div class="skills-block">
-      <div class="skill-cat">
-        <div class="skill-cat-label">Research &amp; Strategy</div>
-        <div class="pill-group">
-          <span class="pill">User Interviews</span>
-          <span class="pill">Usability Testing</span>
-          <span class="pill">Eye Tracking</span>
-          <span class="pill">Card Sorting</span>
-          <span class="pill">Competitive Audit</span>
-          <span class="pill">JTBD Frameworks</span>
-          <span class="pill">Usage Analytics</span>
-          <span class="pill">A/B Testing</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-label">Design &amp; Systems</div>
-        <div class="pill-group">
-          <span class="pill">Interaction Design</span>
-          <span class="pill">Design Systems</span>
-          <span class="pill">IA + Navigation</span>
-          <span class="pill">Prototyping</span>
-          <span class="pill">Zero-to-One</span>
-          <span class="pill">Responsive Design</span>
-          <span class="pill">Data Visualization</span>
-          <span class="pill">Accessibility</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-label">AI &amp; Automation</div>
-        <div class="pill-group">
-          <span class="pill">Claude Code</span>
-          <span class="pill">Figma Make</span>
-          <span class="pill">Lovable</span>
-          <span class="pill">Builder.io</span>
-          <span class="pill">Cursor</span>
-          <span class="pill">MCP</span>
-          <span class="pill">Pendo</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-label">Tools</div>
-        <div class="pill-group">
-          <span class="pill">Figma</span>
-          <span class="pill">Adobe Illustrator</span>
-          <span class="pill">Adobe Photoshop</span>
-          <span class="pill">Procreate</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-label">Collaboration</div>
-        <div class="pill-group">
-          <span class="pill">Miro</span>
-          <span class="pill">FigJam</span>
-          <span class="pill">Mural</span>
-          <span class="pill">Jira</span>
-          <span class="pill">Confluence</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-label">Methods</div>
-        <div class="pill-group">
-          <span class="pill">Agile</span>
-          <span class="pill">Cross-functional Collaboration</span>
-          <span class="pill">Stakeholder Alignment</span>
-          <span class="pill">QA Review</span>
-          <span class="pill">Design System Governance</span>
-          <span class="pill">Journey Mapping</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Methodology -->
   <div class="wrap" style="margin-top:0;">
     <div class="sec-divider" style="border-top:1px solid var(--line);">
@@ -639,6 +558,18 @@ footer a:hover{color:var(--v);}
     </div>
   </section>
 
+  <section class="testi-section">
+    <div class="testi-section-inner">
+      <div class="testi-section-label">From colleagues</div>
+      <div style="max-width:720px;">
+        <div class="testi">
+          <div class="testi-q serif">He contributed to UI design trade-off analysis discussions and had many great UX design ideas. Combined with his knowledge of UCD and experience as a UI developer, he quickly became a valuable member of my team.</div>
+          <div class="testi-who mono" style="margin-top:20px;">Dan Castle &nbsp;·&nbsp; Lead UX Engineer &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/thehumanfactor/" target="_blank" rel="noopener" style="color:var(--dark-ink3);text-decoration:underline;text-underline-offset:3px;">LinkedIn ↗</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="contact">
     <div class="contact-inner">
       <h2 class="serif">Open to senior IC and design lead roles. <em>Say hello.</em></h2>
@@ -656,7 +587,7 @@ footer a:hover{color:var(--v);}
   <footer>
     <div class="footer-inner">
       <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine mono">Designed &amp; built from scratch<br>Last updated 2025</div></div>
-      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('writing')">Writing</a><a onclick="showPage('resume')">Resume</a></div>
+      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('resume')">Resume</a></div>
       <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
       <div><h5>Colophon</h5><a href="https://fonts.google.com/specimen/Cormorant+Garamond" target="_blank" rel="noopener">Cormorant Garamond</a><a href="https://fonts.google.com/specimen/DM+Sans" target="_blank" rel="noopener">DM Sans</a></div>
     </div>
@@ -673,8 +604,9 @@ footer a:hover{color:var(--v);}
       <div>
         <div class="label" style="margin-bottom:14px;color:var(--dark-ink3);">About</div>
         <h1 class="serif">I work best at the intersection of research, systems, and storytelling.</h1>
-        <p>Hi, I'm Mayank — a veteran Front End Developer turned User Experience Designer and Researcher based in Santa Clara with over 6 years of design experience. I specialize in analyzing user behaviors through qualitative and quantitative research and creating sustainable user flows for all stakeholders.</p>
-        <p>As an accessibility advocate, I strongly believe that everyone should have the same experience while using digital products. That belief shapes every decision I make, from information architecture down to interaction details.</p>
+        <p>Hi, I'm Mayank — a UX Designer with 6+ years of experience, rooted in front-end development and sharpened by a genuine curiosity for how people interact with complex systems. I specialize in translating user research — both qualitative and quantitative — into design decisions that scale across products and teams.</p>
+        <p>My development background means I design with implementation in mind, and my growing fluency with AI tools means I'm increasingly able to prototype, test, and iterate faster than a traditional design workflow allows. I bring that same rigor to accessibility — believing that good design works for everyone, not just the median user.</p>
+        <p>I'm currently seeking full-time product design roles where I can contribute across the full design lifecycle, from discovery through delivery.</p>
         <div class="label" style="margin-top:28px;margin-bottom:10px;color:var(--dark-ink3);">Outside work</div>
         <p>After work, you can find me in the kitchen experimenting with new recipes or on the couch playing open world video games. There is no in between!</p>
         <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
@@ -770,21 +702,29 @@ footer a:hover{color:var(--v);}
     <div class="timeline-inner">
     <div class="tl-col">
       <div class="tl-item active">
-        <div class="tl-year mono">2021 — now</div>
-        <div class="tl-role serif">UX Designer · Magnite Inc.</div>
-        <div class="tl-desc">Part of the Fantastic 4 design team. Shaping DV+ and Streaming ad products. Biggest contribution: the DV+ Marketplaces project.</div>
+        <div class="tl-year mono">2022 — now</div>
+        <div class="tl-role serif">UX Designer → UX Designer II · Magnite Inc.</div>
+        <div class="tl-desc">Part of a four-person design team shaping DV+ and Streaming ad products. Promoted to UX Designer II in January 2026. Biggest contribution: the DV+ Marketplaces project.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">2021 – 22</div>
+        <div class="tl-role serif">Product Designer I · FCB Health</div>
+        <div class="tl-desc">Designed accessible desktop and mobile experiences for healthcare applications used by 50,000+ users.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">2020</div>
+        <div class="tl-role serif">UX Designer & Researcher · Rocket Software</div>
+        <div class="tl-desc">Led design of the MultiValue Performance Experience Dashboard for 8,000+ users, collaborating with 20+ engineers and PMs.</div>
       </div>
       <div class="tl-item">
         <div class="tl-year mono">2019 – 21</div>
         <div class="tl-role serif">MS Interaction Design · Pratt Institute</div>
         <div class="tl-desc">Graduate studies in interaction design and user research. Built a strong foundation in both qualitative and quantitative research methods.</div>
       </div>
-    </div>
-    <div class="tl-col">
       <div class="tl-item">
         <div class="tl-year mono">Before Pratt</div>
         <div class="tl-role serif">Front-end Developer</div>
-        <div class="tl-desc">Over 6 years of combined design and development experience. Transitioned from engineering into UX to focus on the human side of the systems I was building.</div>
+        <div class="tl-desc">Transitioned from engineering into UX to focus on the human side of the systems I was building.</div>
       </div>
       <div class="tl-item">
         <div class="tl-year mono">Ongoing</div>
@@ -818,7 +758,7 @@ footer a:hover{color:var(--v);}
   <footer>
     <div class="footer-inner">
       <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine mono">Answers all email within 48hrs on weekdays.</div></div>
-      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('writing')">Writing</a><a onclick="showPage('resume')">Resume</a></div>
+      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('resume')">Resume</a></div>
       <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
       <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
     </div>
@@ -877,7 +817,7 @@ footer a:hover{color:var(--v);}
   <footer>
     <div class="footer-inner">
       <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine mono">UX Designer &amp; Researcher</div></div>
-      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('writing')">Writing</a><a onclick="showPage('resume')">Resume</a></div>
+      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('resume')">Resume</a></div>
       <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
       <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
     </div>
@@ -892,30 +832,59 @@ footer a:hover{color:var(--v);}
   <div class="resume-page">
   <div class="resume-inner">
     <h1 class="serif">Mayank Gupta</h1>
-    <div class="r-sub mono">UX Designer &amp; Researcher · Santa Clara, CA · mgupta17@pratt.edu</div>
+    <div class="r-sub mono">UX Designer II · Mountain View, CA · mgupta17@pratt.edu · mayankguptadesigns.com</div>
 
     <div class="r-section">
       <h3>Experience</h3>
+
       <div class="r-exp">
-        <div class="r-yr mono">2021 — now</div>
+        <div class="r-yr mono">2026 — now</div>
         <div>
-          <div class="r-role serif">UX Designer</div>
-          <div class="r-co">Magnite Inc. · DV+ &amp; Streaming</div>
+          <div class="r-role serif">UX Designer II</div>
+          <div class="r-co">Magnite · Mountain View, CA</div>
           <ul class="r-bullets">
-            <li>Part of the Fantastic 4 design team shaping the future of DV+ and Streaming ad products.</li>
-            <li>Lead designer on the DV+ Marketplaces project — largest contribution to date.</li>
-            <li>Research-led approach: qualitative interviews, usability testing, and accessibility reviews embedded into every sprint.</li>
+            <li>Led AI tool adoption for the UX team — evaluated Lovable, Builder.io, Figma Make, and Claude Code; standardized on Figma Make and Claude Code with Figma MCP, securing expedited security approval within one week.</li>
+            <li>Built custom Claude skills to eliminate repetitive design tasks, including a bulk Figma edit skill and a PRD-to-ideation skill that generates design concepts directly in Figma using the in-house component library.</li>
+            <li>Deployed a Claude skill enabling ~60 PMs across DV+ and Streaming to make UI updates independently using the design library, eliminating a chronic backlog of deprioritized design tickets.</li>
+            <li>Created an automated pipeline converting raw bug report emails into structured Jira tickets routed to the correct engineering team, saving 2–3 hours of manual triage per release cycle.</li>
+            <li>Partners with 10 PMs and 50 engineers across two products, owning 5–10 features at any given time as one of four designers covering Magnite's full product portfolio.</li>
           </ul>
         </div>
       </div>
+
       <div class="r-exp">
-        <div class="r-yr mono">Before Magnite</div>
+        <div class="r-yr mono">2022 – 25</div>
         <div>
-          <div class="r-role serif">Front-end Developer → UX Designer</div>
-          <div class="r-co">Various roles</div>
+          <div class="r-role serif">UX Designer</div>
+          <div class="r-co">Magnite · Mountain View, CA</div>
           <ul class="r-bullets">
-            <li>6+ years of combined design and development experience across multiple industries.</li>
-            <li>Transitioned from engineering into UX to bring a technical lens to user experience problems.</li>
+            <li>Drove a 114% increase in ad spend by leading end-to-end UX for DV+ Marketplace Deal Management — a net-new UI for curated marketplace creation, editing, and listing across 5 phases and 3 iteration cycles.</li>
+            <li>Designed the Demand Manager Wrapper Automation tool, resulting in a 4% revenue increase; led UX for a Blocklist Management app giving DV+ publishers granular control over advertiser, DSP, and content inclusions/exclusions.</li>
+            <li>Designed the Political Preview tool to unblock political ad revenue during the 2024 US election cycle, and the Live Events ad serving experience for Magnite Streaming (Olympics, cricket, boxing).</li>
+            <li>Co-owned Magnite's design system — built half of all custom Figma components and contributed directly to Storybook component code using AI-assisted development, reducing dev time by 20%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="r-exp">
+        <div class="r-yr mono">2021 – 22</div>
+        <div>
+          <div class="r-role serif">Product Designer I</div>
+          <div class="r-co">FCB Health · New York, NY</div>
+          <ul class="r-bullets">
+            <li>Crafted accessible, user-centric designs for desktop and mobile platforms, currently used by 50,000+ users across healthcare applications.</li>
+            <li>Partnered with UX Architects, Copywriters, and Developers to ensure solutions met business goals and stringent health industry regulations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="r-exp">
+        <div class="r-yr mono">2020</div>
+        <div>
+          <div class="r-role serif">UX Designer &amp; Researcher</div>
+          <div class="r-co">Rocket Software · Waltham, MA</div>
+          <ul class="r-bullets">
+            <li>Led design of the MultiValue Performance Experience Dashboard for 8,000+ users, collaborating with 20+ engineers and PMs in an Agile environment.</li>
           </ul>
         </div>
       </div>
@@ -924,39 +893,17 @@ footer a:hover{color:var(--v);}
     <div class="r-section">
       <h3>Education</h3>
       <div class="r-exp">
-        <div class="r-yr mono">2019 – 21</div>
+        <div class="r-yr mono">2020 – 21</div>
         <div>
-          <div class="r-role serif">MS Information Experience Design</div>
-          <div class="r-co">Pratt Institute · School of Information</div>
-          <ul class="r-bullets">
-            <li>Focus on interaction design, user research, and information architecture.</li>
-            <li>Graduate projects include the MET Eye Tracking Study, Pratt News Analysis, and Barnard Digital Collections research.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="r-section">
-      <h3>Selected Projects</h3>
-      <div class="r-exp">
-        <div class="r-yr mono">2021</div>
-        <div>
-          <div class="r-role serif">The MET Eye Tracking Study</div>
-          <div class="r-co">Eye Tracking · UX Research · Comparative Analysis</div>
+          <div class="r-role serif">MS Information Experience Design · GPA 3.93</div>
+          <div class="r-co">Pratt Institute · Manhattan, NY</div>
         </div>
       </div>
       <div class="r-exp">
-        <div class="r-yr mono">2020</div>
+        <div class="r-yr mono">2015 – 19</div>
         <div>
-          <div class="r-role serif">COVID-19 Predictive Spatial Analysis</div>
-          <div class="r-co">Data Visualization · Dashboard Design · Carto</div>
-        </div>
-      </div>
-      <div class="r-exp">
-        <div class="r-yr mono">2019</div>
-        <div>
-          <div class="r-role serif">Skill Sharing Application</div>
-          <div class="r-co">Mobile &amp; Web · UX Design · Zero-to-one</div>
+          <div class="r-role serif">B.Tech Information Technology · GPA 3.1</div>
+          <div class="r-co">GGSIP University · Delhi, India</div>
         </div>
       </div>
     </div>
@@ -964,18 +911,20 @@ footer a:hover{color:var(--v);}
     <div class="r-section">
       <h3>Skills</h3>
       <div class="r-skills">
-        <span class="r-skill">UX Research</span>
+        <span class="r-skill">Product Design</span>
+        <span class="r-skill">Design Systems</span>
         <span class="r-skill">Interaction Design</span>
         <span class="r-skill">Usability Testing</span>
-        <span class="r-skill">Eye Tracking</span>
-        <span class="r-skill">Data Visualization</span>
         <span class="r-skill">Accessibility</span>
-        <span class="r-skill">Figma</span>
         <span class="r-skill">Prototyping</span>
-        <span class="r-skill">IA + Navigation</span>
-        <span class="r-skill">Front-end Development</span>
-        <span class="r-skill">Design Systems</span>
-        <span class="r-skill">Journey Mapping</span>
+        <span class="r-skill">A/B Testing</span>
+        <span class="r-skill">Figma</span>
+        <span class="r-skill">Claude Code</span>
+        <span class="r-skill">Figma Make</span>
+        <span class="r-skill">MCP</span>
+        <span class="r-skill">Programmatic Ad Tech</span>
+        <span class="r-skill">B2B SaaS</span>
+        <span class="r-skill">Agile</span>
       </div>
     </div>
 
