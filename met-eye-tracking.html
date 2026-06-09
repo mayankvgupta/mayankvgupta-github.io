@@ -1,174 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>MET Eye Tracking Study — Mayank Gupta</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/cs-v2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MET Eye Tracking Study — Mayank Gupta</title>
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Mayank Gupta&nbsp;<em>/</em></a>
-    <div class="nav-links">
-      <a class="nav-link active" href="index.html">Work</a>
-      <a class="nav-link" href="index.html#about">About</a>
-      <a class="nav-link" href="index.html#writing">Writing</a>
-      <a class="nav-link" href="index.html#resume">Resume</a>
-    </div>
-    <a class="nav-cta" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Mayank <em>Gupta</em></a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#resume" class="nav-link">Resume</a>
+    <a href="index.html#writing" class="nav-link">Writing</a>
   </div>
+  <a href="mailto:mgupta17@pratt.edu" class="nav-cta">Get in touch</a>
 </nav>
 
 <div class="cs-back">
-  <div class="cs-back-inner">
-    <a href="index.html">← Back to Work</a>
-    <span class="breadcrumb">01 of 07</span>
-  </div>
+  <a href="index.html">&#8592; All Work</a>
+  <span class="cs-back-index">01 / 06</span>
 </div>
 
 <div class="cs-hero">
-  <div class="cs-hero-inner">
-    <div class="cs-hero-kicker">
-      <span class="chip v">UX Research</span>
-      <span class="chip">Eye Tracking</span>
-      <span class="chip">Usability Testing</span>
-      <span class="chip">IA</span>
-      <span class="label" style="color:var(--dark-ink3);margin-left:6px;">Academic · 2021</span>
-    </div>
-    <h1 class="serif">The MET Eye Tracking Study</h1>
-    <p class="cs-hero-desc">Evaluative research on the Metropolitan Museum of Art's digital experience using Tobii eye-tracking hardware, retrospective think-aloud sessions, and SUS scoring — surfacing navigational gaps invisible to standard usability testing.</p>
-    <div class="kpi-row">
-      <div class="kpi"><div class="kn serif">10</div><div class="kl mono">Participants</div></div>
-      <div class="kpi"><div class="kn serif">78.3</div><div class="kl mono">SUS Score</div></div>
-      <div class="kpi"><div class="kn serif">50%</div><div class="kl mono">Missed filter feature</div></div>
-      <div class="kpi"><div class="kn serif">4</div><div class="kl mono">Design recommendations</div></div>
-    </div>
+  <div class="cs-hero-kicker">
+    <span class="chip">Research</span>
+    <span class="chip">Eye Tracking</span>
+    <span class="chip">Usability</span>
   </div>
-</div>
-
-<div class="cs-layout-wrap">
-  <div class="cs-layout">
-    <aside class="cs-toc">
-      <div class="cs-toc-title">Contents</div>
-      <ol id="toc">
-        <li class="active" onclick="tocClick(this,'s1')">01 · Context</li>
-        <li onclick="tocClick(this,'s2')">02 · Methodology</li>
-        <li onclick="tocClick(this,'s3')">03 · Findings</li>
-        <li onclick="tocClick(this,'s4')">04 · Recommendations</li>
-      </ol>
-    </aside>
-
-    <div class="cs-content">
-
-      <div class="cs-section" id="s1">
-        <div class="cs-section-num">01 — Context</div>
-        <h2 class="serif">Millions of visitors. One opaque interface.</h2>
-        <p>The Metropolitan Museum of Art's website serves millions of virtual visitors per year, granting access to one of the world's largest art collections. Despite the scale of the audience, the interface had received limited evaluative research — leaving navigational gaps unaddressed.</p>
-        <p>This study used eye-tracking technology to go beyond what users say, capturing where attention actually landed — and where it didn't. The goal: generate evidence-based design recommendations the MET team could act on.</p>
-        <img class="cs-img" src="img/met-eye-tracking/portfolio-img.png" alt="MET Eye Tracking Study overview">
-        <p class="cs-img-caption">Study overview · Tobii Pro X2 · Metropolitan Museum of Art website</p>
-      </div>
-
-      <div class="cs-section" id="s2">
-        <div class="cs-section-num">02 — Methodology</div>
-        <h2 class="serif">Eye tracking plus retrospective think-aloud.</h2>
-        <p>Ten participants (7 graduates, 2 undergraduates, 1 unaffiliated) completed structured tasks on the MET website while eye movements were recorded using Tobii Pro X2 hardware and Tobii Pro Lab software. Sessions were followed immediately by a retrospective think-aloud (RTA) to surface conscious reasoning behind observed gaze patterns.</p>
-        <p>Each session concluded with a System Usability Scale (SUS) questionnaire, producing quantitative learnability and usability scores alongside qualitative data. The mixed-method approach was chosen specifically because eye tracking reveals attention without priming — participants can't easily lie to a heatmap.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Hardware</div><div class="ins-text">Tobii Pro X2 eye tracker + Tobii Pro Lab for data capture and heatmap generation.</div></div>
-          <div class="insight"><div class="ins-num">Protocol</div><div class="ins-text">Structured tasks → eye tracking → retrospective think-aloud → SUS questionnaire.</div></div>
-          <div class="insight"><div class="ins-num">Sample</div><div class="ins-text">10 participants across graduate, undergraduate, and unaffiliated backgrounds. Mixed prior experience with the MET site.</div></div>
-        </div>
-        <img class="cs-img" src="img/met-eye-tracking/heatmap.png" alt="Eye tracking heatmap showing F-shaped scan pattern">
-        <p class="cs-img-caption">Heatmap output · Filter section task · F-shaped scan pattern and missed navigation elements</p>
-      </div>
-
-      <div class="cs-section" id="s3">
-        <div class="cs-section-num">03 — Findings</div>
-        <h2 class="serif">The filters were there. Half the users never saw them.</h2>
-        <p>The study returned a SUS score of 78.3 — learnability 81.3 and usability 77.5. Both sit in the "good" range, but the qualitative data revealed specific friction points the aggregate score obscures.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Finding 01</div><div class="ins-text">50% of participants missed the filter search functionality entirely — it existed, but never entered their field of attention.</div></div>
-          <div class="insight"><div class="ins-num">Finding 02</div><div class="ins-text">Users follow an F-shaped reading pattern on filter sections. Horizontal filter arrangements are especially vulnerable to this scan path.</div></div>
-          <div class="insight"><div class="ins-num">Finding 03</div><div class="ins-text">Long scroll on article pages causes visible fatigue and drop-off. One participant physically moved their head — a signal standard testing rarely captures.</div></div>
-        </div>
-        <div class="pull-quote">
-          <p>"I barely registered 'Great Women Artists' even though it clearly says it there."</p>
-          <cite>— Participant O, retrospective think-aloud</cite>
-        </div>
-        <img class="cs-img" src="img/met-eye-tracking/problem-2.gif" alt="Gaze recording showing scroll fatigue">
-        <p class="cs-img-caption">Gazeplots · Article page · Scroll-induced attention fatigue visible in downward drift of fixation points</p>
-        <p>The close-look article pages presented a separate problem: once inside an artwork article, there was no contextual navigation for lateral exploration. Users had to use the browser back button — interrupting the exploratory browsing the MET's collection was designed to enable.</p>
-        <div class="pull-quote">
-          <p>"I moved my head here because I was tired of reading."</p>
-          <cite>— Participant O, on scroll fatigue during long article</cite>
-        </div>
-      </div>
-
-      <div class="cs-section" id="s4">
-        <div class="cs-section-num">04 — Recommendations</div>
-        <h2 class="serif">Four targeted changes based on where attention went.</h2>
-        <p>Rather than a broad redesign, the study produced four specific, evidence-grounded recommendations tied directly to observed gaze patterns and task failures.</p>
-        <ul>
-          <li><strong>Add in-page navigation to article pages</strong> — users shouldn't need the browser back button to explore the collection laterally.</li>
-          <li><strong>Reorganise filters vertically with alphabetical anchor tags</strong> — the horizontal layout conflicts with the F-shaped scan pattern observed across all participants.</li>
-          <li><strong>Add scroll affordances and reduce article page length</strong> — visible fatigue signals (head movement, long fixation gaps) indicate the format pushes past comfortable reading depth.</li>
-          <li><strong>Expand filter categories</strong> — participants repeatedly tried filtering by attributes the current system doesn't support, generating silent dead-ends.</li>
-        </ul>
-        <div class="img-grid">
-          <div>
-            <img class="cs-img" src="img/met-eye-tracking/filter-recommendation.png" alt="Filter reorganisation recommendation">
-            <p class="cs-img-caption">Filter reorganisation · Vertical layout with alphabetical anchors</p>
-          </div>
-          <div>
-            <img class="cs-img" src="img/met-eye-tracking/recommendation1.png" alt="Article navigation recommendation">
-            <p class="cs-img-caption">Article page navigation · In-context lateral browsing</p>
-          </div>
-        </div>
-        <p>The client appreciated the depth and specificity of the recommendations — using eye-tracking data made each suggestion traceable to an observed behaviour rather than an assumption. Deliverables included a full research report, heatmap documentation, and annotated wireframes for each proposed change.</p>
-      </div>
-
+  <h1>MET Museum Eye Tracking Study</h1>
+  <p class="cs-hero-desc">Improving how users find and consume content on the Metropolitan Museum of Art website through a 10-session eye tracking study — uncovering navigation pain points and delivering 10 actionable design recommendations.</p>
+  <div class="cs-meta-strip">
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-val">UX Researcher · Moderator · Analyst</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Team</div>
+      <div class="cs-meta-val">Raunak Jangid, Kyle Kisicki, Chris Denney, Xiujie Bi</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Duration</div>
+      <div class="cs-meta-val">4 weeks · Fall 2021</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Tools</div>
+      <div class="cs-meta-val">Tobii Pro X2 · Tobii Pro Lab · Excel</div>
     </div>
   </div>
 </div>
 
-<div class="cs-nav-outer">
-  <div class="cs-nav-inner">
-    <a class="cs-nav-item" href="index.html">
-      <div class="cni-label">← All work</div>
-      <div class="cni-title serif">Back to portfolio</div>
-      <div class="cni-arr">←</div>
-    </a>
-    <a class="cs-nav-item" href="design-jedi.html">
-      <div class="cni-label">Next project →</div>
-      <div class="cni-title serif">Design Jedi</div>
-      <div class="cni-arr">→</div>
-    </a>
+<div class="cs-img">
+  <img src="img/met-eye-tracking/web-covers.png" alt="MET Eye Tracking Study Cover">
+</div>
+
+<div class="cs-layout">
+  <aside class="cs-toc">
+    <div class="cs-toc-title">Contents</div>
+    <ol>
+      <li class="active" onclick="scrollTo('s1')">Context</li>
+      <li onclick="scrollTo('s2')">Research</li>
+      <li onclick="scrollTo('s3')">Analysis</li>
+      <li onclick="scrollTo('s4')">Findings</li>
+      <li onclick="scrollTo('s5')">Outcome</li>
+    </ol>
+  </aside>
+
+  <div class="cs-content">
+
+    <div class="cs-section" id="s1">
+      <div class="cs-section-num">01 — Context</div>
+      <h2>Understanding the Problem</h2>
+      <p>Being one of the most celebrated museums on the planet, the MET attracts millions of visitors from across the globe. For those who can't visit in person, the MET website serves as a vital resource to view and interact with the art collection. We partnered with the MET to conduct an eye tracking study on their website and improve the ways in which users discover and consume content.</p>
+      <p>During our first client meeting, the MET team provided a comprehensive document detailing focus areas, pages under consideration, topics of inquiry, and the user groups of interest. Keeping the timeline in mind, we focused on two major sections: <strong>Close Look Articles</strong> and <strong>The Collection Experience</strong>.</p>
+      <div class="img-ph" style="height:260px;">
+        <img src="img/met-eye-tracking/team-image.jpg" alt="The team working with the Tobii tool">
+      </div>
+    </div>
+
+    <div class="cs-section" id="s2">
+      <div class="cs-section-num">02 — Research</div>
+      <h2>Methods & Participants</h2>
+      <p>Given the complexity of inviting unaffiliated participants to campus, we recruited from within the Pratt community. To avoid overlap, we coordinated with other research teams so no participant tested with multiple groups.</p>
+      <p>We recruited <strong>10 participants</strong>: 7 graduates, 2 undergraduates, and 1 unaffiliated participant. All were frequent museum visitors with at least a generalist interest in art.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Method 01</div>
+          <div class="ins-text">Tobii Pro X2 eye tracking hardware with Tobii Pro Lab for gaze replay analysis, AOI, TOI, heatmaps, and fixation points.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Method 02</div>
+          <div class="ins-text">System Usability Scale (SUS) and pre/post-test questionnaires to capture subjective usability ratings.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Method 03</div>
+          <div class="ins-text">Retrospective Think Aloud (RTA) to uncover user mental models and surface latent pain points post-session.</div>
+        </div>
+      </div>
+
+      <h3>Tasks</h3>
+      <ul>
+        <li>Explore a Close Look article as users naturally would</li>
+        <li>Browse the MET Art Collection page and learn about an artwork of interest</li>
+        <li>Search for a Picasso graphite Cubism artwork using collection filters</li>
+      </ul>
+    </div>
+
+    <div class="cs-section" id="s3">
+      <div class="cs-section-num">03 — Analysis</div>
+      <h2>Analyzing Gaze Data</h2>
+      <p>We started analysis by reviewing gaze replays and RTA recordings to capture relevant insights. To validate initial findings we cross-referenced with TOI, AOI, heatmaps, and SUS scores.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kn">78.3</div>
+          <div class="kl">Mean SUS Score</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">77.5</div>
+          <div class="kl">Usability Score</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">81.3</div>
+          <div class="kl">Learnability Score</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">10</div>
+          <div class="kl">Sessions Conducted</div>
+        </div>
+      </div>
+
+      <p>The MET website scored in the 80–84 percentile range based on its SUS score. What these numbers reveal is that new users can quickly understand how to interact with the website — learnability is a genuine strength. However, the gap between learnability and usability signals friction once users go deeper.</p>
+    </div>
+
+    <div class="cs-section" id="s4">
+      <div class="cs-section-num">04 — Findings</div>
+      <h2>Key Recommendations</h2>
+
+      <h3>Close Look Articles</h3>
+      <p>The correlation between text and image — where the image zoomed to highlight the detail being described — was universally praised. Participants appreciated the guided perspective.</p>
+
+      <div class="pull-quote">
+        <p>"It was interesting how when the text was referencing a part of the piece… it would kind of zoom in on that. It's not like you have to look for it, they're already showing it to you."</p>
+        <cite>— Participant A</cite>
+      </div>
+
+      <p><strong>Finding: Long scroll kills momentum.</strong> After spending time on a close-look page, participants felt disoriented and wanted an exit route. The absence of navigation options forced them to scroll all the way to the bottom.</p>
+
+      <div class="pull-quote">
+        <p>"I moved my head here because I was tired of reading. I probably would have paused here had I not been doing this for you guys, and it just felt like a lot of scrolling at this point."</p>
+        <cite>— Participant O</cite>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/met-eye-tracking/recommendation1.png" alt="Navigation menu recommendation">
+        <div class="cs-img-caption">Recommendation: Add in-article navigation menu to let users jump to sections</div>
+      </div>
+
+      <h3>The Collection Experience</h3>
+      <p>Users followed a consistent pattern of searching by keyword then using filters to narrow results. The intricate filter system was well-received — but the filter layout created significant confusion.</p>
+
+      <div class="pull-quote">
+        <p>"I didn't notice graphite was there. I would imagine going down alphabetically instead of across."</p>
+        <cite>— Participant A</cite>
+      </div>
+
+      <p><strong>Finding: F-pattern reading vs. horizontal filter layout.</strong> The heatmap revealed a vertical F-shape reading pattern while filters were arranged horizontally. In the 3rd task, all participants struggled to find the correct material filter — only 50% discovered the search bar within the filters.</p>
+
+      <div class="cs-img">
+        <img src="img/met-eye-tracking/heatmap.png" alt="Heatmap showing F-pattern reading">
+        <div class="cs-img-caption">Heatmap showing users scanning vertically while filters are ordered horizontally</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/met-eye-tracking/filter-recommendation.png" alt="Filter recommendation">
+        <div class="cs-img-caption">Recommendation: Alphabetical groupings with anchor tags for efficient filter navigation</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s5">
+      <div class="cs-section-num">05 — Outcome</div>
+      <h2>Impact & Takeaways</h2>
+      <p>The client presentation went extremely well. The MET team was particularly interested in learning that users spent significantly more time reading on close look articles than expected. All 10 recommendations resonated as actionable and practical.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Rec 01</div>
+          <div class="ins-text">Add in-article navigation to close look pages — allowing users to jump between sections and exit without scrolling to the bottom.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Rec 02</div>
+          <div class="ins-text">Declutter the close look landing page — reduce micro-interactions that falsely signal interactivity to users.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Rec 03</div>
+          <div class="ins-text">Reorganize collection filters alphabetically with anchor tags — aligning with the vertical F-pattern reading behavior observed in gaze data.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Rec 04</div>
+          <div class="ins-text">Expand filter categories to include more artist-based options, enabling student researchers to better narrow results.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Rec 05</div>
+          <div class="ins-text">Reverse chronological order in Exhibition Date on artwork pages — most recent entries should appear at top.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Rec 06+</div>
+          <div class="ins-text">5 additional recommendations covering image navigation buttons, zoom affordances, search tolerance for typos, and scroll signifiers.</div>
+        </div>
+      </div>
+
+      <p>This project gave me deep appreciation for the power of objective gaze data in validating (or challenging) assumptions. The disconnect between what users say and where their eyes actually go is striking — and eye tracking makes that gap visible in a way no other method can.</p>
+    </div>
+
   </div>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine">UX Designer &amp; Researcher</div></div>
-    <div><h5>Index</h5><a href="index.html">Work</a><a href="index.html#about">About</a><a href="index.html#resume">Resume</a></div>
-    <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-    <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
+<div class="cs-nav-strip">
+  <a class="cs-nav-item prev" href="index.html">
+    <div class="cni-label">All Work</div>
+    <div class="cni-title">Back to Index</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+  <a class="cs-nav-item next" href="design-jedi.html">
+    <div class="cni-label">Next Project</div>
+    <div class="cni-title">Design Jedi</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div>
+    <div class="f-sig">Mayank <em style="font-style:italic;color:var(--v)">Gupta</em></div>
+    <div class="f-fine">Senior UX Designer & Researcher<br>Mountain View, CA</div>
+  </div>
+  <div>
+    <h5>Work</h5>
+    <a href="index.html">Portfolio</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#writing">Writing</a>
+  </div>
+  <div>
+    <h5>Connect</h5>
+    <a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/mayankvgupb3c4" target="_blank">Behance</a>
+    <a href="https://dribbble.com/VI_OM" target="_blank">Dribbble</a>
+  </div>
+  <div>
+    <h5>Contact</h5>
+    <a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a>
   </div>
 </footer>
 
 <script>
-function tocClick(el,id){document.querySelectorAll('#toc li').forEach(l=>l.classList.remove('active'));el.classList.add('active');const t=document.getElementById(id);if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});}
-const secs=['s1','s2','s3','s4'];
-window.addEventListener('scroll',()=>{let cur='';secs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)cur=id;});document.querySelectorAll('#toc li').forEach((li,i)=>{li.classList.toggle('active',secs[i]===cur);});});
+const sections = document.querySelectorAll('.cs-section');
+const tocItems = document.querySelectorAll('.cs-toc li');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = Array.from(sections).indexOf(e.target);
+      tocItems.forEach(li => li.classList.remove('active'));
+      if (tocItems[idx]) tocItems[idx].classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(s => obs.observe(s));
+
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 </body>
 </html>

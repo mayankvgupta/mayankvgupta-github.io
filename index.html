@@ -4,14 +4,17 @@
 <meta charset="utf-8">
 <title>Mayank Gupta — UX Designer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mayank Gupta — UX Designer & Researcher. Portfolio of research-led, accessibility-aware design work.">
-<meta name="keywords" content="UX design, user experience, UX research, accessibility, portfolio, Mayank Gupta">
+<meta name="description" content="Mayank Gupta — Senior UX Designer & Researcher. Portfolio of user-centered design work.">
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/site.webmanifest">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
@@ -20,23 +23,15 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-JGEX2HKCPR');
-  gtag('config', 'UA-188381013-2');
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* ── Tokens ── */
 :root {
   --bg: #faf9f6; --bg2: #f3f0ea; --bg3: #eae7de;
   --ink: #141210; --ink2: #514c46; --ink3: #8c8880; --ink4: #c4c0b4;
   --line: #e4e0d6; --line2: #ccc8bc;
   --v: #7c3aed; --vl: rgba(124,58,237,0.08); --vl2: rgba(124,58,237,0.15);
-  --dark: #181716; --dark2: #201f1e; --dark3: #2e2c2a;
-  --card-radius: 6px;
-  --dark-ink: #f0ece3; --dark-ink2: #b8b2a8; --dark-ink3: #6e6a64;
-  --dark-line: rgba(255,255,255,0.09);
-  --mw: 1120px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -44,15 +39,20 @@ body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font
 a{color:inherit;text-decoration:none;}
 img{display:block;max-width:100%;}
 ul,ol{list-style:none;}
+
+/* ── Type helpers ── */
 .serif{font-family:'Cormorant Garamond',serif;}
 .mono{font-family:'JetBrains Mono',monospace;}
 .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);}
-.v{color:var(--v);}
+.v-color{color:var(--v);}
+
+/* ── SPA pages ── */
+.page{display:none;}
+.page.active{display:block;}
 
 /* ── Nav ── */
-nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--line);padding:0 48px;height:72px;display:flex;align-items:center;}
-.nav-inner{max-width:var(--mw);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;cursor:pointer;white-space:nowrap;}
+nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:66px;}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;cursor:pointer;user-select:none;}
 .nav-brand em{font-style:italic;color:var(--v);}
 .nav-links{display:flex;gap:36px;}
 .nav-link{font-size:13px;font-weight:400;color:var(--ink3);cursor:pointer;letter-spacing:.01em;transition:color .15s;padding:4px 0;border-bottom:1.5px solid transparent;}
@@ -60,116 +60,84 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px sol
 .nav-link.active{color:var(--v);border-bottom-color:var(--v);}
 .nav-cta{font-size:13px;font-weight:500;color:var(--v);cursor:pointer;border-bottom:1px solid var(--v);padding-bottom:1px;transition:opacity .2s;}
 .nav-cta:hover{opacity:.65;}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
-.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);transition:all .2s;}
 
-/* ── Pages ── */
-.page{display:none;}
-.page.active{display:block;}
+/* ── Shared layout ── */
+.wrap{max-width:1320px;margin:0 auto;padding:0 52px;}
 
-/* ── Shared ── */
-.wrap{max-width:var(--mw);margin:0 auto;padding:0 48px;}
-.full-bleed{width:100%;}
-.sec-divider{display:flex;align-items:center;gap:16px;border-top:1px solid var(--line);height:52px;}
+/* Section divider */
+.sec-divider{display:flex;align-items:center;gap:16px;border-top:1px solid var(--line);height:52px;padding:0 52px;}
 .sec-divider .sd-title{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);}
 .sec-divider .sd-count{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--ink4);}
+
+/* Chip */
+.chip{display:inline-block;border:1px solid var(--line2);padding:3px 10px;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);}
+.chip.v-chip{background:var(--vl);border-color:rgba(124,58,237,.2);color:var(--v);}
+
+/* Buttons */
+.btn-v{display:inline-flex;align-items:center;gap:8px;background:var(--v);color:#fff;padding:12px 24px;font-size:13px;font-weight:500;cursor:pointer;transition:opacity .2s;letter-spacing:.01em;border:none;font-family:'DM Sans',sans-serif;}
+.btn-v:hover{opacity:.85;}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line2);padding:12px 22px;font-size:13px;color:var(--ink2);cursor:pointer;transition:all .2s;background:none;font-family:'DM Sans',sans-serif;}
+.btn-outline:hover{border-color:var(--v);color:var(--v);}
+
+/* KPI row */
 .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 .kpi{padding:28px 36px;border-right:1px solid var(--line);}
 .kpi:last-child{border-right:none;}
 .kpi .kn{font-family:'Cormorant Garamond',serif;font-size:52px;line-height:1;font-weight:400;color:var(--ink);}
 .kpi .kl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-top:6px;}
-.chip{display:inline-flex;align-items:center;border:1px solid var(--line2);padding:4px 12px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);}
-.chip.v{background:var(--vl);border-color:rgba(124,58,237,.2);color:var(--v);}
-.btn-v{display:inline-flex;align-items:center;gap:8px;background:var(--v);color:#fff;padding:12px 24px;border-radius:2px;font-size:13px;font-weight:500;cursor:pointer;transition:opacity .2s;letter-spacing:.01em;text-decoration:none;}
-.btn-v:hover{opacity:.85;}
-.btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line2);padding:12px 22px;border-radius:2px;font-size:13px;color:var(--ink2);cursor:pointer;transition:all .2s;text-decoration:none;}
-.btn-outline:hover{border-color:var(--v);color:var(--v);}
 
-/* ── Pill tags (skills) ── */
-.pill-group{display:flex;flex-wrap:wrap;gap:6px 8px;}
-.pill{display:inline-flex;align-items:center;padding:5px 14px;border-radius:3px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;letter-spacing:.01em;color:var(--ink2);background:var(--bg2);border:1px solid var(--line);transition:all .18s;cursor:default;}
-.pill:hover{background:var(--vl);border-color:rgba(124,58,237,.25);color:var(--v);}
-.skills-block{display:flex;flex-direction:column;gap:20px;}
-.skill-cat-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink4);margin-bottom:8px;}
-.skill-cat .pill-group{gap:5px 6px;}
-
-/* ── Dark band utility ── */
-.dark-band{background:var(--dark);color:var(--dark-ink);}
-.dark-band .label,.dark-band .mono{color:var(--dark-ink3);}
-.dark-band .serif{color:var(--dark-ink);}
-
-/* ════════════════════════════════════
+/* ══════════════════════════════════════════════
    HOME
-   ════════════════════════════════════ */
-
-/* Hero — dark band */
-.hero{background:var(--dark);padding:0;}
-.hero-inner{max-width:var(--mw);margin:0 auto;padding:88px 48px 72px;}
+══════════════════════════════════════════════ */
+/* Hero */
+.hero{padding:96px 52px 64px;}
 .hero-kicker{display:flex;align-items:center;gap:16px;margin-bottom:36px;}
-.hero-kicker .label{color:var(--dark-ink3);}
-.hero-kicker::after{content:'';flex:0 0 56px;height:1px;background:var(--v);opacity:.4;}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,88px);line-height:.96;font-weight:400;letter-spacing:-.025em;color:var(--dark-ink);max-width:980px;margin-bottom:64px;}
+.hero-kicker::after{content:'';flex:0 0 56px;height:1px;background:var(--v);opacity:.35;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(56px,7vw,96px);line-height:.96;font-weight:400;letter-spacing:-.025em;color:var(--ink);max-width:1080px;margin-bottom:56px;}
 .hero h1 em{font-style:italic;color:var(--v);}
-.hero-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding-top:40px;border-top:1px solid var(--dark-line);}
+.hero-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding-top:40px;border-top:1px solid var(--line);}
 .hero-meta-col{padding-right:48px;}
-.hero-meta-col+.hero-meta-col{border-left:1px solid var(--dark-line);padding-left:40px;}
+.hero-meta-col+.hero-meta-col{border-left:1px solid var(--line);padding-left:40px;}
 .hero-meta-col:last-child{padding-right:0;}
 .hmc-label{margin-bottom:10px;}
-.hmc-label.label{color:var(--dark-ink3);}
-.hmc-text{font-size:14px;line-height:1.7;color:var(--dark-ink2);}
+.hmc-text{font-size:14px;line-height:1.7;color:var(--ink2);}
 
-/* Work cards grid */
-.work-cards{max-width:var(--mw);margin:0 auto;padding:40px 48px 72px;}
-.work-card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
-.work-card{background:var(--bg);cursor:pointer;transition:background .2s,box-shadow .2s;position:relative;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--card-radius);text-decoration:none;color:inherit;}
-.work-card:hover{background:var(--bg2);box-shadow:0 4px 24px rgba(0,0,0,.07);}
-.wc-image{width:100%;aspect-ratio:16/9;background:var(--bg3);overflow:hidden;position:relative;}
-.wc-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
-.work-card:hover .wc-image img{transform:scale(1.03);}
-.wc-body{padding:28px 32px 32px;flex:1;display:flex;flex-direction:column;}
-.wc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
-.wc-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink4);letter-spacing:.12em;margin-bottom:12px;}
-.wc-title{font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1;letter-spacing:-.01em;color:var(--ink);margin-bottom:10px;}
-.wc-excerpt{font-size:13px;color:var(--ink3);line-height:1.6;flex:1;}
-.wc-footer{display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);}
-.wc-meta{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);line-height:1.7;}
-.wc-arr{font-size:18px;color:var(--ink4);transition:color .2s,transform .2s;}
-.work-card:hover .wc-arr{color:var(--v);transform:translateX(4px);}
-
-/* Featured card — spans full width */
-.work-card.featured{grid-column:1/-1;}
-.work-card.featured .wc-image{aspect-ratio:21/7;}
-.work-card.featured .wc-body{padding:32px 40px 36px;}
-.work-card.featured .wc-title{font-size:40px;}
+/* Work rows */
+.work-row{display:grid;grid-template-columns:56px 1fr 220px 32px;gap:32px;align-items:center;padding:36px 52px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .2s;position:relative;}
+.work-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--v);transform:scaleY(0);transition:transform .25s;transform-origin:bottom;}
+.work-row:hover{background:var(--bg2);}
+.work-row:hover::before{transform:scaleY(1);}
+.wr-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink4);letter-spacing:.1em;}
+.wr-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,38px);line-height:1.05;letter-spacing:-.01em;color:var(--ink);margin-bottom:6px;}
+.wr-excerpt{font-size:13px;color:var(--ink3);line-height:1.55;max-width:640px;}
+.wr-meta{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);text-align:right;line-height:1.9;}
+.wr-arr{font-size:20px;color:var(--ink4);text-align:right;transition:color .2s,transform .2s;}
+.work-row:hover .wr-arr{color:var(--v);transform:translateX(4px);}
 
 /* Methodology */
-.method{padding:72px 0;}
-.method-inner{max-width:var(--mw);margin:0 auto;padding:0 48px;}
+.method{padding:72px 52px;}
 .method-intro{font-size:14px;line-height:1.7;color:var(--ink2);max-width:520px;margin:12px 0 52px;}
 .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
 .mcol{padding-right:40px;}
 .mcol+.mcol{padding-left:20px;}
 .mcol:last-child{padding-right:0;}
 .mcol-num{font-family:'Cormorant Garamond',serif;font-size:64px;line-height:1;color:var(--line2);margin-bottom:10px;}
+.mcol.active .mcol-num{color:var(--v);}
 .mcol-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--ink);margin-bottom:8px;}
+.mcol.active .mcol-name{color:var(--v);}
 .mcol-desc{font-size:13px;line-height:1.65;color:var(--ink2);margin-bottom:18px;}
-.mcol-tags{display:flex;flex-wrap:wrap;gap:6px;}
-.mcol-tag{font-size:12px;padding:5px 12px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);color:var(--ink3);}
+.mcol-tags{display:flex;flex-direction:column;gap:5px;}
+.mcol-tag{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);padding:5px 0;border-bottom:1px solid var(--line);}
 
-/* Testimonials — dark band */
-.testi-section{background:var(--dark);padding:72px 0;}
-.testi-section-inner{max-width:var(--mw);margin:0 auto;padding:0 48px;}
-.testi-section-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dark-ink3);margin-bottom:40px;}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--dark-line);}
-.testi{padding:40px;background:var(--dark2);}
-.testi-q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;line-height:1.5;color:var(--dark-ink);margin-bottom:20px;}
-.testi-q::before{content:'\201C';font-size:40px;line-height:.6;display:block;color:var(--v);opacity:.5;margin-bottom:8px;font-style:normal;}
-.testi-who{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dark-ink3);}
+/* Skills grid (replaces testimonials) */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
+.skill-card{padding:44px;background:var(--bg);}
+.skill-card-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--ink);margin-bottom:16px;}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px;}
 
 /* Contact */
-.contact{padding:96px 0;border-top:1px solid var(--line);}
-.contact-inner{max-width:var(--mw);margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 360px;gap:80px;align-items:end;}
-.contact h2{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);line-height:1.04;font-weight:400;letter-spacing:-.015em;}
+.contact{padding:96px 52px;display:grid;grid-template-columns:1fr 360px;gap:80px;align-items:end;border-top:1px solid var(--line);}
+.contact h2{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,68px);line-height:1.04;font-weight:400;letter-spacing:-.015em;}
 .contact h2 em{font-style:italic;color:var(--v);}
 .contact-links{display:flex;flex-direction:column;gap:16px;}
 .cl-item .cl-label{margin-bottom:4px;}
@@ -178,26 +146,24 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px sol
 .cl-item .cl-val a:hover{opacity:.65;}
 
 /* Footer */
-footer{border-top:1px solid var(--line);}
-.footer-inner{max-width:var(--mw);margin:0 auto;padding:52px 48px 64px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+footer{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding:52px 52px 64px;border-top:1px solid var(--line);}
 footer .f-sig{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;margin-bottom:10px;}
 footer .f-fine{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink4);line-height:1.9;}
 footer h5{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:14px;}
-footer a{display:block;font-size:13px;color:var(--ink2);padding:3px 0;transition:color .15s;}
-footer a:hover{color:var(--v);}
+footer a,footer span.f-link{display:block;font-size:13px;color:var(--ink2);padding:3px 0;transition:color .15s;cursor:pointer;}
+footer a:hover,footer span.f-link:hover{color:var(--v);}
 
-/* ════════════════════════════════════
+/* ══════════════════════════════════════════════
    ABOUT
-   ════════════════════════════════════ */
-.about-hero{background:var(--dark);padding:0;}
-.about-hero-inner{max-width:var(--mw);margin:0 auto;padding:80px 48px 72px;display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:start;}
-.about-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,68px);line-height:1.0;font-weight:400;letter-spacing:-.02em;margin:14px 0 24px;color:var(--dark-ink);}
-.about-hero p{font-size:15px;line-height:1.75;color:var(--dark-ink2);margin-bottom:14px;}
-.about-hero .label{color:var(--dark-ink3);}
-.about-portrait{overflow:hidden;min-height:460px;border:1px solid var(--dark-line);}
-.about-portrait img{width:100%;height:100%;object-fit:cover;display:block;}
-.timeline{padding:64px 0;}
-.timeline-inner{max-width:var(--mw);margin:0 auto;padding:0 48px;}
+══════════════════════════════════════════════ */
+.about-hero{padding:80px 52px 64px;display:grid;grid-template-columns:1.2fr 1fr;gap:80px;border-bottom:1px solid var(--line);}
+.about-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6vw,72px);line-height:1.0;font-weight:400;letter-spacing:-.02em;margin:14px 0 24px;}
+.about-hero p{font-size:15px;line-height:1.75;color:var(--ink2);margin-bottom:14px;}
+.about-portrait{background:var(--bg3);display:flex;align-items:center;justify-content:center;min-height:480px;overflow:hidden;}
+.about-portrait img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+
+/* Timeline */
+.timeline{padding:64px 52px;display:grid;grid-template-columns:1fr 1fr;gap:64px;}
 .tl-col{position:relative;padding-left:28px;}
 .tl-col::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:1.5px;background:var(--line2);}
 .tl-item{position:relative;padding-bottom:32px;}
@@ -206,685 +172,504 @@ footer a:hover{color:var(--v);}
 .tl-year{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px;}
 .tl-role{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--ink);margin-bottom:4px;}
 .tl-desc{font-size:13px;color:var(--ink3);line-height:1.55;}
-.principles{padding:0 0 72px;}
-.principles-inner{max-width:var(--mw);margin:0 auto;padding:64px 48px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);}
+
+/* Principles */
+.principles{padding:0 52px 72px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);padding-top:64px;}
 .prin{padding-right:48px;}
 .prin+.prin{border-left:1px solid var(--line);padding-left:40px;}
 .prin:last-child{padding-right:0;}
 .prin-num{font-family:'Cormorant Garamond',serif;font-size:64px;line-height:1;color:var(--line2);margin-bottom:8px;}
 .prin-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;margin-bottom:10px;}
 .prin-desc{font-size:14px;line-height:1.7;color:var(--ink2);}
-.about-skills{padding:0 0 72px;}
-.about-skills-inner{max-width:var(--mw);margin:0 auto;padding:0 48px;}
 
-/* ════════════════════════════════════
+/* ══════════════════════════════════════════════
    WRITING
-   ════════════════════════════════════ */
-.writing-hero{padding:0;border-bottom:1px solid var(--line);background:var(--dark);}
-.writing-hero-inner{max-width:var(--mw);margin:0 auto;padding:64px 48px 48px;}
-.writing-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6vw,76px);line-height:.96;font-weight:400;letter-spacing:-.02em;max-width:700px;margin:14px 0 20px;color:var(--dark-ink);}
-.writing-hero p{font-size:15px;color:var(--dark-ink2);line-height:1.65;max-width:520px;}
-.writing-hero .chip{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:var(--dark-ink2);}
-.writing-hero .chip.v{background:var(--vl);border-color:rgba(124,58,237,.35);color:var(--v);}
-.post-row{border-bottom:1px solid var(--line);cursor:pointer;transition:background .15s;}
-.post-row:hover{background:var(--bg2);}
-.post-row-inner{max-width:var(--mw);margin:0 auto;padding:32px 48px;display:grid;grid-template-columns:160px 1fr 80px;gap:32px;align-items:baseline;}
-.post-date{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);}
-.post-title{font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.2;color:var(--ink);margin-bottom:6px;}
-.post-excerpt{font-size:13px;color:var(--ink3);line-height:1.55;max-width:640px;}
-.post-read{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink4);text-align:right;}
+══════════════════════════════════════════════ */
+.writing-hero{padding:64px 52px 40px;border-bottom:1px solid var(--line);}
+.writing-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,6vw,80px);line-height:.96;font-weight:400;letter-spacing:-.02em;max-width:700px;margin:14px 0 20px;}
+.writing-hero p{font-size:15px;color:var(--ink2);line-height:1.65;max-width:520px;}
+.writing-empty{padding:80px 52px;text-align:center;}
+.writing-empty h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:400;color:var(--ink2);margin-bottom:16px;}
+.writing-empty p{font-size:14px;color:var(--ink3);line-height:1.7;}
 
-/* ════════════════════════════════════
+/* ══════════════════════════════════════════════
    RESUME
-   ════════════════════════════════════ */
-.resume-page{padding:72px 0;max-width:var(--mw);margin:0 auto;}
-.resume-inner{padding:0 48px;max-width:860px;}
-.resume h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,6vw,72px);line-height:.96;font-weight:400;letter-spacing:-.02em;margin-bottom:8px;}
-.resume .r-sub{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:56px;}
+══════════════════════════════════════════════ */
+.resume-wrap{padding:72px 52px;max-width:900px;}
+.resume-wrap h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,5vw,72px);line-height:.96;font-weight:400;letter-spacing:-.02em;margin-bottom:8px;}
+.r-sub{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:56px;}
 .r-section{margin-bottom:48px;}
 .r-section h3{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--v);border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:24px;}
-.r-exp{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:16px 0;border-bottom:1px dashed var(--line);}
+.r-exp{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:16px 0;border-bottom:1px dashed var(--line);}
 .r-exp:last-child{border-bottom:none;}
 .r-yr{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.1em;}
 .r-role{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;margin-bottom:2px;}
 .r-co{font-size:14px;color:var(--ink2);margin-bottom:8px;}
-.r-bullets{font-size:13.5px;color:var(--ink2);line-height:1.65;padding-left:16px;list-style:disc;}
-.r-bullets li{margin-bottom:4px;}
+.r-bullets{font-size:13.5px;color:var(--ink2);line-height:1.65;padding-left:16px;}
+.r-bullets li{margin-bottom:4px;list-style:disc;}
 .r-skills{display:flex;flex-wrap:wrap;gap:8px;}
-.r-skill{font-size:12.5px;color:var(--ink2);border:1px solid var(--line);padding:6px 16px;border-radius:999px;background:var(--bg2);transition:all .15s;}
-.r-skill:hover{background:var(--vl);border-color:rgba(124,58,237,.25);color:var(--v);}
+.r-skill{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);border:1px solid var(--line2);padding:5px 12px;}
 .r-dl{margin-top:36px;display:flex;gap:12px;}
 
-/* ════════════════════════════════════
+/* ══════════════════════════════════════════════
    RESPONSIVE
-   ════════════════════════════════════ */
-@media (max-width: 900px) {
+══════════════════════════════════════════════ */
+@media(max-width:1024px){
   nav{padding:0 24px;}
-  .nav-links{display:none;}
-  .nav-cta{display:none;}
-  .nav-hamburger{display:flex;}
-  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:20px 24px;gap:20px;z-index:200;}
-  .hero-inner{padding:64px 24px 48px;}
-  .hero h1{font-size:clamp(36px,9vw,64px);}
-  .hero-meta{grid-template-columns:1fr;}
-  .hero-meta-col+.hero-meta-col{border-left:none;border-top:1px solid var(--dark-line);padding-left:0;padding-top:20px;margin-top:20px;}
-  .work-cards{padding:24px;}
-  .work-card-grid{grid-template-columns:1fr;}
-  .work-card.featured{grid-column:auto;}
-  .work-card.featured .wc-image{aspect-ratio:16/9;}
-  .work-card.featured .wc-title{font-size:30px;}
-  .method-inner{padding:0 24px;}
+  .hero{padding:64px 24px 40px;}
+  .work-row{padding:24px;grid-template-columns:40px 1fr 160px 24px;gap:16px;}
+  .method{padding:48px 24px;}
   .method-grid{grid-template-columns:1fr 1fr;gap:32px;}
-  .mcol{padding-right:0 !important;padding-left:0 !important;}
-  .testi-grid{grid-template-columns:1fr;}
-  .contact-inner{grid-template-columns:1fr;gap:40px;padding:0 24px;}
-  .footer-inner{grid-template-columns:1fr 1fr;gap:32px;padding:40px 24px;}
-  .wrap{padding:0 24px;}
-  .about-hero-inner{grid-template-columns:1fr;gap:40px;padding:48px 24px;}
-  .about-portrait{min-height:300px;}
-  .timeline-inner{grid-template-columns:1fr;gap:0;padding:0 24px;}
-  .principles-inner{grid-template-columns:1fr;padding:40px 24px 0;gap:32px;}
-  .prin{padding-right:0;}
-  .prin+.prin{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:32px;}
-  .about-skills-inner{padding:0 24px;}
-  .writing-hero-inner{padding:40px 24px;}
-  .post-row-inner{grid-template-columns:1fr;gap:8px;padding:24px;}
-  .post-read{text-align:left;}
-  .resume-inner{padding:0 24px;}
-  .r-exp{grid-template-columns:1fr;}
-  .testi-section-inner{padding:0 24px;}
-  .kpi-row{grid-template-columns:repeat(2,1fr);}
-  .kpi{border-bottom:1px solid var(--dark-line);}
+  .contact{padding:64px 24px;grid-template-columns:1fr;gap:32px;}
+  footer{padding:40px 24px 48px;grid-template-columns:1fr 1fr;}
+  .about-hero{padding:48px 24px;grid-template-columns:1fr;gap:40px;}
+  .timeline{padding:40px 24px;grid-template-columns:1fr;}
+  .principles{padding:40px 24px 48px;grid-template-columns:1fr;gap:32px;}
+  .principles .prin+.prin{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:32px;}
+  .resume-wrap{padding:48px 24px;}
+  .writing-hero{padding:40px 24px 24px;}
+  .sec-divider{padding:0 24px;}
+  .skills-grid{grid-template-columns:1fr;}
 }
-@media (max-width: 540px) {
-  .method-grid{grid-template-columns:1fr;}
-  .footer-inner{grid-template-columns:1fr;}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .work-row{grid-template-columns:36px 1fr;gap:12px;}
+  .wr-meta,.wr-arr{display:none;}
+  .hero-meta{grid-template-columns:1fr;gap:24px;}
+  .hero-meta-col+.hero-meta-col{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:24px;}
+  .kpi-row{grid-template-columns:1fr 1fr;}
+  .kpi:nth-child(2){border-right:none;}
+  .kpi:nth-child(3){border-top:1px solid var(--line);}
 }
 </style>
 </head>
 <body>
 
-<nav id="main-nav">
-  <div class="nav-inner">
-    <div class="nav-brand" onclick="showPage('home')">Mayank Gupta&nbsp;<em>/</em></div>
-    <div class="nav-links" id="nav-links">
-      <span class="nav-link active" data-page="home" onclick="showPage('home');closeNav()">Work</span>
-      <span class="nav-link" data-page="about" onclick="showPage('about');closeNav()">About</span>
-      <span class="nav-link" data-page="resume" onclick="showPage('resume');closeNav()">Resume</span>
-    </div>
-    <a class="nav-cta" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
-    <div class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </div>
+<!-- ══════════════════════
+     NAV
+══════════════════════ -->
+<nav>
+  <div class="nav-brand" onclick="showPage('home')">Mayank Gupta <em>/</em></div>
+  <div class="nav-links">
+    <span class="nav-link active" data-page="home" onclick="showPage('home')">Work</span>
+    <span class="nav-link" data-page="about" onclick="showPage('about')">About</span>
+    <span class="nav-link" data-page="writing" onclick="showPage('writing')">Writing</span>
+    <span class="nav-link" data-page="resume" onclick="showPage('resume')">Resume</span>
   </div>
+  <a href="mailto:mgupta17@pratt.edu" class="nav-cta">Get in touch ↗</a>
 </nav>
 
 
-<!-- ═══════════════════════════
+<!-- ══════════════════════
      HOME
-     ═══════════════════════════ -->
+══════════════════════ -->
 <div id="home" class="page active">
 
-  <section class="hero dark-band">
-    <div class="hero-inner">
-      <div class="hero-kicker"><span class="label">Portfolio · 2019–Present</span></div>
-      <h1>
-        A UX designer &amp; researcher working at the intersection of
-        <em>accessibility, systems &amp; people.</em>
-      </h1>
-      <div class="hero-meta">
-        <div class="hero-meta-col">
-          <div class="hmc-label label">Currently</div>
-          <div class="hmc-text">UX Designer at Magnite Inc. — shaping the future of DV+ and Streaming ad products as part of the Fantastic 4 design team.</div>
-        </div>
-        <div class="hero-meta-col">
-          <div class="hmc-label label">Previously</div>
-          <div class="hmc-text">Front-end developer turned UX designer. Graduated from Pratt Institute with a focus on interaction design and user research.</div>
-        </div>
-        <div class="hero-meta-col">
-          <div class="hmc-label label">This index</div>
-          <div class="hmc-text">Seven case studies — selected for the depth of the problem and rigour of the research, not just the polish of the output.</div>
-        </div>
+  <section class="hero">
+    <div class="hero-kicker label">Portfolio · 2020–Present</div>
+    <h1>
+      A senior UX designer &amp; researcher working at the intersection of
+      <em>research, systems &amp; people.</em>
+    </h1>
+    <div class="hero-meta">
+      <div class="hero-meta-col">
+        <div class="hmc-label label">Currently</div>
+        <div class="hmc-text">UX Designer at <a href="https://www.magnite.com/" style="color:var(--v);">Magnite</a> — shaping the DV+ &amp; Streaming platform used by top publishers and advertisers worldwide. Led design work that drove a 114% increase in Ad Spend.</div>
+      </div>
+      <div class="hero-meta-col">
+        <div class="hmc-label label">Previously</div>
+        <div class="hmc-text">Product Designer at FCB Health designing healthcare apps for 50k+ users. UX Designer &amp; Researcher at Rocket Software. MS in Information Experience Design from Pratt Institute (GPA: 3.93).</div>
+      </div>
+      <div class="hero-meta-col">
+        <div class="hmc-label label">This index</div>
+        <div class="hmc-text">Six featured case studies — spanning research, product design, data visualization, and interaction design. Selected for the quality of the problem.</div>
       </div>
     </div>
   </section>
 
-  <div class="wrap" style="padding-top:52px;">
-    <div class="sec-divider" style="border-top:none;padding-top:0;">
-      <span class="sd-title">Selected Work</span>
-      <span class="sd-count">— 07 projects</span>
-    </div>
+  <div class="sec-divider">
+    <span class="sd-title">Selected Work</span>
+    <span class="sd-count">— 06 case studies</span>
   </div>
 
-  <div class="work-cards" id="work-list">
-    <div class="work-card-grid">
-
-      <!-- Featured card — MET Eye Tracking Study -->
-      <a class="work-card featured" href="met-eye-tracking.html">
-        <div class="wc-image">
-          <img src="img/met-eye-tracking/portfolio-img.png" alt="The MET Eye Tracking Study" loading="lazy">
-        </div>
-        <div class="wc-body">
-          <div class="wc-tags">
-            <span class="chip v">UX Research</span>
-            <span class="chip">Eye Tracking</span>
-            <span class="chip">UX Design</span>
-          </div>
-          <div class="wc-num mono">01</div>
-          <div class="wc-title serif">The MET Eye Tracking Study</div>
-          <div class="wc-excerpt">Evaluative research on the Metropolitan Museum of Art's digital experience using eye-tracking technology and comparative analysis to surface navigational pain points.</div>
-          <div class="wc-footer">
-            <div class="wc-meta mono">Academic · UX Research &amp; Design · 2021</div>
-            <div class="wc-arr">→</div>
-          </div>
-        </div>
-      </a>
-
-      <!-- 2-col cards -->
-      <a class="work-card" href="design-jedi.html">
-        <div class="wc-image">
-          <img src="img/design-jedi/header-image.png" alt="Design Jedi" loading="lazy">
-        </div>
-        <div class="wc-body">
-          <div class="wc-tags">
-            <span class="chip v">UX Research</span>
-            <span class="chip">Journey Mapping</span>
-          </div>
-          <div class="wc-num mono">02</div>
-          <div class="wc-title serif">Design Jedi</div>
-          <div class="wc-excerpt">End-to-end UX research and design project combining user interviews, journey mapping, and comparative analysis to redesign a complex user flow.</div>
-          <div class="wc-footer">
-            <div class="wc-meta mono">UX Design · Visual Design · 2021</div>
-            <div class="wc-arr">→</div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card" href="pratt-news-analysis.html">
-        <div class="wc-image">
-          <img src="img/pratt-news/portfolio-img.png" alt="Pratt News Analysis" loading="lazy">
-        </div>
-        <div class="wc-body">
-          <div class="wc-tags">
-            <span class="chip v">User Research</span>
-            <span class="chip">UX Analysis</span>
-          </div>
-          <div class="wc-num mono">03</div>
-          <div class="wc-title serif">Pratt News Analysis</div>
-          <div class="wc-excerpt">Comprehensive UX analysis of Pratt Institute's news platform — identifying audience needs, content gaps, and information architecture improvements.</div>
-          <div class="wc-footer">
-            <div class="wc-meta mono">UX Research · IA · 2020</div>
-            <div class="wc-arr">→</div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card" href="covid-predicitve-analysis.html">
-        <div class="wc-image">
-          <img src="img/covid-data-vis/mockup-covid-vis.png" alt="COVID-19 Predictive Spatial Analysis" loading="lazy">
-        </div>
-        <div class="wc-body">
-          <div class="wc-tags">
-            <span class="chip v">Data Visualization</span>
-            <span class="chip">Dashboard</span>
-          </div>
-          <div class="wc-num mono">04</div>
-          <div class="wc-title serif">COVID-19 Predictive Spatial Analysis</div>
-          <div class="wc-excerpt">Interactive dashboard combining spatial analysis and predictive modelling to visualize COVID-19 spread patterns. Built with Carto and user-tested with public health researchers.</div>
-          <div class="wc-footer">
-            <div class="wc-meta mono">Data Vis · Spatial Analysis · 2020</div>
-            <div class="wc-arr">→</div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card" href="placemaking-week.html">
-        <div class="wc-image">
-          <img src="img/placemaking-week/mockup-1.png" alt="Placemaking Week" loading="lazy">
-        </div>
-        <div class="wc-body">
-          <div class="wc-tags">
-            <span class="chip v">Website Redesign</span>
-            <span class="chip">UX Design</span>
-          </div>
-          <div class="wc-num mono">05</div>
-          <div class="wc-title serif">Placemaking Week</div>
-          <div class="wc-excerpt">Full redesign of the Placemaking Week conference website — mobile-first approach with research, information architecture, and high-fidelity visual design.</div>
-          <div class="wc-footer">
-            <div class="wc-meta mono">Web · Visual Design · UX Research · 2020</div>
-            <div class="wc-arr">→</div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card" href="barnard-college-user-testing.html">
-        <div class="wc-image">
-          <img src="img/barnard-college/barnard-new-mockup.png" alt="Barnard Digital Collections" loading="lazy">
-        </div>
-        <div class="wc-body">
-          <div class="wc-tags">
-            <span class="chip v">User Research</span>
-            <span class="chip">IA</span>
-          </div>
-          <div class="wc-num mono">06</div>
-          <div class="wc-title serif">Barnard Digital Collections</div>
-          <div class="wc-excerpt">User testing and information architecture analysis of Barnard College's digital collections portal — surfacing friction for students and faculty researchers.</div>
-          <div class="wc-footer">
-            <div class="wc-meta mono">User Research · Visual Design · 2020</div>
-            <div class="wc-arr">→</div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card" href="skill-sharing-app.html">
-        <div class="wc-image">
-          <img src="img/skill-sharing-app/mockup-1.png" alt="Skill Sharing Application" loading="lazy">
-        </div>
-        <div class="wc-body">
-          <div class="wc-tags">
-            <span class="chip v">Mobile</span>
-            <span class="chip">UX Design</span>
-            <span class="chip">Zero-to-one</span>
-          </div>
-          <div class="wc-num mono">07</div>
-          <div class="wc-title serif">Skill Sharing Application</div>
-          <div class="wc-excerpt">Zero-to-one mobile and web design for a peer-to-peer skill sharing platform. Full research, visual design, and prototyping from brief to hi-fi.</div>
-          <div class="wc-footer">
-            <div class="wc-meta mono">Mobile &amp; Web · UX Design · 2019</div>
-            <div class="wc-arr">→</div>
-          </div>
-        </div>
-      </a>
-
-    </div>
+  <div id="work-list">
+    <a href="met-eye-tracking.html" class="work-row">
+      <div class="wr-num mono">01</div>
+      <div>
+        <div class="wr-title serif">MET Museum Eye Tracking Study</div>
+        <div class="wr-excerpt">Eye tracking research on the Metropolitan Museum's website navigation. Uncovered usability gaps through heatmaps, gaze paths, and user interviews.</div>
+      </div>
+      <div class="wr-meta mono">Pratt Institute · Research<br>Researcher · 4 weeks · 2021</div>
+      <div class="wr-arr">→</div>
+    </a>
+    <a href="design-jedi.html" class="work-row">
+      <div class="wr-num mono">02</div>
+      <div>
+        <div class="wr-title serif">Design Jedi — UX Job Board &amp; Interview Prep</div>
+        <div class="wr-excerpt">End-to-end product design for a job board and AI-driven interview prep tool built for UX designers. Capstone project spanning 15 weeks of research, wireframing, and hi-fi delivery.</div>
+      </div>
+      <div class="wr-meta mono">Pratt Institute · Product<br>Lead designer · 15 weeks · 2021</div>
+      <div class="wr-arr">→</div>
+    </a>
+    <a href="placemaking-week.html" class="work-row">
+      <div class="wr-num mono">03</div>
+      <div>
+        <div class="wr-title serif">Placemaking Week — Website Redesign</div>
+        <div class="wr-excerpt">Full information architecture overhaul and redesign for an urban placemaking nonprofit. 14 weeks of stakeholder interviews, card sorting, tree testing, and high-fidelity prototyping.</div>
+      </div>
+      <div class="wr-meta mono">Pratt Institute · Redesign<br>UX Designer · 14 weeks · 2021</div>
+      <div class="wr-arr">→</div>
+    </a>
+    <a href="skill-sharing-app.html" class="work-row">
+      <div class="wr-num mono">04</div>
+      <div>
+        <div class="wr-title serif">Peer Skill Sharing Mobile App</div>
+        <div class="wr-excerpt">Mobile-first app MVP enabling peer-to-peer skill exchange. Took the product from zero — user research, persona development, sketches, wireframes, and hi-fi prototypes.</div>
+      </div>
+      <div class="wr-meta mono">Pratt Institute · Mobile<br>UX Designer · 8 weeks · 2021</div>
+      <div class="wr-arr">→</div>
+    </a>
+    <a href="covid-predicitve-analysis.html" class="work-row">
+      <div class="wr-num mono">05</div>
+      <div>
+        <div class="wr-title serif">COVID-19 Spatial Data Dashboard</div>
+        <div class="wr-excerpt">Dynamic predictive analytics dashboard using Spatial Markov Chains to forecast COVID-19 trends. Three geo-spatial visualizations showing the impact of mask mandates on case trajectories.</div>
+      </div>
+      <div class="wr-meta mono">Pratt Institute · Data Viz<br>Solo project · 6 weeks · 2020</div>
+      <div class="wr-arr">→</div>
+    </a>
+    <a href="barnard-college-user-testing.html" class="work-row">
+      <div class="wr-num mono">06</div>
+      <div>
+        <div class="wr-title serif">Barnard Digital Collections — Usability Study</div>
+        <div class="wr-excerpt">Moderated and analyzed 10+ remote usability tests on the Barnard Digital Collection website. Delivered Figma mockups with actionable design improvements for accessibility and navigation.</div>
+      </div>
+      <div class="wr-meta mono">Pratt Institute · Research<br>UX Researcher · 7 weeks · 2020</div>
+      <div class="wr-arr">→</div>
+    </a>
   </div>
 
-  <!-- Methodology -->
-  <div class="wrap" style="margin-top:0;">
-    <div class="sec-divider" style="border-top:1px solid var(--line);">
-      <span class="sd-title">How I Work</span>
-      <span class="sd-count">— Methodology</span>
-    </div>
+  <div class="sec-divider" style="margin-top:0;">
+    <span class="sd-title">How I Work</span>
+    <span class="sd-count">— Methodology</span>
   </div>
   <section class="method">
-    <div class="method-inner">
-      <div class="method-intro">Every project follows the same four-phase loop — expanding outward to explore, then narrowing to act.</div>
-      <div class="method-grid">
-        <div class="mcol">
-          <div class="mcol-num serif">01</div>
-          <div class="mcol-name serif">Discover</div>
-          <div class="mcol-desc">I start by listening — to users, stakeholders, and data — before forming any opinions about the solution.</div>
-          <div class="mcol-tags">
-            <span class="mcol-tag">User interviews</span>
-            <span class="mcol-tag">Stakeholder sessions</span>
-            <span class="mcol-tag">Competitive audit</span>
-            <span class="mcol-tag">Analytics review</span>
-          </div>
+    <div class="method-intro">Every project follows the same four-phase loop — expanding outward to explore the problem space, then narrowing to deliver with intention.</div>
+    <div class="method-grid">
+      <div class="mcol">
+        <div class="mcol-num serif">01</div>
+        <div class="mcol-name serif">Discover</div>
+        <div class="mcol-desc">I start by listening — to users, stakeholders, and data — before forming any opinions about the solution.</div>
+        <div class="mcol-tags">
+          <div class="mcol-tag mono">User interviews</div>
+          <div class="mcol-tag mono">Stakeholder sessions</div>
+          <div class="mcol-tag mono">Competitive audit</div>
+          <div class="mcol-tag mono">Usage analytics</div>
         </div>
-        <div class="mcol">
-          <div class="mcol-num serif">02</div>
-          <div class="mcol-name serif">Define</div>
-          <div class="mcol-desc">I synthesize findings into a clear problem statement — so the team agrees on <em>what</em> we're solving before <em>how</em>.</div>
-          <div class="mcol-tags">
-            <span class="mcol-tag">Synthesis + themes</span>
-            <span class="mcol-tag">Personas + JTBD</span>
-            <span class="mcol-tag">Problem statement</span>
-            <span class="mcol-tag">Success metrics</span>
-          </div>
+      </div>
+      <div class="mcol active">
+        <div class="mcol-num serif">02</div>
+        <div class="mcol-name serif">Define</div>
+        <div class="mcol-desc">I synthesize findings into a clear problem statement — so the team agrees on <em>what</em> we're solving before <em>how</em>.</div>
+        <div class="mcol-tags">
+          <div class="mcol-tag mono">Synthesis + themes</div>
+          <div class="mcol-tag mono">Personas + JTBD</div>
+          <div class="mcol-tag mono">Problem statement</div>
+          <div class="mcol-tag mono">Success metrics</div>
         </div>
-        <div class="mcol">
-          <div class="mcol-num serif">03</div>
-          <div class="mcol-name serif">Design</div>
-          <div class="mcol-desc">I explore many directions quickly, test with real users, and iterate until the evidence supports a direction.</div>
-          <div class="mcol-tags">
-            <span class="mcol-tag">Lo-fi sketches</span>
-            <span class="mcol-tag">Prototyping</span>
-            <span class="mcol-tag">Usability testing</span>
-            <span class="mcol-tag">Hi-fi iteration</span>
-          </div>
+      </div>
+      <div class="mcol">
+        <div class="mcol-num serif">03</div>
+        <div class="mcol-name serif">Design</div>
+        <div class="mcol-desc">I explore many directions quickly, then test with real users and iterate until evidence supports a direction.</div>
+        <div class="mcol-tags">
+          <div class="mcol-tag mono">Lo-fi sketches</div>
+          <div class="mcol-tag mono">Prototyping</div>
+          <div class="mcol-tag mono">Usability testing</div>
+          <div class="mcol-tag mono">Hi-fi iteration</div>
         </div>
-        <div class="mcol">
-          <div class="mcol-num serif">04</div>
-          <div class="mcol-name serif">Deliver</div>
-          <div class="mcol-desc">I hand off with full specs, stay close through build, and measure outcomes to inform the next cycle.</div>
-          <div class="mcol-tags">
-            <span class="mcol-tag">Eng handoff + spec</span>
-            <span class="mcol-tag">QA + polish</span>
-            <span class="mcol-tag">Launch + rollout</span>
-            <span class="mcol-tag">Metrics review ↺</span>
-          </div>
+      </div>
+      <div class="mcol">
+        <div class="mcol-num serif">04</div>
+        <div class="mcol-name serif">Deliver</div>
+        <div class="mcol-desc">I hand off with full specs, stay close through build, and measure outcomes to inform the next cycle.</div>
+        <div class="mcol-tags">
+          <div class="mcol-tag mono">Eng handoff + spec</div>
+          <div class="mcol-tag mono">QA + polish</div>
+          <div class="mcol-tag mono">Launch + rollout</div>
+          <div class="mcol-tag mono">Metrics review ↺</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="testi-section">
-    <div class="testi-section-inner">
-      <div class="testi-section-label">From colleagues</div>
-      <div style="max-width:720px;">
-        <div class="testi">
-          <div class="testi-q serif">He contributed to UI design trade-off analysis discussions and had many great UX design ideas. Combined with his knowledge of UCD and experience as a UI developer, he quickly became a valuable member of my team.</div>
-          <div class="testi-who mono" style="margin-top:20px;">Dan Castle &nbsp;·&nbsp; Lead UX Engineer &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/thehumanfactor/" target="_blank" rel="noopener" style="color:var(--dark-ink3);text-decoration:underline;text-underline-offset:3px;">LinkedIn ↗</a></div>
-        </div>
+  <div class="sec-divider">
+    <span class="sd-title">Skills &amp; Tools</span>
+    <span class="sd-count">— Competencies</span>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-title serif">UX Research</div>
+      <div class="skill-tags">
+        <span class="chip">User Interviews</span>
+        <span class="chip">Usability Testing</span>
+        <span class="chip">Eye Tracking</span>
+        <span class="chip">Heatmaps</span>
+        <span class="chip">Card Sorting</span>
+        <span class="chip">Tree Testing</span>
+        <span class="chip">Surveys</span>
+        <span class="chip">Journey Mapping</span>
+        <span class="chip">Personas</span>
+        <span class="chip">A/B Testing</span>
       </div>
     </div>
-  </section>
+    <div class="skill-card">
+      <div class="skill-card-title serif">Interaction Design</div>
+      <div class="skill-tags">
+        <span class="chip">Information Architecture</span>
+        <span class="chip">Wireframing</span>
+        <span class="chip">Prototyping</span>
+        <span class="chip">Interaction Design</span>
+        <span class="chip">Responsive Design</span>
+        <span class="chip">Accessibility</span>
+        <span class="chip">Design Systems</span>
+        <span class="chip">Visual Design</span>
+        <span class="chip">Mobile Design</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title serif">Tools</div>
+      <div class="skill-tags">
+        <span class="chip">Figma</span>
+        <span class="chip">Adobe XD</span>
+        <span class="chip">Axure RP</span>
+        <span class="chip">Sketch</span>
+        <span class="chip">InVision</span>
+        <span class="chip">Miro</span>
+        <span class="chip">Adobe Illustrator</span>
+        <span class="chip">Photoshop</span>
+        <span class="chip">HTML / CSS</span>
+        <span class="chip">Hotjar</span>
+        <span class="chip">Tobii Pro</span>
+      </div>
+    </div>
+  </div>
 
   <section class="contact">
-    <div class="contact-inner">
-      <h2 class="serif">Open to senior IC and design lead roles. <em>Say hello.</em></h2>
-      <div class="contact-links">
-        <div class="cl-item"><div class="cl-label label">Email</div><div class="cl-val"><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div></div>
-        <div class="cl-item"><div class="cl-label label">Elsewhere</div><div class="cl-val" style="color:var(--ink2);font-size:13px;"><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener" style="color:var(--v);">LinkedIn</a></div></div>
-        <div style="margin-top:8px;display:flex;gap:12px;flex-wrap:wrap;">
-          <a class="btn-v" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
-          <a class="btn-outline" href="resume_mayank_gupta.pdf" target="_blank">↓ Download resume</a>
-        </div>
+    <div>
+      <h2 class="serif">Open to new opportunities. <em>Say hello.</em></h2>
+    </div>
+    <div class="contact-links">
+      <div class="cl-item"><div class="cl-label label">Email</div><div class="cl-val"><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div></div>
+      <div class="cl-item"><div class="cl-label label">LinkedIn</div><div class="cl-val"><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">linkedin.com/in/mayankguptadesigns</a></div></div>
+      <div class="cl-item"><div class="cl-label label">Elsewhere</div><div class="cl-val" style="color:var(--ink2);font-size:13px;">Behance · Instagram @viomclicks · Dribbble</div></div>
+      <div style="margin-top:8px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="mailto:mgupta17@pratt.edu" class="btn-v">Get in touch ↗</a>
+        <a href="Mayank_Gupta_Resume.pdf" target="_blank" class="btn-outline">↓ Download resume</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="footer-inner">
-      <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine mono">Designed &amp; built from scratch<br>Last updated 2025</div></div>
-      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('resume')">Resume</a></div>
-      <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-      <div><h5>Colophon</h5><a href="https://fonts.google.com/specimen/Cormorant+Garamond" target="_blank" rel="noopener">Cormorant Garamond</a><a href="https://fonts.google.com/specimen/DM+Sans" target="_blank" rel="noopener">DM Sans</a></div>
+    <div>
+      <div class="f-sig serif">Mayank Gupta</div>
+      <div class="f-fine mono">UX Designer &amp; Researcher<br>Mountain View, CA · mayankguptadesigns.com</div>
+    </div>
+    <div>
+      <h5>Index</h5>
+      <span class="f-link" onclick="showPage('home')">Work</span>
+      <span class="f-link" onclick="showPage('about')">About</span>
+      <span class="f-link" onclick="showPage('writing')">Writing</span>
+      <span class="f-link" onclick="showPage('resume')">Resume</span>
+    </div>
+    <div>
+      <h5>Elsewhere</h5>
+      <a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.behance.net/mayankvgupb3c4" target="_blank" rel="noopener">Behance</a>
+      <a href="https://www.instagram.com/viomclicks/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://dribbble.com/VI_OM" target="_blank" rel="noopener">Dribbble</a>
+    </div>
+    <div>
+      <h5>Work</h5>
+      <a href="met-eye-tracking.html">MET Eye Tracking</a>
+      <a href="design-jedi.html">Design Jedi</a>
+      <a href="placemaking-week.html">Placemaking Week</a>
+      <a href="skill-sharing-app.html">Skill Sharing App</a>
+      <a href="covid-predicitve-analysis.html">COVID Dashboard</a>
+      <a href="barnard-college-user-testing.html">Barnard Collections</a>
     </div>
   </footer>
-</div>
+
+</div><!-- /home -->
 
 
-<!-- ═══════════════════════════
+<!-- ══════════════════════
      ABOUT
-     ═══════════════════════════ -->
+══════════════════════ -->
 <div id="about" class="page">
-  <section class="about-hero dark-band">
-    <div class="about-hero-inner">
-      <div>
-        <div class="label" style="margin-bottom:14px;color:var(--dark-ink3);">About</div>
-        <h1 class="serif">I work best at the intersection of research, systems, and storytelling.</h1>
-        <p>Hi, I'm Mayank — a UX Designer with 6+ years of experience, rooted in front-end development and sharpened by a genuine curiosity for how people interact with complex systems. I specialize in translating user research — both qualitative and quantitative — into design decisions that scale across products and teams.</p>
-        <p>My development background means I design with implementation in mind, and my growing fluency with AI tools means I'm increasingly able to prototype, test, and iterate faster than a traditional design workflow allows. I bring that same rigor to accessibility — believing that good design works for everyone, not just the median user.</p>
-        <p>I'm currently seeking full-time product design roles where I can contribute across the full design lifecycle, from discovery through delivery.</p>
-        <div class="label" style="margin-top:28px;margin-bottom:10px;color:var(--dark-ink3);">Outside work</div>
-        <p>After work, you can find me in the kitchen experimenting with new recipes or on the couch playing open world video games. There is no in between!</p>
-        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
-          <a class="btn-v" href="resume_mayank_gupta.pdf" target="_blank">View resume ↗</a>
-          <a class="btn-outline" href="mailto:mgupta17@pratt.edu" style="border-color:rgba(255,255,255,0.15);color:var(--dark-ink2);">mgupta17@pratt.edu</a>
-        </div>
+
+  <section class="about-hero">
+    <div>
+      <div class="label" style="margin-bottom:14px;">About</div>
+      <h1 class="serif">I work best on things that feel too complicated to design.</h1>
+      <p>Hi, I'm Mayank — a Senior UX Designer &amp; Researcher based in Mountain View, CA. I started as a front-end developer and made the leap into UX when I realized that the most important problems weren't engineering problems — they were human ones.</p>
+      <p>I hold an MS in Information Experience Design from Pratt Institute (GPA: 3.93), where I specialized in user research, accessibility, and information architecture. I believe that everyone should have the same experience while using digital products.</p>
+      <p>Currently at <a href="https://www.magnite.com/" style="color:var(--v);">Magnite</a>, shaping the DV+ and Streaming advertising platform. My biggest contribution: the DV+ Marketplaces project, where I led design that drove a 114% increase in Ad Spend through accessible, user-centered design and continuous iteration.</p>
+      <div class="label" style="margin-top:28px;margin-bottom:10px;">Outside work</div>
+      <p>You'll find me experimenting with new recipes in the kitchen, playing open-world video games, or taking photographs. There's no in-between.</p>
+      <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+        <button class="btn-v" onclick="showPage('resume')">View resume ↗</button>
+        <a href="mailto:mgupta17@pratt.edu" class="btn-outline">mgupta17@pratt.edu</a>
       </div>
-      <div class="about-portrait">
-        <img src="img/about-me.jpg" alt="Mayank Gupta">
-      </div>
+    </div>
+    <div class="about-portrait">
+      <img src="img/about-me.jpg" alt="Mayank Gupta">
     </div>
   </section>
 
-  <!-- Skills -->
-  <div class="about-skills">
-    <div class="about-skills-inner" style="padding-top:52px;padding-bottom:52px;border-bottom:1px solid var(--line);">
-      <div class="label" style="margin-bottom:24px;">Skills &amp; Craft</div>
-      <div class="skills-block">
-        <div class="skill-cat">
-          <div class="skill-cat-label">Research &amp; Strategy</div>
-          <div class="pill-group">
-            <span class="pill">User Interviews</span>
-            <span class="pill">Usability Testing</span>
-            <span class="pill">Eye Tracking</span>
-            <span class="pill">Card Sorting</span>
-            <span class="pill">Competitive Audit</span>
-            <span class="pill">JTBD Frameworks</span>
-            <span class="pill">Usage Analytics</span>
-            <span class="pill">A/B Testing</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-label">Design &amp; Systems</div>
-          <div class="pill-group">
-            <span class="pill">Interaction Design</span>
-            <span class="pill">Design Systems</span>
-            <span class="pill">IA + Navigation</span>
-            <span class="pill">Prototyping</span>
-            <span class="pill">Zero-to-One</span>
-            <span class="pill">Responsive Design</span>
-            <span class="pill">Data Visualization</span>
-            <span class="pill">Accessibility</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-label">AI &amp; Automation</div>
-          <div class="pill-group">
-            <span class="pill">Claude Code</span>
-            <span class="pill">Figma Make</span>
-            <span class="pill">Lovable</span>
-            <span class="pill">Builder.io</span>
-            <span class="pill">Cursor</span>
-            <span class="pill">MCP</span>
-            <span class="pill">Pendo</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-label">Tools</div>
-          <div class="pill-group">
-            <span class="pill">Figma</span>
-            <span class="pill">Adobe Illustrator</span>
-            <span class="pill">Adobe Photoshop</span>
-            <span class="pill">Procreate</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-label">Collaboration</div>
-          <div class="pill-group">
-            <span class="pill">Miro</span>
-            <span class="pill">FigJam</span>
-            <span class="pill">Mural</span>
-            <span class="pill">Jira</span>
-            <span class="pill">Confluence</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-label">Methods</div>
-          <div class="pill-group">
-            <span class="pill">Agile</span>
-            <span class="pill">Cross-functional Collaboration</span>
-            <span class="pill">Stakeholder Alignment</span>
-            <span class="pill">QA Review</span>
-            <span class="pill">Design System Governance</span>
-            <span class="pill">Journey Mapping</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap"><div class="sec-divider"><span class="sd-title">Career</span><span class="sd-count">— 6+ years</span></div></div>
+  <div class="sec-divider"><span class="sd-title">Career</span><span class="sd-count">— Experience &amp; Education</span></div>
   <div class="timeline">
-    <div class="timeline-inner">
     <div class="tl-col">
       <div class="tl-item active">
-        <div class="tl-year mono">2022 — now</div>
-        <div class="tl-role serif">UX Designer → UX Designer II · Magnite Inc.</div>
-        <div class="tl-desc">Part of a four-person design team shaping DV+ and Streaming ad products. Promoted to UX Designer II in January 2026. Biggest contribution: the DV+ Marketplaces project.</div>
+        <div class="tl-year mono">June 2022 — Present</div>
+        <div class="tl-role serif">User Experience Designer · Magnite</div>
+        <div class="tl-desc">Led UX for DV+ Marketplace — 114% increase in Ad Spend. Designed Marketplace Admin tool, Demand Manager Wrapper Automation (4% revenue increase), and contributed to the design system (20% dev time reduction).</div>
       </div>
-      <div class="tl-item">
-        <div class="tl-year mono">2021 – 22</div>
+      <div class="tl-item active">
+        <div class="tl-year mono">Feb 2021 — Mar 2022</div>
         <div class="tl-role serif">Product Designer I · FCB Health</div>
-        <div class="tl-desc">Designed accessible desktop and mobile experiences for healthcare applications used by 50,000+ users.</div>
+        <div class="tl-desc">Refined design for healthcare apps, websites, and interactive visual aids. Cross-functional collaboration with UX Architects, Copywriters, and Developers. Designs now used by 50k+ users across healthcare platforms.</div>
+      </div>
+      <div class="tl-item active">
+        <div class="tl-year mono">Jun 2021 — Dec 2021</div>
+        <div class="tl-role serif">UX Designer &amp; Researcher · Rocket Software</div>
+        <div class="tl-desc">Led design of the MultiValue Performance Experience Dashboard with 20+ engineers and PMs. Conducted "Lunch and Learn" sessions for 50+ team members. Scalable, accessible designs for 8000+ users.</div>
+      </div>
+    </div>
+    <div class="tl-col">
+      <div class="tl-item active">
+        <div class="tl-year mono">Jan 2020 — Dec 2021</div>
+        <div class="tl-role serif">MS · Information Experience Design — Pratt Institute</div>
+        <div class="tl-desc">GPA: 3.93. Manhattan, NY. Specialized in user research, accessibility, and information architecture. Capstone and project work spans this portfolio.</div>
       </div>
       <div class="tl-item">
-        <div class="tl-year mono">2020</div>
-        <div class="tl-role serif">UX Designer & Researcher · Rocket Software</div>
-        <div class="tl-desc">Led design of the MultiValue Performance Experience Dashboard for 8,000+ users, collaborating with 20+ engineers and PMs.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year mono">2019 – 21</div>
-        <div class="tl-role serif">MS Interaction Design · Pratt Institute</div>
-        <div class="tl-desc">Graduate studies in interaction design and user research. Built a strong foundation in both qualitative and quantitative research methods.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year mono">Before Pratt</div>
-        <div class="tl-role serif">Front-end Developer</div>
-        <div class="tl-desc">Transitioned from engineering into UX to focus on the human side of the systems I was building.</div>
+        <div class="tl-year mono">Aug 2015 — Jul 2019</div>
+        <div class="tl-role serif">BTech · Information Technology — GGSIP University</div>
+        <div class="tl-desc">GPA: 3.1. Delhi, India. Background in software development — the foundation for a design practice that understands how things get built.</div>
       </div>
       <div class="tl-item">
         <div class="tl-year mono">Ongoing</div>
         <div class="tl-role serif">Accessibility Advocate</div>
-        <div class="tl-desc">Strong believer that everyone deserves the same digital experience. Accessibility informs every project, from research framing to component decisions.</div>
+        <div class="tl-desc">Strongly believes everyone should have equal access to digital products. Incorporates accessibility standards into every design deliverable.</div>
       </div>
-    </div>
     </div>
   </div>
 
+  <div class="sec-divider"><span class="sd-title">How I Work</span><span class="sd-count">— 3 principles</span></div>
   <div class="principles">
-    <div class="principles-inner">
-      <div class="prin">
-        <div class="prin-num serif">01.</div>
-        <div class="prin-title serif">Research before pixels.</div>
-        <div class="prin-desc">The best design decisions come from understanding people first. I spend as much time on research as I do on design — often more.</div>
-      </div>
-      <div class="prin">
-        <div class="prin-num serif">02.</div>
-        <div class="prin-title serif">Accessibility is not a checkbox.</div>
-        <div class="prin-desc">Inclusive design improves the experience for everyone. I advocate for it at every stage — from IA through to handoff and QA.</div>
-      </div>
-      <div class="prin">
-        <div class="prin-num serif">03.</div>
-        <div class="prin-title serif">Ship the smallest useful thing.</div>
-        <div class="prin-desc">The first version is a vote on the next three. Getting real feedback from real users beats perfecting the prototype.</div>
-      </div>
+    <div class="prin">
+      <div class="prin-num serif">01.</div>
+      <div class="prin-title serif">Research before pixels.</div>
+      <div class="prin-desc">I don't open Figma until I understand the problem. User interviews, analytics, and competitive audits come first — the design follows from evidence, not intuition.</div>
+    </div>
+    <div class="prin">
+      <div class="prin-num serif">02.</div>
+      <div class="prin-title serif">Design for everyone.</div>
+      <div class="prin-desc">Accessibility is not a feature you add at the end — it's a design constraint that makes products better for all users. I build it in from the first sketch.</div>
+    </div>
+    <div class="prin">
+      <div class="prin-num serif">03.</div>
+      <div class="prin-title serif">Stay close through build.</div>
+      <div class="prin-desc">A great handoff isn't a wall. I stay in close contact with engineering through implementation, QA, and launch — because the gap between spec and shipped is where details disappear.</div>
     </div>
   </div>
 
   <footer>
-    <div class="footer-inner">
-      <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine mono">Answers all email within 48hrs on weekdays.</div></div>
-      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('resume')">Resume</a></div>
-      <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-      <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
-    </div>
+    <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine mono">Answers email within 48 hrs on weekdays.</div></div>
+    <div><h5>Index</h5><span class="f-link" onclick="showPage('home')">Work</span><span class="f-link" onclick="showPage('about')">About</span><span class="f-link" onclick="showPage('writing')">Writing</span><span class="f-link" onclick="showPage('resume')">Resume</span></div>
+    <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.behance.net/mayankvgupb3c4" target="_blank" rel="noopener">Behance</a><a href="https://www.instagram.com/viomclicks/" target="_blank" rel="noopener">Instagram</a></div>
+    <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn message</a></div>
   </footer>
-</div>
+
+</div><!-- /about -->
 
 
-<!-- ═══════════════════════════
+<!-- ══════════════════════
      WRITING
-     ═══════════════════════════ -->
+══════════════════════ -->
 <div id="writing" class="page">
-  <div class="writing-hero dark-band">
-    <div class="writing-hero-inner">
-      <div class="label" style="color:var(--dark-ink3);">Writing</div>
-      <h1 class="serif">Notes on design, research, and building things for people.</h1>
-      <p>Occasional essays and reflections on UX practice. More coming soon.</p>
-      <div style="display:flex;gap:8px;margin-top:20px;flex-wrap:wrap;">
-        <span class="chip v">All · 3</span>
-        <span class="chip">Essays · 2</span>
-        <span class="chip">Notes · 1</span>
-      </div>
+  <div class="writing-hero">
+    <div class="label">Writing</div>
+    <h1 class="serif">Thoughts on UX, research, and building things people actually use.</h1>
+    <p>Essays and notes on design practice. Coming soon.</p>
+  </div>
+  <div class="writing-empty">
+    <h2 class="serif">Working on it.</h2>
+    <p>I'm compiling essays on user research, accessibility, and UX leadership.<br>Check back soon — or reach out if there's a topic you'd like me to write about.</p>
+    <div style="margin-top:32px;">
+      <a href="mailto:mgupta17@pratt.edu" class="btn-v">Suggest a topic ↗</a>
     </div>
   </div>
-
-  <div class="post-row">
-    <div class="post-row-inner">
-      <div class="post-date mono">2021 · Essay<br>8 min read</div>
-      <div>
-        <div class="post-title serif">What the workarounds tell you.</div>
-        <div class="post-excerpt">On how the unofficial tools users build to work around your product are the most honest design research you can do — and why you should look for them before you start sketching.</div>
-      </div>
-      <div class="post-read mono">Coming soon</div>
-    </div>
-  </div>
-  <div class="post-row">
-    <div class="post-row-inner">
-      <div class="post-date mono">2020 · Essay<br>6 min read</div>
-      <div>
-        <div class="post-title serif">Accessibility as design constraint, not design tax.</div>
-        <div class="post-excerpt">The counterintuitive case that accessibility requirements sharpen your design thinking rather than limiting it — and how inclusive design has improved three of my projects.</div>
-      </div>
-      <div class="post-read mono">Coming soon</div>
-    </div>
-  </div>
-  <div class="post-row">
-    <div class="post-row-inner">
-      <div class="post-date mono">2020 · Note<br>3 min read</div>
-      <div>
-        <div class="post-title serif">Eye tracking taught me to look at data differently.</div>
-        <div class="post-excerpt">A short reflection on what surprised me in the MET study — and how heat maps changed the way I think about where users actually look versus where we assume they look.</div>
-      </div>
-      <div class="post-read mono">Coming soon</div>
-    </div>
-  </div>
-
   <footer>
-    <div class="footer-inner">
-      <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine mono">UX Designer &amp; Researcher</div></div>
-      <div><h5>Index</h5><a onclick="showPage('home')">Work</a><a onclick="showPage('about')">About</a><a onclick="showPage('resume')">Resume</a></div>
-      <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-      <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
-    </div>
+    <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine mono">Writing coming soon.</div></div>
+    <div><h5>Index</h5><span class="f-link" onclick="showPage('home')">Work</span><span class="f-link" onclick="showPage('about')">About</span><span class="f-link" onclick="showPage('writing')">Writing</span><span class="f-link" onclick="showPage('resume')">Resume</span></div>
+    <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.behance.net/mayankvgupb3c4" target="_blank" rel="noopener">Behance</a></div>
+    <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
   </footer>
-</div>
+</div><!-- /writing -->
 
 
-<!-- ═══════════════════════════
+<!-- ══════════════════════
      RESUME
-     ═══════════════════════════ -->
+══════════════════════ -->
 <div id="resume" class="page">
-  <div class="resume-page">
-  <div class="resume-inner">
+  <div class="resume-wrap">
     <h1 class="serif">Mayank Gupta</h1>
-    <div class="r-sub mono">UX Designer II · Mountain View, CA · mgupta17@pratt.edu · mayankguptadesigns.com</div>
+    <div class="r-sub mono">Senior UX Designer &amp; Researcher · Mountain View, CA · mgupta17@pratt.edu</div>
+
+    <div class="r-section">
+      <h3>Summary</h3>
+      <p style="font-size:14px;line-height:1.75;color:var(--ink2);">User-Centric Senior Experience Designer with expertise in creating intuitive, sustainable, and engaging interfaces. Specialized in Information Experience Design with a Master's from Pratt Institute (GPA: 3.93). Passionate about solving complex design challenges through design thinking, user research, and iterative testing. Skilled leader and collaborator, aligning business goals with user needs to deliver innovative solutions and measurable outcomes.</p>
+    </div>
 
     <div class="r-section">
       <h3>Experience</h3>
-
       <div class="r-exp">
-        <div class="r-yr mono">2026 — now</div>
+        <div class="r-yr mono">June 2022<br>— Present</div>
         <div>
-          <div class="r-role serif">UX Designer II</div>
+          <div class="r-role serif">User Experience Designer</div>
           <div class="r-co">Magnite · Mountain View, CA</div>
           <ul class="r-bullets">
-            <li>Led AI tool adoption for the UX team — evaluated Lovable, Builder.io, Figma Make, and Claude Code; standardized on Figma Make and Claude Code with Figma MCP, securing expedited security approval within one week.</li>
-            <li>Built custom Claude skills to eliminate repetitive design tasks, including a bulk Figma edit skill and a PRD-to-ideation skill that generates design concepts directly in Figma using the in-house component library.</li>
-            <li>Deployed a Claude skill enabling ~60 PMs across DV+ and Streaming to make UI updates independently using the design library, eliminating a chronic backlog of deprioritized design tickets.</li>
-            <li>Created an automated pipeline converting raw bug report emails into structured Jira tickets routed to the correct engineering team, saving 2–3 hours of manual triage per release cycle.</li>
-            <li>Partners with 10 PMs and 50 engineers across two products, owning 5–10 features at any given time as one of four designers covering Magnite's full product portfolio.</li>
+            <li>Led UX design for DV+ Marketplace Deal Management — 114% increase in Ad Spend through accessible, user-centered design and continuous iteration.</li>
+            <li>Designed internal Marketplace Admin UI tool, reducing dependency on engineering resources and ensuring backward compatibility.</li>
+            <li>Led design of the Demand Manager Wrapper Automation tool — 4% revenue increase.</li>
+            <li>Delivered scalable design solutions for the Spring Serve and Streaming unification project ("One Magnite" vision).</li>
+            <li>Contributed to the creation of a scalable design system, reducing development time by 20% across all products.</li>
+            <li>Conducted rigorous pre-launch QA testing to maintain high UX standards.</li>
           </ul>
         </div>
       </div>
-
       <div class="r-exp">
-        <div class="r-yr mono">2022 – 25</div>
-        <div>
-          <div class="r-role serif">UX Designer</div>
-          <div class="r-co">Magnite · Mountain View, CA</div>
-          <ul class="r-bullets">
-            <li>Drove a 114% increase in ad spend by leading end-to-end UX for DV+ Marketplace Deal Management — a net-new UI for curated marketplace creation, editing, and listing across 5 phases and 3 iteration cycles.</li>
-            <li>Designed the Demand Manager Wrapper Automation tool, resulting in a 4% revenue increase; led UX for a Blocklist Management app giving DV+ publishers granular control over advertiser, DSP, and content inclusions/exclusions.</li>
-            <li>Designed the Political Preview tool to unblock political ad revenue during the 2024 US election cycle, and the Live Events ad serving experience for Magnite Streaming (Olympics, cricket, boxing).</li>
-            <li>Co-owned Magnite's design system — built half of all custom Figma components and contributed directly to Storybook component code using AI-assisted development, reducing dev time by 20%.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="r-exp">
-        <div class="r-yr mono">2021 – 22</div>
+        <div class="r-yr mono">Feb 2021<br>— Mar 2022</div>
         <div>
           <div class="r-role serif">Product Designer I</div>
           <div class="r-co">FCB Health · New York, NY</div>
           <ul class="r-bullets">
-            <li>Crafted accessible, user-centric designs for desktop and mobile platforms, currently used by 50,000+ users across healthcare applications.</li>
-            <li>Partnered with UX Architects, Copywriters, and Developers to ensure solutions met business goals and stringent health industry regulations.</li>
+            <li>Refined design for healthcare apps, websites, and interactive visual aids for diverse healthcare users.</li>
+            <li>Partnered with UX Architects, Copywriters, Developers, and stakeholders to meet business goals and health industry regulations.</li>
+            <li>Crafted accessible, user-centric designs for desktop and mobile platforms — currently used by 50k+ users.</li>
           </ul>
         </div>
       </div>
-
       <div class="r-exp">
-        <div class="r-yr mono">2020</div>
+        <div class="r-yr mono">Jun 2021<br>— Dec 2021</div>
         <div>
           <div class="r-role serif">UX Designer &amp; Researcher</div>
           <div class="r-co">Rocket Software · Waltham, MA</div>
           <ul class="r-bullets">
-            <li>Led design of the MultiValue Performance Experience Dashboard for 8,000+ users, collaborating with 20+ engineers and PMs in an Agile environment.</li>
+            <li>Led the design of the MultiValue Performance Experience Dashboard, collaborating with 20+ engineers and PMs in an Agile environment.</li>
+            <li>Led 3 "Lunch and Learn" sessions for 50+ team members, including executives, to foster a user-centric culture.</li>
+            <li>Created scalable, accessible, and user-friendly designs for 8000+ users, improving both UX and efficiency.</li>
           </ul>
         </div>
       </div>
@@ -893,79 +678,98 @@ footer a:hover{color:var(--v);}
     <div class="r-section">
       <h3>Education</h3>
       <div class="r-exp">
-        <div class="r-yr mono">2020 – 21</div>
+        <div class="r-yr mono">Jan 2020<br>— Dec 2021</div>
         <div>
-          <div class="r-role serif">MS Information Experience Design · GPA 3.93</div>
-          <div class="r-co">Pratt Institute · Manhattan, NY</div>
+          <div class="r-role serif">MS · Information Experience Design</div>
+          <div class="r-co">Pratt Institute · Manhattan, NY · GPA: 3.93</div>
         </div>
       </div>
       <div class="r-exp">
-        <div class="r-yr mono">2015 – 19</div>
+        <div class="r-yr mono">Aug 2015<br>— Jul 2019</div>
         <div>
-          <div class="r-role serif">B.Tech Information Technology · GPA 3.1</div>
-          <div class="r-co">GGSIP University · Delhi, India</div>
+          <div class="r-role serif">BTech · Information Technology</div>
+          <div class="r-co">GGSIP University · Delhi, India · GPA: 3.1</div>
         </div>
       </div>
     </div>
 
     <div class="r-section">
-      <h3>Skills</h3>
+      <h3>Core Skills</h3>
       <div class="r-skills">
-        <span class="r-skill">Product Design</span>
-        <span class="r-skill">Design Systems</span>
-        <span class="r-skill">Interaction Design</span>
-        <span class="r-skill">Usability Testing</span>
-        <span class="r-skill">Accessibility</span>
-        <span class="r-skill">Prototyping</span>
-        <span class="r-skill">A/B Testing</span>
-        <span class="r-skill">Figma</span>
-        <span class="r-skill">Claude Code</span>
-        <span class="r-skill">Figma Make</span>
-        <span class="r-skill">MCP</span>
-        <span class="r-skill">Programmatic Ad Tech</span>
-        <span class="r-skill">B2B SaaS</span>
-        <span class="r-skill">Agile</span>
+        <span class="r-skill mono">UX Design Leadership</span>
+        <span class="r-skill mono">User Research</span>
+        <span class="r-skill mono">Usability Testing</span>
+        <span class="r-skill mono">Information Architecture</span>
+        <span class="r-skill mono">Interaction Design</span>
+        <span class="r-skill mono">Design Systems</span>
+        <span class="r-skill mono">Prototyping</span>
+        <span class="r-skill mono">Accessibility Design</span>
+        <span class="r-skill mono">Mobile Design</span>
+        <span class="r-skill mono">A/B Testing</span>
+        <span class="r-skill mono">Agile / Scrum</span>
+        <span class="r-skill mono">Cross-Functional Collaboration</span>
+        <span class="r-skill mono">Visual Design</span>
+        <span class="r-skill mono">Responsive Design</span>
+      </div>
+    </div>
+
+    <div class="r-section">
+      <h3>Tools</h3>
+      <div class="r-skills">
+        <span class="r-skill mono">Figma</span>
+        <span class="r-skill mono">Adobe XD</span>
+        <span class="r-skill mono">Axure RP</span>
+        <span class="r-skill mono">Sketch</span>
+        <span class="r-skill mono">InVision</span>
+        <span class="r-skill mono">Balsamiq</span>
+        <span class="r-skill mono">Miro</span>
+        <span class="r-skill mono">Mural</span>
+        <span class="r-skill mono">FigJam</span>
+        <span class="r-skill mono">Adobe Illustrator</span>
+        <span class="r-skill mono">Adobe Photoshop</span>
+        <span class="r-skill mono">HTML / CSS / JS</span>
+        <span class="r-skill mono">Hotjar</span>
+        <span class="r-skill mono">Tobii Pro</span>
+        <span class="r-skill mono">Carto</span>
+        <span class="r-skill mono">Procreate</span>
       </div>
     </div>
 
     <div class="r-dl">
-      <a class="btn-v" href="resume_mayank_gupta.pdf" target="_blank">↓ Download PDF resume</a>
-      <span class="btn-outline" onclick="showPage('about')" style="cursor:pointer;">View full about →</span>
+      <a href="Mayank_Gupta_Resume.pdf" target="_blank" class="btn-v">↓ Download PDF resume</a>
+      <button class="btn-outline" onclick="showPage('about')">View full about →</button>
     </div>
   </div>
-  </div>
-</div>
+</div><!-- /resume -->
+
 
 <script>
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
   document.querySelectorAll('.nav-link').forEach(l => {
-    l.classList.toggle('active', l.dataset.page === id);
+    const pg = id === 'home' ? 'home' : id;
+    l.classList.toggle('active', l.dataset.page === pg);
   });
-  window.scrollTo({top:0,behavior:'instant'});
-  try { history.pushState({page:id}, '', '#'+id); } catch(e){}
+  window.scrollTo({top: 0, behavior: 'instant'});
+  try { history.pushState({page: id}, '', '#' + id); } catch(e) {}
 }
 
-function toggleNav() {
-  const links = document.getElementById('nav-links');
-  links.classList.toggle('open');
-}
-
-function closeNav() {
-  document.getElementById('nav-links').classList.remove('open');
-}
-
-// Handle hash routing on load
-const hash = window.location.hash.replace('#','');
+// Hash routing on load
+const hash = window.location.hash.replace('#', '');
 if (hash && document.getElementById(hash)) showPage(hash);
 
-// Handle browser back/forward
+// Back/forward browser navigation
 window.addEventListener('popstate', e => {
-  if (e.state?.page && document.getElementById(e.state.page)) {
-    showPage(e.state.page);
+  const p = e.state && e.state.page;
+  if (p && document.getElementById(p)) {
+    document.querySelectorAll('.page').forEach(pg => pg.classList.remove('active'));
+    document.getElementById(p).classList.add('active');
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', l.dataset.page === p));
   }
 });
 </script>
+
 </body>
 </html>

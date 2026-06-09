@@ -1,163 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Design Jedi — Mayank Gupta</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/cs-v2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Jedi — Mayank Gupta</title>
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Mayank Gupta&nbsp;<em>/</em></a>
-    <div class="nav-links">
-      <a class="nav-link active" href="index.html">Work</a>
-      <a class="nav-link" href="index.html#about">About</a>
-      <a class="nav-link" href="index.html#writing">Writing</a>
-      <a class="nav-link" href="index.html#resume">Resume</a>
-    </div>
-    <a class="nav-cta" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Mayank <em>Gupta</em></a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#resume" class="nav-link">Resume</a>
+    <a href="index.html#writing" class="nav-link">Writing</a>
   </div>
+  <a href="mailto:mgupta17@pratt.edu" class="nav-cta">Get in touch</a>
 </nav>
 
 <div class="cs-back">
-  <div class="cs-back-inner">
-    <a href="index.html">← Back to Work</a>
-    <span class="breadcrumb">02 of 07</span>
-  </div>
+  <a href="index.html">&#8592; All Work</a>
+  <span class="cs-back-index">02 / 06</span>
 </div>
 
 <div class="cs-hero">
-  <div class="cs-hero-inner">
-    <div class="cs-hero-kicker">
-      <span class="chip v">UX Design</span>
-      <span class="chip">UX Research</span>
-      <span class="chip">Journey Mapping</span>
-      <span class="chip">Zero-to-one</span>
-      <span class="label" style="color:var(--dark-ink3);margin-left:6px;">Academic · 2021</span>
+  <div class="cs-hero-kicker">
+    <span class="chip">Product Design</span>
+    <span class="chip">UX Research</span>
+    <span class="chip">Prototyping</span>
+  </div>
+  <h1>Design Jedi — UX Job Board & Interview Prep</h1>
+  <p class="cs-hero-desc">A consolidated job hunting and interview preparation platform built for entry-level UX designers — bringing job aggregation, storytelling practice, and mentorship into one coherent product.</p>
+  <div class="cs-meta-strip">
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-val">UX Researcher · UX Designer</div>
     </div>
-    <h1 class="serif">Design Jedi</h1>
-    <p class="cs-hero-desc">A job-hunting and interview-preparation platform purpose-built for entry-level UX designers — designed from the ground up through user research, comparative analysis, journey mapping, and five rounds of usability testing.</p>
-    <div class="kpi-row">
-      <div class="kpi"><div class="kn serif">9</div><div class="kl mono">User interviews</div></div>
-      <div class="kpi"><div class="kn serif">5</div><div class="kl mono">Usability tests</div></div>
-      <div class="kpi"><div class="kn serif">3</div><div class="kl mono">Core pillars</div></div>
-      <div class="kpi"><div class="kn serif">Hi-fi</div><div class="kl mono">Prototype shipped</div></div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Team</div>
+      <div class="cs-meta-val">Vonetta R DeVonish, Nico Lopez, Mingqi Rui</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Duration</div>
+      <div class="cs-meta-val">15 weeks · Spring 2021</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Tools</div>
+      <div class="cs-meta-val">Adobe XD · Illustrator · Photoshop</div>
     </div>
   </div>
 </div>
 
-<div class="cs-layout-wrap">
-  <div class="cs-layout">
-    <aside class="cs-toc">
-      <div class="cs-toc-title">Contents</div>
-      <ol id="toc">
-        <li class="active" onclick="tocClick(this,'s1')">01 · Context</li>
-        <li onclick="tocClick(this,'s2')">02 · Research</li>
-        <li onclick="tocClick(this,'s3')">03 · Findings</li>
-        <li onclick="tocClick(this,'s4')">04 · Design</li>
-        <li onclick="tocClick(this,'s5')">05 · Outcome</li>
-      </ol>
-    </aside>
+<div class="cs-img">
+  <img src="img/design-jedi/header-image.png" alt="Design Jedi Header">
+</div>
 
-    <div class="cs-content">
+<div class="cs-layout">
+  <aside class="cs-toc">
+    <div class="cs-toc-title">Contents</div>
+    <ol>
+      <li class="active" onclick="scrollTo('s1')">Problem</li>
+      <li onclick="scrollTo('s2')">Research</li>
+      <li onclick="scrollTo('s3')">Insights</li>
+      <li onclick="scrollTo('s4')">Design</li>
+      <li onclick="scrollTo('s5')">Outcome</li>
+    </ol>
+  </aside>
 
-      <div class="cs-section" id="s1">
-        <div class="cs-section-num">01 — Context</div>
-        <h2 class="serif">Breaking into UX is harder than it should be.</h2>
-        <p>Entry-level UX designers face a fragmented landscape: job listings scattered across a dozen platforms, no interview preparation resources tailored to the discipline, and portfolio feedback that only comes from peers who are equally lost.</p>
-        <p>Design Jedi was conceived as a single platform addressing all three pain points — a design-specific job board, AI-powered interview prep, and a mentorship network — built entirely from user research rather than assumptions.</p>
-        <img class="cs-img" src="img/design-jedi/header-image.png" alt="Design Jedi platform overview">
-        <p class="cs-img-caption">Design Jedi · Platform overview · Job board, interview prep, and networking in one place</p>
-      </div>
+  <div class="cs-content">
 
-      <div class="cs-section" id="s2">
-        <div class="cs-section-num">02 — Research</div>
-        <h2 class="serif">Nine interviews before a single wireframe.</h2>
-        <p>Remote interviews with 9 current UX design students and recent graduates revealed consistent patterns in how early-career designers navigate job searching. Participants were recruited from Pratt's graduate design programme and adjacent networks to ensure genuine early-career perspective.</p>
-        <p>The research ran alongside a comparative analysis of LinkedIn and Glassdoor — examining what general-purpose platforms do well and where design-specific needs fall through the cracks.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Interviews</div><div class="ins-text">9 remote interviews with current UX students and recent graduates. Focus on job-hunting behaviours, pain points, and current workarounds.</div></div>
-          <div class="insight"><div class="ins-num">Comp. Analysis</div><div class="ins-text">Audit of LinkedIn and Glassdoor against design-specific needs — identifying gaps in interview prep, portfolio guidance, and community features.</div></div>
-          <div class="insight"><div class="ins-num">Usability Testing</div><div class="ins-text">5 high-fidelity usability tests on the prototype. Each round surfaced a specific issue that informed the next iteration.</div></div>
+    <div class="cs-section" id="s1">
+      <div class="cs-section-num">01 — Problem</div>
+      <h2>Conflicting Resources for a Fragmented Process</h2>
+      <p>Being entry-level designers ourselves, we felt the acute absence of consolidated resources for design students navigating job hunts and interview prep. Thousands of job boards exist — but none are built specifically for the design community. Interview practice tools are scattered. Mentorship connections happen by luck.</p>
+      <p>We asked ourselves one question: <em>Where do UX designers go to find jobs, practice presentation skills, tackle design challenges, and prepare for interviews — all in one place?</em></p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Gap 01</div>
+          <div class="ins-text">No single job board aggregates UX-specific roles from across the hundreds of listings scattered on LinkedIn, Glassdoor, and niche boards.</div>
         </div>
-        <img class="cs-img" src="img/design-jedi/journey-map.png" alt="Journey map of UX job seeker experience">
-        <p class="cs-img-caption">Journey map · Entry-level UX job seeker · From initial job search to interview preparation to offer</p>
+        <div class="insight">
+          <div class="ins-num">Gap 02</div>
+          <div class="ins-text">No tool exists to help designers practice their storytelling, receive feedback on case study presentations, or prepare for company-specific questions.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Gap 03</div>
+          <div class="ins-text">Mentorship and professional connections are largely serendipitous — there's no structured pathway for entry-level designers to find and maintain mentor relationships.</div>
+        </div>
       </div>
-
-      <div class="cs-section" id="s3">
-        <div class="cs-section-num">03 — Findings</div>
-        <h2 class="serif">Four pain points. One clear direction.</h2>
-        <p>The interviews converged on four overlapping problems that general job platforms consistently fail to address for designers.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Pain Point 01</div><div class="ins-text">Interview engagement — candidates don't know what to expect in design interviews and have nowhere to practise portfolio presentation skills specifically.</div></div>
-          <div class="insight"><div class="ins-num">Pain Point 02</div><div class="ins-text">Portfolio optimisation — without expert feedback, designers iterate on portfolios in the dark, unsure what hiring managers actually value.</div></div>
-          <div class="insight"><div class="ins-num">Pain Point 03</div><div class="ins-text">Storytelling — translating research and design decisions into compelling case narratives is a learnable skill that has no structured learning path.</div></div>
-          </div>
-        <p>Peer networking emerged as an underserved need: participants wanted connections with people at the same career stage, not just senior mentors. The platform's community layer was designed around this insight.</p>
-        <img class="cs-img" src="img/design-jedi/sitemap.png" alt="Design Jedi sitemap and information architecture">
-        <p class="cs-img-caption">Information architecture · Sitemap · Three core pillars: Job Board, Interview Prep, Networking</p>
-      </div>
-
-      <div class="cs-section" id="s4">
-        <div class="cs-section-num">04 — Design</div>
-        <h2 class="serif">Three pillars. One cohesive platform.</h2>
-        <p>The design was organised around three core pillars that directly address the research findings: a design-specific job board aggregating listings across platforms, AI-powered interview preparation with video recording and feedback, and a mentorship and peer networking layer.</p>
-        <img class="cs-img" src="img/design-jedi/job-board-wireframe.png" alt="Job board wireframe">
-        <p class="cs-img-caption">Job board wireframe · Design-specific filters · Aggregated listings from multiple sources</p>
-        <p>The information architecture was deliberately simple — three destinations from the home screen, with progressive disclosure for advanced features. Five rounds of usability testing shaped the navigation model, the onboarding flow, and the interview prep interface specifically.</p>
-        <img class="cs-img" src="img/design-jedi/high-fidelity-prototype-01.png" alt="High-fidelity prototype screens">
-        <p class="cs-img-caption">High-fidelity prototype · Core screens · Job board, interview prep, and networking hub</p>
-        <p>A style guide and lightweight design system were produced alongside the prototype, covering typography, colour, component states, and interaction patterns — establishing a consistent visual language across the three pillars.</p>
-      </div>
-
-      <div class="cs-section" id="s5">
-        <div class="cs-section-num">05 — Outcome</div>
-        <h2 class="serif">Intuitive architecture. Validated through testing.</h2>
-        <p>Five usability test rounds across lo-fi and hi-fi fidelity produced an iterated prototype that participants could navigate without instruction. The core flows — job search, interview preparation, and peer connection — all tested cleanly in the final round.</p>
-        <p>The project established a repeatable research-to-design process that I've carried into every project since: structure insights before opening Figma, and test early enough that the findings can actually change the direction.</p>
-      </div>
-
     </div>
+
+    <div class="cs-section" id="s2">
+      <div class="cs-section-num">02 — Research</div>
+      <h2>Understanding the User</h2>
+      <p>We combined qualitative data from <strong>9 remote interviews</strong> with UX design students and recent graduates to gain a deeper understanding of their current job-hunting process. Participants were recruited through LinkedIn and Slack channels focused on the UX community.</p>
+      <p>After preliminary research, we ran a comparative analysis of existing tools, brainstormed wireframes, developed a style guide, built a high-fidelity prototype, and conducted <strong>5 usability tests</strong>.</p>
+
+      <div class="cs-img">
+        <img src="img/design-jedi/user-persona.png" alt="User Persona">
+        <div class="cs-img-caption">Persona: The Current Student — primary target user</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/design-jedi/journey-map.png" alt="User Journey Map">
+        <div class="cs-img-caption">User Journey Map — mapping pain points across the job hunt process</div>
+      </div>
+
+      <h3>Comparative Analysis</h3>
+      <p>We benchmarked Design Jedi against LinkedIn and Glassdoor across four dimensions: target user fit, creativity of concept, design quality, and information architecture clarity.</p>
+      <p>Our analysis confirmed that while LinkedIn and Glassdoor serve broad professional audiences, neither is purpose-built for the needs of entry-level UX designers — leaving a clear opportunity.</p>
+    </div>
+
+    <div class="cs-section" id="s3">
+      <div class="cs-section-num">03 — Insights</div>
+      <h2>What Participants Told Us</h2>
+      <p>Our participants had developed sophisticated personal systems for navigating job hunts — meticulous about reviewing listings, setting alerts, and building LinkedIn connections. The remote work environment had actually reduced some interviewing anxiety. But several pain points emerged consistently.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">01</div>
+          <div class="ins-text">Staying engaged and energetic during remote interviews — maintaining perceived enthusiasm through a screen is genuinely hard.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">02</div>
+          <div class="ins-text">Shaping portfolios toward specific UX specializations — not just "good UX work" but work that signals intent to pursue particular domains.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">03</div>
+          <div class="ins-text">Practicing verbal and written communication skills, especially storytelling in case study presentations and written design rationale.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">04</div>
+          <div class="ins-text">Improving UI design skills — researchers who want to grow into hybrid roles feel a clear gap in their visual design fluency.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">05</div>
+          <div class="ins-text">Enhancing storytelling during case study presentations — structure, pacing, and the ability to make decisions legible to stakeholders.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s4">
+      <div class="cs-section-num">04 — Design</div>
+      <h2>From Sketches to High Fidelity</h2>
+      <p>Each team member sketched one feature according to their assigned user flow. I owned the Job Board feature — designing the initial wireframe and running a quick one-person test to validate the hypothesis before moving to digital.</p>
+
+      <div class="cs-img">
+        <img src="img/design-jedi/job-board-wireframe.png" alt="Job Board Wireframe">
+        <div class="cs-img-caption">Paper prototype of the Job Board feature</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/design-jedi/wireframes-01.png" alt="Final Wireframes">
+        <div class="cs-img-caption">Final low-fidelity wireframes across all four features</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/design-jedi/sitemap.png" alt="Site Map">
+        <div class="cs-img-caption">Preliminary site map organizing the four core features</div>
+      </div>
+
+      <h3>Three Core Features</h3>
+      <ul>
+        <li><strong>Interviewing</strong> — AI-powered recording and feedback on storytelling, case study pacing, and company-specific question banks.</li>
+        <li><strong>Networking</strong> — Structured pathways to find mentors, connect with professionals, and discover relevant Slack communities.</li>
+        <li><strong>Job Hunting</strong> — Aggregated UX-specific listings from hundreds of job boards into a single, design-community-focused interface.</li>
+      </ul>
+
+      <div class="cs-img">
+        <img src="img/design-jedi/high-fidelity-prototype-01.png" alt="High Fidelity Prototype">
+        <div class="cs-img-caption">High-fidelity prototype — the final design after 5 rounds of user testing</div>
+      </div>
+
+      <div class="pull-quote">
+        <p>After an extensive research process, multiple iterations, and a final round of usability tests, we arrived at a design that passed both functional and experiential validation.</p>
+        <cite>— <a href="https://xd.adobe.com/view/a1dc77fe-5f15-4795-ba45-836f4c3dcc3d-f48f/" target="_blank" style="color:var(--v)">Interact with the Design Jedi prototype &#8594;</a></cite>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s5">
+      <div class="cs-section-num">05 — Outcome</div>
+      <h2>Reflection & Learnings</h2>
+      <p>Design Jedi was a deeply personal project — we were solving problems we lived ourselves. That proximity made the research richer, but also required active effort to avoid confirmation bias and ensure our insights reflected the broader user group, not just our own frustrations.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Learning 01</div>
+          <div class="ins-text">Proximity to the problem is a double-edged sword. Rich empathy and lived experience — but requires disciplined separation of self from user data.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 02</div>
+          <div class="ins-text">Early paper prototyping compressed iteration cycles significantly. Quick one-person tests before digital wireframes saved substantial rework.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 03</div>
+          <div class="ins-text">The comparative analysis framework — evaluating on four dimensions rather than holistic impressions — produced more actionable differentiation insights.</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<div class="cs-nav-outer">
-  <div class="cs-nav-inner">
-    <a class="cs-nav-item" href="met-eye-tracking.html">
-      <div class="cni-label">← Previous</div>
-      <div class="cni-title serif">The MET Eye Tracking Study</div>
-      <div class="cni-arr">←</div>
-    </a>
-    <a class="cs-nav-item" href="pratt-news-analysis.html">
-      <div class="cni-label">Next project →</div>
-      <div class="cni-title serif">Pratt News Analysis</div>
-      <div class="cni-arr">→</div>
-    </a>
-  </div>
+<div class="cs-nav-strip">
+  <a class="cs-nav-item prev" href="met-eye-tracking.html">
+    <div class="cni-label">Previous Project</div>
+    <div class="cni-title">MET Eye Tracking</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+  <a class="cs-nav-item next" href="placemaking-week.html">
+    <div class="cni-label">Next Project</div>
+    <div class="cni-title">Placemaking Week</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine">UX Designer &amp; Researcher</div></div>
-    <div><h5>Index</h5><a href="index.html">Work</a><a href="index.html#about">About</a><a href="index.html#resume">Resume</a></div>
-    <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-    <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
+<footer class="site-footer">
+  <div>
+    <div class="f-sig">Mayank <em style="font-style:italic;color:var(--v)">Gupta</em></div>
+    <div class="f-fine">Senior UX Designer & Researcher<br>Mountain View, CA</div>
+  </div>
+  <div>
+    <h5>Work</h5>
+    <a href="index.html">Portfolio</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#writing">Writing</a>
+  </div>
+  <div>
+    <h5>Connect</h5>
+    <a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/mayankvgupb3c4" target="_blank">Behance</a>
+    <a href="https://dribbble.com/VI_OM" target="_blank">Dribbble</a>
+  </div>
+  <div>
+    <h5>Contact</h5>
+    <a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a>
   </div>
 </footer>
 
 <script>
-function tocClick(el,id){document.querySelectorAll('#toc li').forEach(l=>l.classList.remove('active'));el.classList.add('active');const t=document.getElementById(id);if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});}
-const secs=['s1','s2','s3','s4','s5'];
-window.addEventListener('scroll',()=>{let cur='';secs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)cur=id;});document.querySelectorAll('#toc li').forEach((li,i)=>{li.classList.toggle('active',secs[i]===cur);});});
+const sections = document.querySelectorAll('.cs-section');
+const tocItems = document.querySelectorAll('.cs-toc li');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = Array.from(sections).indexOf(e.target);
+      tocItems.forEach(li => li.classList.remove('active'));
+      if (tocItems[idx]) tocItems[idx].classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(s => obs.observe(s));
+
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 </body>
 </html>

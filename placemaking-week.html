@@ -1,174 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Placemaking Week Redesign — Mayank Gupta</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/cs-v2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placemaking Week Website Redesign — Mayank Gupta</title>
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Mayank Gupta&nbsp;<em>/</em></a>
-    <div class="nav-links">
-      <a class="nav-link active" href="index.html">Work</a>
-      <a class="nav-link" href="index.html#about">About</a>
-      <a class="nav-link" href="index.html#writing">Writing</a>
-      <a class="nav-link" href="index.html#resume">Resume</a>
-    </div>
-    <a class="nav-cta" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Mayank <em>Gupta</em></a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#resume" class="nav-link">Resume</a>
+    <a href="index.html#writing" class="nav-link">Writing</a>
   </div>
+  <a href="mailto:mgupta17@pratt.edu" class="nav-cta">Get in touch</a>
 </nav>
 
 <div class="cs-back">
-  <div class="cs-back-inner">
-    <a href="index.html">← Back to Work</a>
-    <span class="breadcrumb">05 of 07</span>
-  </div>
+  <a href="index.html">&#8592; All Work</a>
+  <span class="cs-back-index">03 / 06</span>
 </div>
 
 <div class="cs-hero">
-  <div class="cs-hero-inner">
-    <div class="cs-hero-kicker">
-      <span class="chip v">UX Design</span>
-      <span class="chip">UX Research</span>
-      <span class="chip">Information Architecture</span>
-      <span class="chip">Website Redesign</span>
-      <span class="label" style="color:var(--dark-ink3);margin-left:6px;">Academic · 2020</span>
-    </div>
-    <h1 class="serif">Placemaking Week Website Redesign</h1>
-    <p class="cs-hero-desc">A 14-week collaborative redesign of the Placemaking Week conference website — fixing a navigation labyrinth through user surveys, observation studies, card sorting, and tree testing, culminating in high-fidelity desktop and mobile designs.</p>
-    <div class="kpi-row">
-      <div class="kpi"><div class="kn serif">20</div><div class="kl mono">Survey participants</div></div>
-      <div class="kpi"><div class="kn serif">11</div><div class="kl mono">Card sort participants</div></div>
-      <div class="kpi"><div class="kn serif">10</div><div class="kl mono">Tree test participants</div></div>
-      <div class="kpi"><div class="kn serif">3</div><div class="kl mono">Pages redesigned</div></div>
-    </div>
+  <div class="cs-hero-kicker">
+    <span class="chip">Redesign</span>
+    <span class="chip">Information Architecture</span>
+    <span class="chip">Card Sorting</span>
   </div>
-</div>
-
-<div class="cs-layout-wrap">
-  <div class="cs-layout">
-    <aside class="cs-toc">
-      <div class="cs-toc-title">Contents</div>
-      <ol id="toc">
-        <li class="active" onclick="tocClick(this,'s1')">01 · Context</li>
-        <li onclick="tocClick(this,'s2')">02 · Research</li>
-        <li onclick="tocClick(this,'s3')">03 · Findings</li>
-        <li onclick="tocClick(this,'s4')">04 · Design</li>
-        <li onclick="tocClick(this,'s5')">05 · Outcome</li>
-      </ol>
-    </aside>
-
-    <div class="cs-content">
-
-      <div class="cs-section" id="s1">
-        <div class="cs-section-num">01 — Context</div>
-        <h2 class="serif">A navigation labyrinth. The "back" button as the only escape.</h2>
-        <p>Placemaking Week is a global conference run by Project for Public Spaces — a weeklong gathering of placemakers emphasising hands-on learning and community legacy. Despite the richness of the event, their website was actively discouraging attendance: a dynamic navigation menu that changed unpredictably, dense walls of text, and a landing page that gave users no reason to stay.</p>
-        <p>This 14-week project, conducted with a team of five and guided by Prof. Nancy Smith, set out to restructure the website's information architecture and redesign three core pages for both desktop and mobile — with particular focus on fixing the navigation.</p>
-        <img class="cs-img" src="img/placemaking-week/mockup-1.png" alt="Placemaking Week redesign mockup">
-        <p class="cs-img-caption">Placemaking Week · Redesign overview · Desktop and mobile views</p>
-      </div>
-
-      <div class="cs-section" id="s2">
-        <div class="cs-section-num">02 — Research</div>
-        <h2 class="serif">Four methods. One clear picture of what was broken.</h2>
-        <p>The research phase combined quantitative and qualitative approaches to understand both what users struggled with and why. The target user group was students from diverse academic backgrounds — architecture, design, business, and computer science — who represented only 5% of current attendees but were a primary growth audience for the conference.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Online Survey</div><div class="ins-text">20 participants. Quantitative data on conference attendance, demographics, tech backgrounds, and first impressions of the existing site.</div></div>
-          <div class="insight"><div class="ins-num">Observation Study</div><div class="ins-text">3 participants completing tasks on the live site with think-aloud protocol. Captured navigation patterns and frustration points in real time.</div></div>
-          <div class="insight"><div class="ins-num">Card Sorting</div><div class="ins-text">38 cards, 11 participants. Tested labelling and grouping assumptions — and revealed significant confusion in how users categorised site content.</div></div>
-        </div>
-        <img class="cs-img" src="img/placemaking-week/observation-study.png" alt="Notes from observation study">
-        <p class="cs-img-caption">Observation study · Notes · Think-aloud session with prospective user</p>
-        <p>The card sort was deliberately broad — 38 cards drawn from user input, existing site terminology, and comparable conference websites. The result was 61 different category groupings across 11 participants, which wasn't a failure but a signal: the existing labels were generating genuine confusion that needed to be addressed before any tree testing could produce reliable results.</p>
-        <img class="cs-img" src="img/placemaking-week/card-sorting-matrix.png" alt="Card sorting similarity matrix">
-        <p class="cs-img-caption">Card sorting · Similarity matrix · 61 unique categories surfaced labelling confusion</p>
-      </div>
-
-      <div class="cs-section" id="s3">
-        <div class="cs-section-num">03 — Findings</div>
-        <h2 class="serif">Three problems. All pointing to the same root cause.</h2>
-        <p>The research converged on a consistent story: the website's content was potentially interesting, but users couldn't navigate to it — and what they saw first wasn't compelling enough to make them try harder.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Finding 01</div><div class="ins-text">The landing page failed to communicate the event's value. 2 of 3 observation study participants said they wouldn't attend based on first impression alone.</div></div>
-          <div class="insight"><div class="ins-num">Finding 02</div><div class="ins-text">The dynamic navigation menu trapped users. With no persistent structure and no breadcrumbs, the browser back button was the primary navigation tool.</div></div>
-          <div class="insight"><div class="ins-num">Finding 03</div><div class="ins-text">Information density was overwhelming. Users couldn't assess relevance before committing to reading — and most didn't commit.</div></div>
-        </div>
-        <div class="pull-quote">
-          <p>"[This is] too much text, I am not gonna read through all of this."</p>
-          <cite>— Observation study participant</cite>
-        </div>
-        <p>Tree testing followed the card sort, using a revised labelling system informed by the 61-category data. 10 participants completed 7 structured tasks — 5 in person, 5 remote. The tree testing results confirmed which structural changes were necessary before moving to wireframing.</p>
-        <img class="cs-img" src="img/placemaking-week/final-tree.png" alt="Final tree structure for tree testing">
-        <p class="cs-img-caption">Tree testing · Final tested tree · 7 tasks across 10 participants</p>
-      </div>
-
-      <div class="cs-section" id="s4">
-        <div class="cs-section-num">04 — Design</div>
-        <h2 class="serif">From paper prototype to high-fidelity. Navigation first, always.</h2>
-        <p>The design process started with paper prototypes — initially planned for in-person testing, moved to digital and remote due to COVID. Each team member was responsible for sketching key sections; my focus was the header and footer, with two header iterations and three footer iterations tested with 5 participants.</p>
-        <p>Paper prototype testing returned two clear insights: users expected clicking a speaker's photo to load more detail, and the navigation order felt wrong — "About" was expected first. Both were addressed before low-fidelity wireframing began.</p>
-        <img class="cs-img" src="img/placemaking-week/persona-01.png" alt="User persona for architecture student">
-        <p class="cs-img-caption">User persona · Architecture student · Primary target user group for redesign</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Consistent Nav</div><div class="ins-text">Fixed navigation structure across all pages — no dynamic menus, no labyrinth. Every page knows where it is in the hierarchy.</div></div>
-          <div class="insight"><div class="ins-num">Visual Hierarchy</div><div class="ins-text">Reduced text density by introducing visual entry points — imagery, clear section headings, and scannable content blocks over wall-of-text layouts.</div></div>
-          <div class="insight"><div class="ins-num">Responsive Grid</div><div class="ins-text">12-column responsive grid adapted for desktop and mobile. Consistent padding and type scale across breakpoints.</div></div>
-        </div>
-        <img class="cs-img" src="img/placemaking-week/final-high-fidelity-screens.png" alt="Final high-fidelity prototype screens">
-        <p class="cs-img-caption">High-fidelity prototype · Three redesigned pages · Desktop and mobile</p>
-      </div>
-
-      <div class="cs-section" id="s5">
-        <div class="cs-section-num">05 — Outcome</div>
-        <h2 class="serif">Navigation fixed. Client presentation delivered.</h2>
-        <p>The final high-fidelity designs addressed all three core problems identified in research: a landing page that communicates the conference's value on first impression, a consistent navigation that removes the labyrinth, and a content hierarchy that makes information scannable rather than exhausting.</p>
-        <p>Three pages were delivered for both desktop and mobile: the landing page, the programme/schedule page, and the registration flow. The client received the designs at the end of the 14-week project alongside a research report documenting all study findings.</p>
-        <p>The project reinforced a principle I've applied since: don't wireframe until the information architecture is settled. Every hour spent on card sorting and tree testing saved ten hours of rework in prototyping.</p>
-      </div>
-
+  <h1>Placemaking Week Website Redesign</h1>
+  <p class="cs-hero-desc">Restructuring and enhancing the desktop and mobile experience for Project for Public Spaces' annual conference — fixing a dynamic navigation system that was actively discouraging potential attendees.</p>
+  <div class="cs-meta-strip">
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-val">UX Researcher · UX Designer</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Team</div>
+      <div class="cs-meta-val">David Bradshaw, Devin Singh, Nicole Tominaga, Yichen Wang</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Duration</div>
+      <div class="cs-meta-val">14 weeks · Spring 2020</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Tools</div>
+      <div class="cs-meta-val">Adobe XD · Optimal Workshop</div>
     </div>
   </div>
 </div>
 
-<div class="cs-nav-outer">
-  <div class="cs-nav-inner">
-    <a class="cs-nav-item" href="covid-predicitve-analysis.html">
-      <div class="cni-label">← Previous</div>
-      <div class="cni-title serif">COVID-19 Predictive Spatial Analysis</div>
-      <div class="cni-arr">←</div>
-    </a>
-    <a class="cs-nav-item" href="barnard-college-user-testing.html">
-      <div class="cni-label">Next project →</div>
-      <div class="cni-title serif">Barnard Digital Collections</div>
-      <div class="cni-arr">→</div>
-    </a>
+<div class="cs-img">
+  <img src="img/placemaking-week/mockup-1.png" alt="Placemaking Week Website Redesign">
+</div>
+
+<div class="cs-layout">
+  <aside class="cs-toc">
+    <div class="cs-toc-title">Contents</div>
+    <ol>
+      <li class="active" onclick="scrollTo('s1')">Problem</li>
+      <li onclick="scrollTo('s2')">Research</li>
+      <li onclick="scrollTo('s3')">Architecture</li>
+      <li onclick="scrollTo('s4')">Design</li>
+      <li onclick="scrollTo('s5')">Outcome</li>
+    </ol>
+  </aside>
+
+  <div class="cs-content">
+
+    <div class="cs-section" id="s1">
+      <div class="cs-section-num">01 — Problem</div>
+      <h2>Inconsistent Navigation & Cluttered Information</h2>
+      <p>Placemaking Week — a subset of Project for Public Spaces — is a weeklong global gathering emphasizing hands-on learning and innovative social events, while leaving behind a public space legacy in host cities around the world.</p>
+      <p>The current website suffered from two compounding problems: it was text-heavy to the point of overwhelming users, and its dynamic navigation menu created a labyrinth with no clear escape. The "back" button was users' only rescue. Together, these two factors were actively discouraging potential attendees from registering.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Problem 01</div>
+          <div class="ins-text">Dynamic navigation with no persistent menu — users lost their place constantly and couldn't form a mental model of the site structure.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Problem 02</div>
+          <div class="ins-text">Landing page failed to entice — 2 of 3 observation study participants said they would not want to attend based on their first impression alone.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Problem 03</div>
+          <div class="ins-text">Text-heavy pages without clear hierarchy — users were unsure whether reading through content would even lead them to what they needed.</div>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <p>"[This is] too much text, I am not gonna read through all of this."</p>
+        <cite>— Observation Study Participant</cite>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s2">
+      <div class="cs-section-num">02 — Research</div>
+      <h2>Mixed Methods Study</h2>
+      <p>We focused on students as our primary user group — particularly interesting given that they represent only 5% of total attendees, yet are a key demographic for building long-term conference community. I consulted students from business, design, computer science, and architecture to capture a diverse range of needs.</p>
+      <p>We combined qualitative data from <strong>15 in-person interviews</strong> and <strong>10 usability tests</strong> with quantitative data from an online questionnaire to build a comprehensive picture of user needs.</p>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/questionarre.png" alt="Questionnaire Results">
+        <div class="cs-img-caption">65% of participants had never attended a placemaking or urban design conference</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/observation-study.png" alt="Observation Study Notes">
+        <div class="cs-img-caption">Notes from observation study sessions — conducted in-person and then adapted to remote</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/persona-01.svg" alt="User Persona">
+        <div class="cs-img-caption">Persona: Architecture Student — the target user group for this redesign</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s3">
+      <div class="cs-section-num">03 — Architecture</div>
+      <h2>Fixing the Information Architecture</h2>
+      <p>Preliminary research made it clear that fixing the IA was the single highest-priority intervention. Our high-level navigation goals were clear:</p>
+      <ul>
+        <li>Consistent navigation menu across all pages</li>
+        <li>Simplified structure accessible to every user group</li>
+        <li>Intuitive labelling system that maps to user mental models</li>
+      </ul>
+
+      <h3>Card Sorting — 38 Cards, 11 Participants</h3>
+      <p>We defined 38 cards combining previous user input, terminology from the existing site, and language used by other well-known conferences. The card sort was conducted with 11 participants using Optimal Workshop.</p>
+      <p><strong>The sort partially failed — we ended up with 61 unique categories.</strong> Rather than a setback, this revealed the depth of labelling confusion. Users weren't confused by the content; they were confused by the language used to describe it.</p>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/card-sorting-matrix.png" alt="Card Sorting Similarity Matrix">
+        <div class="cs-img-caption">Similarity matrix from card sort — 61 unique categories signalled systemic labelling confusion</div>
+      </div>
+
+      <h3>Tree Testing — 10 Participants, 7 Tasks</h3>
+      <p>Taking card sort insights, we modified the labelling system and ran tree testing with 10 participants (5 in-person, 5 remote) using 7 short tasks designed to test navigation across key user journeys.</p>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/final-tree.png" alt="Final Tree">
+        <div class="cs-img-caption">Final information architecture tree tested across 10 participants</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/tree-testing-overview.png" alt="Tree Testing Results">
+        <div class="cs-img-caption">Tree testing results overview — directness and success rates by task</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/site-map.png" alt="Revised Site Map">
+        <div class="cs-img-caption">Revised site map — consistent, simplified architecture based on research findings</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s4">
+      <div class="cs-section-num">04 — Design</div>
+      <h2>From Paper to Pixel</h2>
+      <p>Every team member was responsible for sketching one section. I owned the header and footer — drawing two header iterations and three footer iterations. We then digitized paper prototypes and tested them remotely with 5 users (COVID forced the pivot from our in-person plan).</p>
+
+      <h3>Key Feedback from Prototype Testing</h3>
+      <ul>
+        <li>Users expected clicking on speaker photos to reveal more information</li>
+        <li>Navigation menu order was counterintuitive — users expected "About" first</li>
+      </ul>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/paper-prototype.jpg" alt="Paper Prototype Sketches">
+        <div class="cs-img-caption">Initial sketches — header and footer iterations for early concept validation</div>
+      </div>
+
+      <h3>Style Guide</h3>
+      <p>The visual redesign aimed to retain the organization's identity while updating components for better contrast and aesthetic appeal. The redesign uses the Open Sans typeface with a responsive 12-column grid system, and a color palette that inherits legacy while improving contrast ratios.</p>
+
+      <div class="cs-img">
+        <img src="img/placemaking-week/final-high-fidelity-screens.png" alt="High Fidelity Screens">
+        <div class="cs-img-caption">Final high-fidelity designs — desktop and mobile for three primary pages</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s5">
+      <div class="cs-section-num">05 — Outcome</div>
+      <h2>Impact & Reflections</h2>
+      <p>The client appreciated how the research-driven IA improvements translated directly into cleaner navigation and a more inviting first impression. We redesigned three pages for both desktop and mobile platforms.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Learning 01</div>
+          <div class="ins-text">A partially failed card sort is still valuable data — 61 categories revealed labelling confusion that open-ended interviews had not surfaced as clearly.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 02</div>
+          <div class="ins-text">Remote pivots require deliberate scaffolding. Digitizing paper prototypes quickly while maintaining test fidelity was a genuine design challenge in itself.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 03</div>
+          <div class="ins-text">When the core problem is IA, fixing visual design first is a trap. Research-first sequencing — card sort, tree test, then wireframes — was the right call.</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine">UX Designer &amp; Researcher</div></div>
-    <div><h5>Index</h5><a href="index.html">Work</a><a href="index.html#about">About</a><a href="index.html#resume">Resume</a></div>
-    <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-    <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
+<div class="cs-nav-strip">
+  <a class="cs-nav-item prev" href="design-jedi.html">
+    <div class="cni-label">Previous Project</div>
+    <div class="cni-title">Design Jedi</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+  <a class="cs-nav-item next" href="skill-sharing-app.html">
+    <div class="cni-label">Next Project</div>
+    <div class="cni-title">Skill Sharing App</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div>
+    <div class="f-sig">Mayank <em style="font-style:italic;color:var(--v)">Gupta</em></div>
+    <div class="f-fine">Senior UX Designer & Researcher<br>Mountain View, CA</div>
+  </div>
+  <div>
+    <h5>Work</h5>
+    <a href="index.html">Portfolio</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#writing">Writing</a>
+  </div>
+  <div>
+    <h5>Connect</h5>
+    <a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/mayankvgupb3c4" target="_blank">Behance</a>
+    <a href="https://dribbble.com/VI_OM" target="_blank">Dribbble</a>
+  </div>
+  <div>
+    <h5>Contact</h5>
+    <a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a>
   </div>
 </footer>
 
 <script>
-function tocClick(el,id){document.querySelectorAll('#toc li').forEach(l=>l.classList.remove('active'));el.classList.add('active');const t=document.getElementById(id);if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});}
-const secs=['s1','s2','s3','s4','s5'];
-window.addEventListener('scroll',()=>{let cur='';secs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)cur=id;});document.querySelectorAll('#toc li').forEach((li,i)=>{li.classList.toggle('active',secs[i]===cur);});});
+const sections = document.querySelectorAll('.cs-section');
+const tocItems = document.querySelectorAll('.cs-toc li');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = Array.from(sections).indexOf(e.target);
+      tocItems.forEach(li => li.classList.remove('active'));
+      if (tocItems[idx]) tocItems[idx].classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(s => obs.observe(s));
+
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 </body>
 </html>

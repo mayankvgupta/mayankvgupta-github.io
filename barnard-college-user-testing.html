@@ -1,184 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Barnard Digital Collections — Mayank Gupta</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/cs-v2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barnard Digital Collections Usability Study — Mayank Gupta</title>
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Mayank Gupta&nbsp;<em>/</em></a>
-    <div class="nav-links">
-      <a class="nav-link active" href="index.html">Work</a>
-      <a class="nav-link" href="index.html#about">About</a>
-      <a class="nav-link" href="index.html#writing">Writing</a>
-      <a class="nav-link" href="index.html#resume">Resume</a>
-    </div>
-    <a class="nav-cta" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Mayank <em>Gupta</em></a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#resume" class="nav-link">Resume</a>
+    <a href="index.html#writing" class="nav-link">Writing</a>
   </div>
+  <a href="mailto:mgupta17@pratt.edu" class="nav-cta">Get in touch</a>
 </nav>
 
 <div class="cs-back">
-  <div class="cs-back-inner">
-    <a href="index.html">← Back to Work</a>
-    <span class="breadcrumb">06 of 07</span>
-  </div>
+  <a href="index.html">&#8592; All Work</a>
+  <span class="cs-back-index">06 / 06</span>
 </div>
 
 <div class="cs-hero">
-  <div class="cs-hero-inner">
-    <div class="cs-hero-kicker">
-      <span class="chip v">UX Research</span>
-      <span class="chip">Usability Testing</span>
-      <span class="chip">Remote Research</span>
-      <span class="chip">IA</span>
-      <span class="label" style="color:var(--dark-ink3);margin-left:6px;">Academic · 2020</span>
-    </div>
-    <h1 class="serif">Barnard Digital Collections</h1>
-    <p class="cs-hero-desc">Remote usability testing of Barnard College's digital archive — combining think-aloud sessions, task analysis, and post-test questionnaires across 8 participants to diagnose discoverability failures and produce four targeted design recommendations.</p>
-    <div class="kpi-row">
-      <div class="kpi"><div class="kn serif">8</div><div class="kl mono">Participants</div></div>
-      <div class="kpi"><div class="kn serif">37.5%</div><div class="kl mono">Missed filter panel</div></div>
-      <div class="kpi"><div class="kn serif">75%</div><div class="kl mono">Date filter issues</div></div>
-      <div class="kpi"><div class="kn serif">4</div><div class="kl mono">Design recommendations</div></div>
-    </div>
+  <div class="cs-hero-kicker">
+    <span class="chip">Usability Testing</span>
+    <span class="chip">Remote Research</span>
+    <span class="chip">Digital Archives</span>
   </div>
-</div>
-
-<div class="cs-layout-wrap">
-  <div class="cs-layout">
-    <aside class="cs-toc">
-      <div class="cs-toc-title">Contents</div>
-      <ol id="toc">
-        <li class="active" onclick="tocClick(this,'s1')">01 · Context</li>
-        <li onclick="tocClick(this,'s2')">02 · Methods</li>
-        <li onclick="tocClick(this,'s3')">03 · Findings</li>
-        <li onclick="tocClick(this,'s4')">04 · Recommendations</li>
-        <li onclick="tocClick(this,'s5')">05 · Outcome</li>
-      </ol>
-    </aside>
-
-    <div class="cs-content">
-
-      <div class="cs-section" id="s1">
-        <div class="cs-section-num">01 — Context</div>
-        <h2 class="serif">85,000 sources. A search experience that worked against the researcher.</h2>
-        <p>Barnard Digital Collections provides students, staff, and independent researchers with free access to nearly 85,000 digital archival materials — newspapers, scrapbooks, photographs, and academic sources. The interface had seen no significant redesign since launch.</p>
-        <p>Working with the Center for Digital Experiences under Prof. Elena Villaespesa and Prof. Madhav Tankha, our team of four was tasked with remote usability testing of the desktop site — with a specific brief to evaluate the filter system and exhibits section. A website update was already in the pipeline; the client wanted evidence of what needed to change before development began.</p>
-        <img class="cs-img" src="img/barnard-college/barnard-new-mockup.png" alt="Barnard Digital Collections interface">
-        <p class="cs-img-caption">Barnard Digital Collections · Desktop interface · 85% of users access the desktop version</p>
-      </div>
-
-      <div class="cs-section" id="s2">
-        <div class="cs-section-num">02 — Methods</div>
-        <h2 class="serif">Remote think-aloud with four structured tasks.</h2>
-        <p>From a pool of 20 candidates recruited via the client, we shortlisted 8 participants — a mix of Barnard students, staff, and independent researchers, including some with no prior experience using digital archives. All sessions were conducted remotely via Zoom with screen sharing and audio recording.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Session structure</div><div class="ins-text">Think-aloud protocol across 4 tasks (~45 mins). Each session had a moderator and a note-taker. I moderated 2 sessions and note-took in 2 others.</div></div>
-          <div class="insight"><div class="ins-num">Task design</div><div class="ins-text">4 tasks built around a researcher scenario — designed to test exhibit navigation, global search, metadata filters, and photo browsing under realistic conditions.</div></div>
-          <div class="insight"><div class="ins-num">Post-test survey</div><div class="ins-text">Questionnaire capturing overall impressions, task difficulty ratings, and open-ended feedback after each session.</div></div>
-        </div>
-        <p>The scenario framed participants as independent researchers studying student life at Barnard in the 1960s–70s. Tasks covered: finding a digital exhibit, locating an archived article, using advanced search operators, and finding historical photographs through the filter system.</p>
-        <div class="img-grid">
-          <div>
-            <img class="cs-img" src="img/barnard-college/graph-figure1.png" alt="Survey results: participant backgrounds">
-            <p class="cs-img-caption">Figure 1 · Participant backgrounds · Mix of students, staff, and external researchers</p>
-          </div>
-          <div>
-            <img class="cs-img" src="img/barnard-college/graph-figure2.png" alt="Survey results: prior archive experience">
-            <p class="cs-img-caption">Figure 2 · Prior archive experience · Several participants new to digital archives</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cs-section" id="s3">
-        <div class="cs-section-num">03 — Findings</div>
-        <h2 class="serif">The filters existed. Most users never found them.</h2>
-        <p>The overall aesthetic of the site received positive feedback — users found it visually clean and appreciated the colour scheme. But as soon as they attempted specific research tasks, a consistent set of usability failures emerged.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Finding 01</div><div class="ins-text">37.5% of participants completely missed the "Narrow Your Search" panel. Low contrast made it invisible to users scanning for filter controls.</div></div>
-          <div class="insight"><div class="ins-num">Finding 02</div><div class="ins-text">75% of users struggled with the date filter — omitting the "End" date triggered a vague error with no guidance on how to fix it.</div></div>
-          <div class="insight"><div class="ins-num">Finding 03</div><div class="ins-text">Inexperienced researchers didn't know about advanced search operators ("AND", "OR", "NOT"). The feature existed but wasn't surfaced where users needed it.</div></div>
-        </div>
-        <p>A fourth pattern emerged in the exhibits section: users navigating between exhibits had only "Next" and "Prev" buttons — no overview, no sense of position within the collection. This made lateral discovery impossible. A fifth issue appeared when users clicked on archival photographs: the default cropped view caused confusion, with some participants believing they had navigated to a different image entirely.</p>
-      </div>
-
-      <div class="cs-section" id="s4">
-        <div class="cs-section-num">04 — Recommendations</div>
-        <h2 class="serif">Four precise fixes. Each traceable to an observed behaviour.</h2>
-        <p>Each recommendation mapped directly to a documented session finding — no design speculation, no best-practice generalisation. The brief was to propose changes that could be implemented through minor development modifications without disrupting the site's existing visual identity.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Rec 01</div><div class="ins-text">Increase contrast on the "Narrow Your Search" panel and add a clear error message for the date filter — with an info icon that prevents the error before it occurs.</div></div>
-          <div class="insight"><div class="ins-num">Rec 02</div><div class="ins-text">Surface advanced search operators (AND, OR, NOT) directly above the global search bar — making them visible without requiring users to discover hidden documentation.</div></div>
-          <div class="insight"><div class="ins-num">Rec 03</div><div class="ins-text">Add a sub-navigation menu to the exhibits section showing all exhibit titles — giving users a sense of place and enabling non-sequential browsing.</div></div>
-        </div>
-        <img class="cs-img" src="img/barnard-college/recommendations-01.png" alt="Recommendation 1: filter contrast and date error">
-        <p class="cs-img-caption">Recommendation 01 · Narrow Your Search · Added contrast and improved date error signifier</p>
-        <div class="img-grid">
-          <div>
-            <img class="cs-img" src="img/barnard-college/recommendations-02.png" alt="Recommendation 2: search operators">
-            <p class="cs-img-caption">Recommendation 02 · Search operators · Surfaced above global search bar</p>
-          </div>
-          <div>
-            <img class="cs-img" src="img/barnard-college/recommendations-03.png" alt="Recommendation 3: exhibit sub-navigation">
-            <p class="cs-img-caption">Recommendation 03 · Exhibit navigation · Sub-nav with all exhibit titles</p>
-          </div>
-        </div>
-        <p>The fourth recommendation addressed the photograph crop issue: display images in full when first opened, with the option to zoom in or out — and make the zoom controls visually prominent rather than easy to miss. The mockup I designed for this recommendation was the primary deliverable I owned on the project.</p>
-        <img class="cs-img" src="img/barnard-college/recommendations-04.png" alt="Recommendation 4: photograph display">
-        <p class="cs-img-caption">Recommendation 04 · Photo display · Full image on first open, prominent zoom controls</p>
-      </div>
-
-      <div class="cs-section" id="s5">
-        <div class="cs-section-num">05 — Outcome</div>
-        <h2 class="serif">Client-validated recommendations. Evidence for a pending rebuild.</h2>
-        <p>The client appreciated the specificity of the findings — and confirmed that several issues had been suspected but not formally documented as usability problems. Having them grounded in observed session data gave the development team a prioritised list to act on as the site update moved forward.</p>
-        <p>A post-presentation discussion explored the possibility of a horizontal filter layout for improved discoverability. After building a mockup, the team concluded the horizontal approach introduced new problems — cluttered layout and awkward mouse navigation — and recommended against it. That willingness to prototype and discard an idea was a useful lesson in the cost of untested assumptions.</p>
-        <p>The study reinforced the value of recruiting participants with diverse experience levels. The users who had never used digital archives before surfaced the most significant usability failures — the ones that more experienced researchers had long since learned to work around.</p>
-      </div>
-
+  <h1>Barnard Digital Collections Usability Study</h1>
+  <p class="cs-hero-desc">Ten remote usability sessions on Barnard College's digital archive — identifying discoverability barriers and navigation failures, then delivering four prioritized recommendations with Figma mockups for immediate implementation.</p>
+  <div class="cs-meta-strip">
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-val">UX Researcher · Moderator · Designer</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Team</div>
+      <div class="cs-meta-val">Hiral Parekh, Lillian Gooden, Mohammed Hosen</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Duration</div>
+      <div class="cs-meta-val">7 weeks · Spring 2020</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Tools</div>
+      <div class="cs-meta-val">Adobe Illustrator · Photoshop · Zoom</div>
     </div>
   </div>
 </div>
 
-<div class="cs-nav-outer">
-  <div class="cs-nav-inner">
-    <a class="cs-nav-item" href="placemaking-week.html">
-      <div class="cni-label">← Previous</div>
-      <div class="cni-title serif">Placemaking Week</div>
-      <div class="cni-arr">←</div>
-    </a>
-    <a class="cs-nav-item" href="skill-sharing-app.html">
-      <div class="cni-label">Next project →</div>
-      <div class="cni-title serif">Skill Sharing Application</div>
-      <div class="cni-arr">→</div>
-    </a>
+<div class="cs-img" style="background:#fcd2d3;padding:40px;">
+  <img src="img/barnard-college/barnard-new-mockup.png" alt="Barnard Digital Collections">
+</div>
+
+<div class="cs-layout">
+  <aside class="cs-toc">
+    <div class="cs-toc-title">Contents</div>
+    <ol>
+      <li class="active" onclick="scrollTo('s1')">Context</li>
+      <li onclick="scrollTo('s2')">Research</li>
+      <li onclick="scrollTo('s3')">Analysis</li>
+      <li onclick="scrollTo('s4')">Recommendations</li>
+      <li onclick="scrollTo('s5')">Outcome</li>
+    </ol>
+  </aside>
+
+  <div class="cs-content">
+
+    <div class="cs-section" id="s1">
+      <div class="cs-section-num">01 — Context</div>
+      <h2>Testing a Long-Unchanged Archive</h2>
+      <p>Barnard Digital Collections provides students and researchers with free access to nearly 85,000 academic sources — newspapers, scrapbooks, photographs, and archival documents. Despite the scale of the collection, no major design changes had been made to the website since its inception.</p>
+      <p>The client wanted us to test the desktop version of the site, with particular focus on two specific features: the <strong>filter/metadata system</strong> and the <strong>exhibits section</strong>. A website update was already in the pipeline — our study would inform exactly what to prioritize.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kn">85k</div>
+          <div class="kl">Academic Sources</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">10</div>
+          <div class="kl">Remote Sessions</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">4</div>
+          <div class="kl">Final Recommendations</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">85%</div>
+          <div class="kl">Desktop Users</div>
+        </div>
+      </div>
+
+      <h3>Client Goals</h3>
+      <ul>
+        <li>Enhance discoverability of the collection for better user engagement</li>
+        <li>Understand how users interact with the metadata (filter) categories</li>
+        <li>Assess whether the exhibits section is being found and used effectively</li>
+      </ul>
+    </div>
+
+    <div class="cs-section" id="s2">
+      <div class="cs-section-num">02 — Research</div>
+      <h2>Remote Usability Testing via Zoom</h2>
+      <p>Originally planned as in-person sessions, COVID-19 forced a complete pivot to remote testing via Zoom. Participants were asked to share their screen and think aloud throughout. Sessions were recorded for cross-referencing.</p>
+      <p>From a sample of 20 candidates, we shortlisted 8 — a deliberate mix of Barnard students, staff, and external researchers, some of whom had never used digital archives for research before. Each team member moderated 2 sessions; I moderated 2 and served as note-taker for another 2.</p>
+
+      <h3>Scenario & Tasks</h3>
+      <p>We presented all participants with the same scenario to ensure task comparability:</p>
+      <div class="pull-quote">
+        <p>"Imagine that you are an independent researcher looking for information on student life at Barnard College in the 1960s and '70s. You have come to the Barnard Digital Collections portal to source materials from their archive."</p>
+        <cite>— Study scenario given to all participants</cite>
+      </div>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Task 01</div>
+          <div class="ins-text">Find the digital exhibit on Student Publishing.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Task 02</div>
+          <div class="ins-text">Locate an article about Martha Stewart (class of 1964) in the Barnard Alumnae magazine.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Task 03</div>
+          <div class="ins-text">Search for proposals on second-wave feminists' concerns for women in higher education.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Task 04</div>
+          <div class="ins-text">Find photos of Greek games held at Barnard in 1966 using the digital collection filters.</div>
+        </div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/barnard-college/post-test-questionarre.jpg" alt="Post Test Questionnaire">
+        <div class="cs-img-caption">Post-test questionnaire responses — capturing overall experience and additional recommendations</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s3">
+      <div class="cs-section-num">03 — Analysis</div>
+      <h2>High-Level Findings</h2>
+      <p>After collecting data from all 10 sessions, each team member independently analyzed their interviews and compiled findings. We then converged to identify the patterns that cut across participants and select 4 final recommendations based on severity and implementation feasibility.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Finding 01</div>
+          <div class="ins-text">Overall aesthetic was well-received — users appreciated the colour scheme. But aesthetic satisfaction masked functional failures that only emerged during task completion.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Finding 02</div>
+          <div class="ins-text">Metadata filter categories were genuinely useful for narrowing results — but the sheer number of categories was overwhelming for most users.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Finding 03</div>
+          <div class="ins-text">Inexperienced users were unaware of advanced search operators ("AND", "OR", "NOT") — and the site provided no guidance on where to learn them.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Finding 04</div>
+          <div class="ins-text">"View Object" button in the exhibits section did not appear clickable — users skipped over actionable elements because they didn't register as interactive.</div>
+        </div>
+      </div>
+
+      <div class="cs-img">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <img src="img/barnard-college/graph-figure1.png" alt="Figure 1 - Participant Types">
+          <img src="img/barnard-college/graph-figure2.png" alt="Figure 2 - Archive Experience">
+        </div>
+        <div class="cs-img-caption">Figure 1: Participant breakdown by type | Figure 2: Prior digital archive experience</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s4">
+      <div class="cs-section-num">04 — Recommendations</div>
+      <h2>Four Prioritized Design Solutions</h2>
+
+      <h3>Recommendation 1 — Added Contrast & Better Error Signifiers</h3>
+      <p><strong>Finding:</strong> 37.5% of users completely missed the "Narrow Your Search" panel. 75% of users struggled with the date filter — entering only a start date produced a vague error with no guidance on how to fix it.</p>
+      <p><strong>Solution:</strong> Increase visual contrast on the "Narrow Your Search" panel to draw attention. Improve error messaging to clearly explain what's required, and add an information button to prevent the error altogether.</p>
+
+      <div class="cs-img">
+        <img src="img/barnard-college/recommendations-01.png" alt="Recommendation 1">
+        <div class="cs-img-caption">Mockup: Improved filter panel contrast and contextual error messaging</div>
+      </div>
+
+      <h3>Recommendation 2 — Surface Advanced Search Operators</h3>
+      <p><strong>Finding:</strong> Inexperienced researchers were unaware that "AND", "OR", double quotes, and other search operators were available — the functionality existed but was completely hidden.</p>
+      <p><strong>Solution:</strong> Add operator shortcut buttons directly above the global search bar, making them visible and accessible without requiring users to seek documentation.</p>
+
+      <div class="cs-img">
+        <img src="img/barnard-college/recommendations-02.png" alt="Recommendation 2">
+        <div class="cs-img-caption">Mockup: Advanced search operators surfaced at point-of-use</div>
+      </div>
+
+      <h3>Recommendation 3 — Sub-navigation for Exhibits</h3>
+      <p><strong>Finding:</strong> The exhibits section only offered "Next" and "Prev" navigation — users had no sense of how many exhibits existed or where they were in the collection.</p>
+      <p><strong>Solution:</strong> Add a secondary navigation menu listing individual exhibit titles under main section headings — giving users a map of the collection and a sense of progress.</p>
+
+      <div class="cs-img">
+        <img src="img/barnard-college/recommendations-03.png" alt="Recommendation 3">
+        <div class="cs-img-caption">Mockup: Sub-navigation providing context and progress within the exhibits section</div>
+      </div>
+
+      <h3>Recommendation 4 — Show Photos in Full on First Click</h3>
+      <p><strong>Finding:</strong> Clicking a photo loaded a default cropped view — users thought they had navigated to a different photo entirely. Zoom controls were also poorly visible in the cropped state.</p>
+      <p><strong>Solution:</strong> Display the full photo when first clicked, letting users choose to zoom in rather than defaulting to a crop. Restyle zoom controls to be visually prominent.</p>
+
+      <div class="cs-img">
+        <img src="img/barnard-college/recommendations-04.png" alt="Recommendation 4">
+        <div class="cs-img-caption">Mockup: Full image display on first click with prominent zoom affordance</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s5">
+      <div class="cs-section-num">05 — Outcome</div>
+      <h2>Client Response & Learnings</h2>
+      <p>The client was genuinely appreciative — particularly because our recommendations were easy-to-implement, progressive improvements rather than a full redesign. They had been aware of some of these issues but hadn't framed them as significant UX problems. The study crystallized the issues and provided implementable evidence.</p>
+
+      <div class="pull-quote">
+        <p>The clients were glad to see that our recommendations were practical enough to be implemented through minor development changes — none required a structural overhaul of the site.</p>
+        <cite>— Project outcome</cite>
+      </div>
+
+      <h3>Post-Presentation Exploration</h3>
+      <p>After the client presentation, we explored the possibility of a horizontal filter layout for better discoverability. After producing a mockup, we concluded it introduced new problems — it was cluttered and required careful mouse navigation. A vertical dropdown with good labelling remained the better solution.</p>
+
+      <div class="cs-img">
+        <img src="img/barnard-college/bdc-horizontal-filters.png" alt="Horizontal Filter Exploration">
+        <div class="cs-img-caption">Horizontal filter exploration — ultimately rejected in favour of the improved vertical approach</div>
+      </div>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Learning 01</div>
+          <div class="ins-text">Remote testing via Zoom, when participants feel comfortable, can actually produce richer think-aloud data than in-person sessions where physical presence adds social pressure.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 02</div>
+          <div class="ins-text">Post-meeting explorations are valuable — the horizontal filter concept would not have been ruled out without a concrete mockup to evaluate against the original design.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 03</div>
+          <div class="ins-text">Clients already know about most issues — what research delivers is prioritization and evidence strong enough to justify the development investment of fixing them.</div>
+        </div>
+      </div>
+
+      <div style="margin-top:24px;">
+        <a href="https://drive.google.com/file/d/1ogoSxmqSR6EMaRpm5cXVzI-48dAksuDu/view?usp=sharing" target="_blank" class="btn-v">View Final Report &#8594;</a>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine">UX Designer &amp; Researcher</div></div>
-    <div><h5>Index</h5><a href="index.html">Work</a><a href="index.html#about">About</a><a href="index.html#resume">Resume</a></div>
-    <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-    <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
+<div class="cs-nav-strip">
+  <a class="cs-nav-item prev" href="covid-predicitve-analysis.html">
+    <div class="cni-label">Previous Project</div>
+    <div class="cni-title">COVID-19 Dashboard</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+  <a class="cs-nav-item next" href="index.html">
+    <div class="cni-label">All Work</div>
+    <div class="cni-title">Back to Index</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div>
+    <div class="f-sig">Mayank <em style="font-style:italic;color:var(--v)">Gupta</em></div>
+    <div class="f-fine">Senior UX Designer & Researcher<br>Mountain View, CA</div>
+  </div>
+  <div>
+    <h5>Work</h5>
+    <a href="index.html">Portfolio</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#writing">Writing</a>
+  </div>
+  <div>
+    <h5>Connect</h5>
+    <a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/mayankvgupb3c4" target="_blank">Behance</a>
+    <a href="https://dribbble.com/VI_OM" target="_blank">Dribbble</a>
+  </div>
+  <div>
+    <h5>Contact</h5>
+    <a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a>
   </div>
 </footer>
 
 <script>
-function tocClick(el,id){document.querySelectorAll('#toc li').forEach(l=>l.classList.remove('active'));el.classList.add('active');const t=document.getElementById(id);if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});}
-const secs=['s1','s2','s3','s4','s5'];
-window.addEventListener('scroll',()=>{let cur='';secs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)cur=id;});document.querySelectorAll('#toc li').forEach((li,i)=>{li.classList.toggle('active',secs[i]===cur);});});
+const sections = document.querySelectorAll('.cs-section');
+const tocItems = document.querySelectorAll('.cs-toc li');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = Array.from(sections).indexOf(e.target);
+      tocItems.forEach(li => li.classList.remove('active'));
+      if (tocItems[idx]) tocItems[idx].classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(s => obs.observe(s));
+
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 </body>
 </html>

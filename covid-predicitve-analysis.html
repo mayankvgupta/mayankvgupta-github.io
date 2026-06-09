@@ -1,171 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>COVID-19 Predictive Spatial Analysis — Mayank Gupta</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/cs-v2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Spatial Data Dashboard — Mayank Gupta</title>
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Mayank Gupta&nbsp;<em>/</em></a>
-    <div class="nav-links">
-      <a class="nav-link active" href="index.html">Work</a>
-      <a class="nav-link" href="index.html#about">About</a>
-      <a class="nav-link" href="index.html#writing">Writing</a>
-      <a class="nav-link" href="index.html#resume">Resume</a>
-    </div>
-    <a class="nav-cta" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Mayank <em>Gupta</em></a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#resume" class="nav-link">Resume</a>
+    <a href="index.html#writing" class="nav-link">Writing</a>
   </div>
+  <a href="mailto:mgupta17@pratt.edu" class="nav-cta">Get in touch</a>
 </nav>
 
 <div class="cs-back">
-  <div class="cs-back-inner">
-    <a href="index.html">← Back to Work</a>
-    <span class="breadcrumb">04 of 07</span>
-  </div>
+  <a href="index.html">&#8592; All Work</a>
+  <span class="cs-back-index">05 / 06</span>
 </div>
 
 <div class="cs-hero">
-  <div class="cs-hero-inner">
-    <div class="cs-hero-kicker">
-      <span class="chip v">Data Visualisation</span>
-      <span class="chip">Spatial Analysis</span>
-      <span class="chip">Dashboard Design</span>
-      <span class="chip">Carto</span>
-      <span class="label" style="color:var(--dark-ink3);margin-left:6px;">Academic · 2020</span>
-    </div>
-    <h1 class="serif">COVID-19 Predictive Spatial Analysis</h1>
-    <p class="cs-hero-desc">Three interactive visualisations combining spatial predictive analysis and data design to forecast COVID-19 hotspots at the county level — going beyond the dashboards that existed at the time by adding population context and forward-looking trend modelling.</p>
-    <div class="kpi-row">
-      <div class="kpi"><div class="kn serif">3</div><div class="kl mono">Visualisations built</div></div>
-      <div class="kpi"><div class="kn serif">5</div><div class="kl mono">Data buckets (Jenks)</div></div>
-      <div class="kpi"><div class="kn serif">2</div><div class="kl mono">User study participants</div></div>
-      <div class="kpi"><div class="kn serif">Carto</div><div class="kl mono">Platform</div></div>
-    </div>
+  <div class="cs-hero-kicker">
+    <span class="chip">Data Visualization</span>
+    <span class="chip">Spatial Analysis</span>
+    <span class="chip">Solo Project</span>
   </div>
-</div>
-
-<div class="cs-layout-wrap">
-  <div class="cs-layout">
-    <aside class="cs-toc">
-      <div class="cs-toc-title">Contents</div>
-      <ol id="toc">
-        <li class="active" onclick="tocClick(this,'s1')">01 · Context</li>
-        <li onclick="tocClick(this,'s2')">02 · Data &amp; Methods</li>
-        <li onclick="tocClick(this,'s3')">03 · Design</li>
-        <li onclick="tocClick(this,'s4')">04 · User Testing</li>
-        <li onclick="tocClick(this,'s5')">05 · Outcome</li>
-      </ol>
-    </aside>
-
-    <div class="cs-content">
-
-      <div class="cs-section" id="s1">
-        <div class="cs-section-num">01 — Context</div>
-        <h2 class="serif">Every COVID dashboard showed the past. This one showed the future.</h2>
-        <p>At the height of the pandemic, existing COVID-19 visualisations showed cumulative case counts — useful for understanding what had happened, but limited for anticipating what was about to happen. They also stripped out population context, making it impossible to distinguish a hotspot from a dense metro area.</p>
-        <p>This project set out to build something different: visualisations that combined spatial predictive analysis with county-level population data to forecast emerging hotspots and mask-use correlations in an interactive, filterable format.</p>
-        <img class="cs-img" src="img/covid-data-vis/mockup-covid-vis.png" alt="COVID-19 spatial analysis dashboard">
-        <p class="cs-img-caption">COVID-19 Predictive Spatial Analysis · Dashboard overview · Carto platform</p>
-      </div>
-
-      <div class="cs-section" id="s2">
-        <div class="cs-section-num">02 — Data &amp; Methods</div>
-        <h2 class="serif">Spatial Markov Chains for forward-looking trend modelling.</h2>
-        <p>County-level case data was cleaned and prepared in OpenRefine and Carto. The predictive component used the Predict Trends and Volatility (PTV) method with Spatial Markov Chains — a statistical technique that factors in neighbouring county trends when forecasting a given county's trajectory.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Data Cleaning</div><div class="ins-text">OpenRefine and Carto for data preparation. County population data joined to case counts to enable per-capita comparison.</div></div>
-          <div class="insight"><div class="ins-num">Prediction Method</div><div class="ins-text">Predict Trends and Volatility (PTV) using Spatial Markov Chains — accounts for geographic adjacency in trend forecasting.</div></div>
-          <div class="insight"><div class="ins-num">Visualisation Design</div><div class="ins-text">Colorblind-safe palette. Point size encodes county population (Jenks classification, 5 buckets, 2–15px range). Date widget for temporal filtering.</div></div>
-        </div>
-        <p>Point size was chosen deliberately to represent county population — a design decision that users in testing immediately understood and appreciated. This gave the visualisation a contextual layer that flat choropleth maps couldn't provide.</p>
-      </div>
-
-      <div class="cs-section" id="s3">
-        <div class="cs-section-num">03 — Design</div>
-        <h2 class="serif">Three visualisations. One dashboard. Full temporal control.</h2>
-        <p>The project produced three separate but linked visualisations, each answering a different question about the spread and trajectory of COVID-19.</p>
-        <ul>
-          <li><strong>Historical case trends</strong> — county-level case counts over time, with population-normalised point sizing to contextualise density.</li>
-          <li><strong>Predictive hotspot analysis</strong> — forward-looking trend classification (trending up, trending down, volatile) using spatial Markov chain outputs.</li>
-          <li><strong>Mask-use correlation</strong> — a third visualisation overlaying mask compliance survey data against predicted case trajectories.</li>
-        </ul>
-        <div class="img-grid">
-          <div>
-            <img class="cs-img" src="img/covid-data-vis/vis-1.png" alt="Historical case trend visualisation">
-            <p class="cs-img-caption">Visualisation 01 · Historical case trends · Population-sized point map</p>
-          </div>
-          <div>
-            <img class="cs-img" src="img/covid-data-vis/vis-2.png" alt="Predictive hotspot analysis">
-            <p class="cs-img-caption">Visualisation 02 · Predictive analysis · Trend classification by county</p>
-          </div>
-        </div>
-        <p>A date widget provided temporal filtering across all three views, allowing users to track how predictions evolved over the course of the dataset. The colorblind-safe palette was a non-negotiable accessibility requirement for public health data.</p>
-        <img class="cs-img" src="img/covid-data-vis/macbook-pro-clay.png" alt="Dashboard on MacBook mockup">
-        <p class="cs-img-caption">Dashboard · Desktop view · Carto interactive visualisation</p>
-      </div>
-
-      <div class="cs-section" id="s4">
-        <div class="cs-section-num">04 — User Testing</div>
-        <h2 class="serif">Two participants. Specific, addressable feedback.</h2>
-        <p>Two participants completed a think-aloud usability study on the interactive visualisations. Despite the small sample, both sessions produced specific, actionable feedback that shaped the final iteration.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">What worked</div><div class="ins-text">Point size for population was immediately understood — both users used it spontaneously to contextualise case counts without prompting.</div></div>
-          <div class="insight"><div class="ins-num">What didn't</div><div class="ins-text">Terminology like "volatility," "trend_up," and "trend_down" confused non-technical users. Labels needed plain-language translation.</div></div>
-          <div class="insight"><div class="ins-num">Accessibility gap</div><div class="ins-text">Small points were difficult to see against light map backgrounds. Both users requested a darker basemap and visible state borders.</div></div>
-        </div>
-        <p>The testing session also confirmed that the predictive layer was the most valued feature — users found forward-looking trend data meaningfully more useful than the historical case counts available on other dashboards.</p>
-      </div>
-
-      <div class="cs-section" id="s5">
-        <div class="cs-section-num">05 — Outcome</div>
-        <h2 class="serif">More useful than existing dashboards. Specific improvements identified.</h2>
-        <p>Both participants rated the visualisations as more useful than the COVID dashboards they had been using — specifically citing the population context and predictive trend layer as differentiating features.</p>
-        <p>The iteration backlog from testing was specific and implementable: darker basemap, state border overlays, tooltip labels with plain-language trend descriptions, and increased minimum point size. The project established a process for data visualisation work that I've applied since: design for the non-expert reader first, and test with people who aren't already comfortable reading data.</p>
-      </div>
-
+  <h1>COVID-19 Spatial Data Dashboard</h1>
+  <p class="cs-hero-desc">Three interconnected spatial visualizations using Carto and Spatial Markov Chains to predict future COVID-19 hotspots — bridging the gap between raw county-level data and actionable public health insight.</p>
+  <div class="cs-meta-strip">
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-val">Solo — Data Viz Designer & Researcher</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Client</div>
+      <div class="cs-meta-val">Prof. Chris Alen Sula · Pratt Institute</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Duration</div>
+      <div class="cs-meta-val">6 weeks · Fall 2020</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Tools</div>
+      <div class="cs-meta-val">Carto · OpenRefine · Microsoft Excel</div>
     </div>
   </div>
 </div>
 
-<div class="cs-nav-outer">
-  <div class="cs-nav-inner">
-    <a class="cs-nav-item" href="pratt-news-analysis.html">
-      <div class="cni-label">← Previous</div>
-      <div class="cni-title serif">Pratt News Analysis</div>
-      <div class="cni-arr">←</div>
-    </a>
-    <a class="cs-nav-item" href="placemaking-week.html">
-      <div class="cni-label">Next project →</div>
-      <div class="cni-title serif">Placemaking Week</div>
-      <div class="cni-arr">→</div>
-    </a>
+<div class="cs-img">
+  <img src="img/covid-data-vis/clay-cover-01.png" alt="COVID Dashboard Cover">
+</div>
+
+<div class="cs-layout">
+  <aside class="cs-toc">
+    <div class="cs-toc-title">Contents</div>
+    <ol>
+      <li class="active" onclick="scrollTo('s1')">Problem</li>
+      <li onclick="scrollTo('s2')">Data Work</li>
+      <li onclick="scrollTo('s3')">Visualizations</li>
+      <li onclick="scrollTo('s4')">UX Study</li>
+      <li onclick="scrollTo('s5')">Outcome</li>
+    </ol>
+  </aside>
+
+  <div class="cs-content">
+
+    <div class="cs-section" id="s1">
+      <div class="cs-section-num">01 — Problem</div>
+      <h2>Two Gaps in Existing COVID Visualizations</h2>
+      <p>The COVID-19 pandemic generated an enormous volume of data visualizations — but a survey of the landscape revealed two consistent and significant gaps across virtually all of them.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Gap 01</div>
+          <div class="ins-text">No visualization accounted for county population within the display. Using the full county area as a visual proxy is misleading — low-density counties with few cases visually dominate high-density counties with larger outbreaks.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Gap 02</div>
+          <div class="ins-text">None of the visualizations used predictive analysis to show future trends. Spatial predictive analysis can identify likely hotspots in advance — enabling proactive resource allocation rather than reactive response.</div>
+        </div>
+      </div>
+
+      <p>The solution to Gap 01 was to use <strong>point size</strong> as the variable representing county population — decoupling visual area from data values. The solution to Gap 02 was to apply Carto's Predict Trends and Volatility (PTV) tool, which uses <strong>Spatial Markov Chains</strong> to calculate probabilistic future states.</p>
+    </div>
+
+    <div class="cs-section" id="s2">
+      <div class="cs-section-num">02 — Data Work</div>
+      <h2>Cleaning & Preparing the Dataset</h2>
+      <p>The raw data required significant preparation. COVID case data was organized in separate columns, while county latitude and longitude data lived in a separate zip-format table. Merging them required a multi-step process across OpenRefine and Carto.</p>
+
+      <h3>Data Pipeline</h3>
+      <ul>
+        <li>Import the county Latitude/Longitude dataset into Carto and export as CSV</li>
+        <li>Import datasets into OpenRefine and merge lat/lon using cross-table functions:<br>
+          <code style="font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--bg2);padding:4px 8px;display:inline-block;margin-top:6px;">cell.cross("c_03mr20_1","fips").cells["lon"].value[0]</code>
+        </li>
+        <li>Perform Transpose operation to interchange rows and columns, then export the final dataset</li>
+      </ul>
+
+      <p>For some of the more complex datasets, I used a combination of OpenRefine and Carto together to achieve the desired merge results — a workflow that revealed some meaningful limitations of each tool used in isolation.</p>
+    </div>
+
+    <div class="cs-section" id="s3">
+      <div class="cs-section-num">03 — Visualizations</div>
+      <h2>Three Interconnected Spatial Views</h2>
+
+      <h3>Visualization 1 — Total Cases Over Time</h3>
+      <p>The first visualization highlights total COVID cases over time in every US county, with point size varying by county population (Jenks classification, 5 buckets, size range 2–15). A date widget allows filtering to specific time windows, enabling analysis of the virus's propagation across states.</p>
+
+      <div class="cs-img">
+        <a href="https://savi.carto.com/u/mgupta17/builder/c9a54e27-d2c6-4fa4-aee8-c967310fda55/embed" target="_blank">
+          <img src="img/covid-data-vis/vis-1.png" alt="Visualization 1 — Total Cases">
+        </a>
+        <div class="cs-img-caption">Visualization 1 — Click to interact with the live Carto prototype</div>
+      </div>
+
+      <h3>Visualization 2 — Predictive Analysis</h3>
+      <p>The second visualization uses Carto's PTV (Predict Trends and Volatility) tool with Spatial Markov Chains to identify counties likely to become the next hotspots. Markov Chains calculate transition probabilities — the likelihood of a system moving from one state to another — making it possible to visualize directional trends even when outcomes are probabilistic rather than certain.</p>
+      <p>Key metrics displayed: <strong>trend_up</strong> (probability of increasing cases), <strong>trend_down</strong> (probability of decreasing cases), and <strong>volatility</strong> (degree of variation over time).</p>
+
+      <div class="cs-img">
+        <a href="https://savi.carto.com/u/mgupta17/builder/c8382d10-51d5-491b-8c74-8e8bad03723e/embed" target="_blank">
+          <img src="img/covid-data-vis/vis-2.png" alt="Visualization 2 — Predictive Analysis">
+        </a>
+        <div class="cs-img-caption">Visualization 2 — Predictive analysis using Spatial Markov Chains. Click to interact.</div>
+      </div>
+
+      <h3>Visualization 3 — Mask Use Prediction</h3>
+      <p>The third visualization predicts case trends based on mask use data from The New York Times. PTV analysis was run on the original dataset filtered by mask use behavior (always vs. never), with interactive widgets letting users see projected trend direction by county based on their masking habits.</p>
+
+      <div class="pull-quote">
+        <p>I used a consistent color scheme across all three visualizations — color-blind safe and subtle enough not to distract from the data. Since each visualization stands alone, the shared palette builds coherence across the series rather than causing cross-interpretation confusion.</p>
+        <cite>— Design rationale</cite>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s4">
+      <div class="cs-section-num">04 — UX Study</div>
+      <h2>Testing with Real Users</h2>
+      <p>I conducted a brief user study with 2 participants — including one with limited technological experience but deep familiarity with the COVID-19 pandemic. I used the Think Aloud method to capture both functional comprehension and aesthetic reactions simultaneously.</p>
+
+      <h3>Study Goals</h3>
+      <ul>
+        <li>Can the user interact with the visualizations without feeling lost?</li>
+        <li>Is the purpose of each visualization and its widgets clear?</li>
+        <li>Can users determine counties with higher infection risk?</li>
+        <li>Are the aesthetics engaging rather than distracting?</li>
+      </ul>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Finding 01</div>
+          <div class="ins-text">Some points were too small and light against the background — low-population counties in pale areas were effectively invisible.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Finding 02</div>
+          <div class="ins-text">The date widget had an off-by-one behavior — clicking a date selected the following week rather than the intended week.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Finding 03</div>
+          <div class="ins-text">Terminology like "volatility," "trend_up," and "trend_down" was opaque — users interpreted it based on context clues rather than understanding the underlying concept.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Finding 04</div>
+          <div class="ins-text">Absence of state borders increased cognitive load — users had significant difficulty locating specific counties without geographic reference lines.</div>
+        </div>
+      </div>
+
+      <p>One particularly revealing moment: when a participant asked what "volatility" meant in context, I responded with "what do you think it means?" — yielding a much richer insight into the gap between designer intent and user mental model than a yes/no comprehension check would have produced.</p>
+    </div>
+
+    <div class="cs-section" id="s5">
+      <div class="cs-section-num">05 — Outcome</div>
+      <h2>Results & Reflections</h2>
+      <p>Both participants found the visualizations more useful than any COVID map they had previously encountered. The point-size-for-population approach was consistently praised — users felt it helped them analyze data far more accurately than choropleth maps that use geographic area as a proxy.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kn">3</div>
+          <div class="kl">Live Carto Prototypes</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">2</div>
+          <div class="kl">User Study Sessions</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">5</div>
+          <div class="kl">UX Recommendations</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">Solo</div>
+          <div class="kl">End-to-end Ownership</div>
+        </div>
+      </div>
+
+      <h3>Recommendations from Study</h3>
+      <ul>
+        <li>Use a darker base map to increase contrast for lighter, smaller county points</li>
+        <li>Add state border overlays to all maps — significantly reduces geographic cognitive load</li>
+        <li>Add a small description/legend explaining how to read the map and interpret terminology</li>
+      </ul>
+
+      <p>Carto is a powerful spatial tool — but the constraints revealed in this project (no text box overlays, fixed widget positioning, projection limitations for Alaska and Hawaii) clarify where purpose-built visualization tools like D3 or Mapbox would offer more design control for production-quality work.</p>
+
+      <div style="margin-top:24px;">
+        <a href="https://studentwork.prattsi.org/infovis/visualization/predicting-the-future-covid-outbreaks/" target="_blank" class="btn-v">View Final Report &#8594;</a>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine">UX Designer &amp; Researcher</div></div>
-    <div><h5>Index</h5><a href="index.html">Work</a><a href="index.html#about">About</a><a href="index.html#resume">Resume</a></div>
-    <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-    <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
+<div class="cs-nav-strip">
+  <a class="cs-nav-item prev" href="skill-sharing-app.html">
+    <div class="cni-label">Previous Project</div>
+    <div class="cni-title">Skill Sharing App</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+  <a class="cs-nav-item next" href="barnard-college-user-testing.html">
+    <div class="cni-label">Next Project</div>
+    <div class="cni-title">Barnard Digital Collections</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div>
+    <div class="f-sig">Mayank <em style="font-style:italic;color:var(--v)">Gupta</em></div>
+    <div class="f-fine">Senior UX Designer & Researcher<br>Mountain View, CA</div>
+  </div>
+  <div>
+    <h5>Work</h5>
+    <a href="index.html">Portfolio</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#writing">Writing</a>
+  </div>
+  <div>
+    <h5>Connect</h5>
+    <a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/mayankvgupb3c4" target="_blank">Behance</a>
+    <a href="https://dribbble.com/VI_OM" target="_blank">Dribbble</a>
+  </div>
+  <div>
+    <h5>Contact</h5>
+    <a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a>
   </div>
 </footer>
 
 <script>
-function tocClick(el,id){document.querySelectorAll('#toc li').forEach(l=>l.classList.remove('active'));el.classList.add('active');const t=document.getElementById(id);if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});}
-const secs=['s1','s2','s3','s4','s5'];
-window.addEventListener('scroll',()=>{let cur='';secs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)cur=id;});document.querySelectorAll('#toc li').forEach((li,i)=>{li.classList.toggle('active',secs[i]===cur);});});
+const sections = document.querySelectorAll('.cs-section');
+const tocItems = document.querySelectorAll('.cs-toc li');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = Array.from(sections).indexOf(e.target);
+      tocItems.forEach(li => li.classList.remove('active'));
+      if (tocItems[idx]) tocItems[idx].classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(s => obs.observe(s));
+
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 </body>
 </html>

@@ -1,152 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Skill Sharing Application — Mayank Gupta</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/cs-v2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peer Skill Sharing App — Mayank Gupta</title>
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Mayank Gupta&nbsp;<em>/</em></a>
-    <div class="nav-links">
-      <a class="nav-link active" href="index.html">Work</a>
-      <a class="nav-link" href="index.html#about">About</a>
-      <a class="nav-link" href="index.html#writing">Writing</a>
-      <a class="nav-link" href="index.html#resume">Resume</a>
-    </div>
-    <a class="nav-cta" href="mailto:mgupta17@pratt.edu">Get in touch ↗</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Mayank <em>Gupta</em></a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#resume" class="nav-link">Resume</a>
+    <a href="index.html#writing" class="nav-link">Writing</a>
   </div>
+  <a href="mailto:mgupta17@pratt.edu" class="nav-cta">Get in touch</a>
 </nav>
 
 <div class="cs-back">
-  <div class="cs-back-inner">
-    <a href="index.html">← Back to Work</a>
-    <span class="breadcrumb">07 of 07</span>
-  </div>
+  <a href="index.html">&#8592; All Work</a>
+  <span class="cs-back-index">04 / 06</span>
 </div>
 
 <div class="cs-hero">
-  <div class="cs-hero-inner">
-    <div class="cs-hero-kicker">
-      <span class="chip v">UI Design</span>
-      <span class="chip">Mobile</span>
-      <span class="chip">UX Design</span>
-      <span class="chip">Adobe XD</span>
-      <span class="label" style="color:var(--dark-ink3);margin-left:6px;">Academic · 2020</span>
+  <div class="cs-hero-kicker">
+    <span class="chip">Mobile Design</span>
+    <span class="chip">MVP</span>
+    <span class="chip">Peer Learning</span>
+  </div>
+  <h1>Peer Skill Sharing Mobile App</h1>
+  <p class="cs-hero-desc">Designing the UI for a minimum viable product that lets students archive hours spent learning skills and find peers for knowledge exchange — turning informal learning into a structured, social experience.</p>
+  <div class="cs-meta-strip">
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-val">UI Designer · UX Contributor</div>
     </div>
-    <h1 class="serif">Skill Sharing Application</h1>
-    <p class="cs-hero-desc">A mobile MVP for Pratt Beta Space — a peer-to-peer skill sharing platform that lets students log hours for skills learned outside the classroom and connect with others learning the same things. Designed from sketches to high-fidelity prototype in Adobe XD.</p>
-    <div class="kpi-row">
-      <div class="kpi"><div class="kn serif">5</div><div class="kl mono">Paper prototype tests</div></div>
-      <div class="kpi"><div class="kn serif">4</div><div class="kl mono">Core user flows</div></div>
-      <div class="kpi"><div class="kn serif">Hi-fi</div><div class="kl mono">Prototype in Adobe XD</div></div>
-      <div class="kpi"><div class="kn serif">MVP</div><div class="kl mono">Scope</div></div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Team</div>
+      <div class="cs-meta-val">Mayank Gupta, Hao Ni</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Duration</div>
+      <div class="cs-meta-val">8 weeks</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Tools</div>
+      <div class="cs-meta-val">Adobe XD</div>
     </div>
   </div>
 </div>
 
-<div class="cs-layout-wrap">
-  <div class="cs-layout">
-    <aside class="cs-toc">
-      <div class="cs-toc-title">Contents</div>
-      <ol id="toc">
-        <li class="active" onclick="tocClick(this,'s1')">01 · Context</li>
-        <li onclick="tocClick(this,'s2')">02 · Process</li>
-        <li onclick="tocClick(this,'s3')">03 · Design</li>
-        <li onclick="tocClick(this,'s4')">04 · Outcome</li>
-      </ol>
-    </aside>
+<div class="cs-img">
+  <img src="img/skill-sharing-app/mockup-1.png" alt="Skill Sharing App Mockup">
+</div>
 
-    <div class="cs-content">
+<div class="cs-layout">
+  <aside class="cs-toc">
+    <div class="cs-toc-title">Contents</div>
+    <ol>
+      <li class="active" onclick="scrollTo('s1')">Challenge</li>
+      <li onclick="scrollTo('s2')">Process</li>
+      <li onclick="scrollTo('s3')">Wireframes</li>
+      <li onclick="scrollTo('s4')">Final Design</li>
+      <li onclick="scrollTo('s5')">Reflection</li>
+    </ol>
+  </aside>
 
-      <div class="cs-section" id="s1">
-        <div class="cs-section-num">01 — Context</div>
-        <h2 class="serif">Learning happens outside the classroom. There was nowhere to record it.</h2>
-        <p>Pratt Beta Space commissioned an MVP for a skill sharing platform — a mobile application that would let students log hours spent learning skills outside formal coursework, authenticate their progress, and connect with peers working on the same things.</p>
-        <p>The goal wasn't to build everything. It was to build enough to start testing. The brief called for an MVP scope: four core flows, a coherent visual system, and a prototype ready for user testing with the development team. I worked alongside a product developer and product manager on a two-person design team, guided by Prof. Basem Aly, over eight weeks.</p>
-        <img class="cs-img" src="img/skill-sharing-app/mockup-1.png" alt="Skill sharing application mockup">
-        <p class="cs-img-caption">Skill Sharing Application · MVP prototype · Adobe XD</p>
-      </div>
+  <div class="cs-content">
 
-      <div class="cs-section" id="s2">
-        <div class="cs-section-num">02 — Process</div>
-        <h2 class="serif">User flow first. Then screens.</h2>
-        <p>Before any sketch reached the screen, the team mapped user flows — starting from primary student goals and iterating through multiple flow versions with a student persona in mind. This grounded the screen prioritisation: login, registration, skill adding, and hours logging were identified as the four non-negotiable MVP flows.</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">User Flows</div><div class="ins-text">Multiple iterations mapped before sketching began. Primary student goals drove prioritisation — not feature completeness.</div></div>
-          <div class="insight"><div class="ins-num">Initial Sketches</div><div class="ins-text">Each team member sketched independently, then discussed. Divided screens to work in parallel once a shared direction was established.</div></div>
-          <div class="insight"><div class="ins-num">Paper Prototyping</div><div class="ins-text">5 participants tested key flows. Returned two specific issues addressed before digital wireframing began.</div></div>
+    <div class="cs-section" id="s1">
+      <div class="cs-section-num">01 — Challenge</div>
+      <h2>Creating an MVP for Peer Learning</h2>
+      <p>Pratt Beta Space needed a platform that would allow students to track hours spent learning skills outside the classroom and enable peer-to-peer knowledge exchange. The goal was to design the UI for an MVP — just enough to begin initial user testing and validate the core concept before development.</p>
+      <p>The challenge was addressing a diverse student audience while keeping the experience seamless for everyone, from design students to engineers to architects.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Goal 01</div>
+          <div class="ins-text">Give users the ability to record and archive hours for skills learned outside the formal classroom setting.</div>
         </div>
-        <img class="cs-img" src="img/skill-sharing-app/intial-sketches.png" alt="Initial sketches for the application">
-        <p class="cs-img-caption">Initial sketches · Primary flows · Mapping screens before committing to digital</p>
-        <p>Paper prototype testing with 5 participants surfaced two issues that shaped the wireframe phase: the registration flow's password requirements needed clearer progressive disclosure — three iterations were explored before landing on an approach that worked — and the onboarding sequence needed reordering based on how students actually thought about joining a skill platform.</p>
-      </div>
-
-      <div class="cs-section" id="s3">
-        <div class="cs-section-num">03 — Design</div>
-        <h2 class="serif">From wireframes to high-fidelity. Four flows, one system.</h2>
-        <p>Low-fidelity wireframes were built after the paper prototype feedback was resolved. Working in parallel with a shared style guide ensured visual consistency across screens owned by different team members — a deliberate process choice that kept the prototype cohesive despite the parallel workstream.</p>
-        <img class="cs-img" src="img/skill-sharing-app/final-wireframes.png" alt="Final wireframes for the application">
-        <p class="cs-img-caption">Final wireframes · Core screens · Login, registration, skill adding, hours logging</p>
-        <div class="insight-grid">
-          <div class="insight"><div class="ins-num">Login flow</div><div class="ins-text">Minimal entry point with clear registration pathway for new users. Onboarding designed to feel approachable rather than gate-like.</div></div>
-          <div class="insight"><div class="ins-num">Registration flow</div><div class="ins-text">Three iterations on password requirement UX before settling on inline progressive validation — the most-tested screen in the prototype.</div></div>
-          <div class="insight"><div class="ins-num">Skill + Hours flows</div><div class="ins-text">The core product loop: add a skill, log hours against it, see progress accumulate. Designed for students logging learning time across multiple disciplines.</div></div>
+        <div class="insight">
+          <div class="ins-num">Goal 02</div>
+          <div class="ins-text">Authenticate and validate user progress — building a credible record of informal learning alongside academic credentials.</div>
         </div>
-        <img class="cs-img" src="img/skill-sharing-app/final-prototype.png" alt="High-fidelity prototype screens">
-        <p class="cs-img-caption">High-fidelity prototype · All four MVP flows · Adobe XD</p>
+        <div class="insight">
+          <div class="ins-num">Goal 03</div>
+          <div class="ins-text">Provide flexibility to learn anywhere, anytime — enabling asynchronous peer connections that aren't constrained by schedules.</div>
+        </div>
       </div>
-
-      <div class="cs-section" id="s4">
-        <div class="cs-section-num">04 — Outcome</div>
-        <h2 class="serif">MVP delivered. Development handoff completed.</h2>
-        <p>The high-fidelity prototype covered all four core flows — login, registration, skill adding, and hours logging — and was handed off to the development team as the design foundation for the initial build. The prototype was ready for the first round of user testing with actual students as soon as development produced a functional version.</p>
-        <p>Working within an MVP constraint was a useful discipline: it forced prioritisation decisions early and kept the design focused on the flows that mattered most for initial validation. Features that would have been valuable — peer browsing, skill matching, progress authentication — were scoped for later iterations once the core loop was tested.</p>
-        <p>The project was also my first experience working directly alongside a product developer and product manager — navigating handoff requirements, understanding technical constraints, and keeping the design system tight enough for a developer to implement without ambiguity. That context shaped how I document and present design work.</p>
-      </div>
-
     </div>
+
+    <div class="cs-section" id="s2">
+      <div class="cs-section-num">02 — Process</div>
+      <h2>Research + Design + Iterate</h2>
+      <p>My primary contribution was designing the low and high fidelity screens across all flows. I also actively participated in brainstorming and researching features for the MVP alongside a product developer and product manager.</p>
+
+      <div class="cs-img">
+        <img src="img/skill-sharing-app/process.svg" alt="Design Process">
+        <div class="cs-img-caption">The three-phase process: Research → Design → Iterate</div>
+      </div>
+
+      <h3>Defining the User Flow</h3>
+      <p>The first step was to determine the user flow and identify the unique screens required for the MVP. We began by defining primary user goals, then mapped various flow iterations with a student persona in mind. This helped us establish screen priority before any design work began.</p>
+
+      <div class="cs-img">
+        <img src="img/skill-sharing-app/notes.png" alt="Brainstorming Notes">
+        <div class="cs-img-caption">Notes from brainstorming sessions — mapping user goals to screen requirements</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s3">
+      <div class="cs-section-num">03 — Wireframes</div>
+      <h2>From Sketches to Low Fidelity</h2>
+      <p>Before the design phase could begin, we each sketched basic wireframes independently and then converged to discuss ideas. Individual sketching before group review produced richer divergence and better raw material to synthesize.</p>
+      <p>To move faster, we divided screens and worked on them individually while following a shared style guide — ensuring consistency without requiring constant synchronization.</p>
+
+      <div class="cs-img">
+        <img src="img/skill-sharing-app/intial-sketches.png" alt="Initial Sketches">
+        <div class="cs-img-caption">Primary sketches — individually produced to maximize divergence before synthesis</div>
+      </div>
+
+      <h3>Trial and Error</h3>
+      <p>We explored three different approaches for handling password requirements on the registration screen — a detail that significantly affects perceived trust and friction at the most critical moment of onboarding.</p>
+
+      <div class="cs-img">
+        <img src="img/skill-sharing-app/trial-error.png" alt="Trial and Error Screens">
+        <div class="cs-img-caption">Three iterations of the password requirements UI — testing clarity vs. simplicity</div>
+      </div>
+
+      <div class="cs-img">
+        <img src="img/skill-sharing-app/final-wireframes.png" alt="Final Wireframes">
+        <div class="cs-img-caption">Final low-fidelity wireframes — establishing layout and flow before visual design</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s4">
+      <div class="cs-section-num">04 — Final Design</div>
+      <h2>High Fidelity Prototype</h2>
+      <p>The final high-fidelity prototypes covered the core MVP flows: login, registration, skill adding, and hours tracking. The designs hit the intended goal — clear, focused, and ready for initial user testing to validate the core concept.</p>
+
+      <div class="cs-img">
+        <img src="img/skill-sharing-app/final-prototype.png" alt="Final Prototype">
+        <div class="cs-img-caption">The Final Avatar — high-fidelity MVP covering all four core flows</div>
+      </div>
+
+      <div class="pull-quote">
+        <p>The MVP scope was intentionally tight — login, registration, skill adding, and hours tracking. Staying focused on what needed validation first prevented the common trap of designing beyond what could realistically be tested.</p>
+        <cite>— Project reflection</cite>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s5">
+      <div class="cs-section-num">05 — Reflection</div>
+      <h2>Learnings</h2>
+      <p>I transitioned off the project when app development began and the visual design phase was underway — a natural handoff point in the MVP lifecycle. The experience of working closely with a developer and product manager revealed how design decisions ripple into engineering constraints in ways that aren't visible when working within a design team alone.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Learning 01</div>
+          <div class="ins-text">Defining screen priority through user flow mapping before wireframing significantly reduced rework — the investment pays forward in every subsequent phase.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 02</div>
+          <div class="ins-text">Working directly with developers sharpened my instinct for design decisions that are deceptively expensive to implement vs. visually equivalent but cheaper alternatives.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 03</div>
+          <div class="ins-text">Individual sketching before group synthesis produced better divergence. Shared style guides enabled parallel design work without sacrificing cohesion.</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<div class="cs-nav-outer">
-  <div class="cs-nav-inner">
-    <a class="cs-nav-item" href="barnard-college-user-testing.html">
-      <div class="cni-label">← Previous</div>
-      <div class="cni-title serif">Barnard Digital Collections</div>
-      <div class="cni-arr">←</div>
-    </a>
-    <a class="cs-nav-item" href="index.html">
-      <div class="cni-label">All work →</div>
-      <div class="cni-title serif">Back to portfolio</div>
-      <div class="cni-arr">→</div>
-    </a>
-  </div>
+<div class="cs-nav-strip">
+  <a class="cs-nav-item prev" href="placemaking-week.html">
+    <div class="cni-label">Previous Project</div>
+    <div class="cni-title">Placemaking Week</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+  <a class="cs-nav-item next" href="covid-predicitve-analysis.html">
+    <div class="cni-label">Next Project</div>
+    <div class="cni-title">COVID-19 Dashboard</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div><div class="f-sig serif">Mayank Gupta</div><div class="f-fine">UX Designer &amp; Researcher</div></div>
-    <div><h5>Index</h5><a href="index.html">Work</a><a href="index.html#about">About</a><a href="index.html#resume">Resume</a></div>
-    <div><h5>Elsewhere</h5><a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank" rel="noopener">LinkedIn</a></div>
-    <div><h5>Reach</h5><a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a></div>
+<footer class="site-footer">
+  <div>
+    <div class="f-sig">Mayank <em style="font-style:italic;color:var(--v)">Gupta</em></div>
+    <div class="f-fine">Senior UX Designer & Researcher<br>Mountain View, CA</div>
+  </div>
+  <div>
+    <h5>Work</h5>
+    <a href="index.html">Portfolio</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#writing">Writing</a>
+  </div>
+  <div>
+    <h5>Connect</h5>
+    <a href="https://www.linkedin.com/in/mayankguptadesigns/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/mayankvgupb3c4" target="_blank">Behance</a>
+    <a href="https://dribbble.com/VI_OM" target="_blank">Dribbble</a>
+  </div>
+  <div>
+    <h5>Contact</h5>
+    <a href="mailto:mgupta17@pratt.edu">mgupta17@pratt.edu</a>
   </div>
 </footer>
 
 <script>
-function tocClick(el,id){document.querySelectorAll('#toc li').forEach(l=>l.classList.remove('active'));el.classList.add('active');const t=document.getElementById(id);if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});}
-const secs=['s1','s2','s3','s4'];
-window.addEventListener('scroll',()=>{let cur='';secs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)cur=id;});document.querySelectorAll('#toc li').forEach((li,i)=>{li.classList.toggle('active',secs[i]===cur);});});
+const sections = document.querySelectorAll('.cs-section');
+const tocItems = document.querySelectorAll('.cs-toc li');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = Array.from(sections).indexOf(e.target);
+      tocItems.forEach(li => li.classList.remove('active'));
+      if (tocItems[idx]) tocItems[idx].classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(s => obs.observe(s));
+
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 </body>
 </html>
