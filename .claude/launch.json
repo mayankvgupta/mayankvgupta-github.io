@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-v2",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/mayank/Downloads/mayankvgupta-github.io/.claude/worktrees/awesome-blackwell-c3acd2 && ruby -run -e httpd . -p $PORT"],
+      "port": 3456
+    }
+  ]
+}
