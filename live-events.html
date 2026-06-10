@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Events Support — Mayank Gupta</title>
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Mayank <em>Gupta</em></a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#resume" class="nav-link">Resume</a>
+    <a href="index.html#writing" class="nav-link">Writing</a>
+  </div>
+  <a href="mailto:mayankvgupta1997@gmail.com" class="nav-cta">Get in touch</a>
+</nav>
+
+<div class="cs-back">
+  <a href="index.html">&#8592; All Work</a>
+  <span class="cs-back-index">02 / 05</span>
+</div>
+
+<div class="cs-hero">
+  <div class="cs-hero-kicker">
+    <span class="chip">Product Design</span>
+    <span class="chip">B2B SaaS</span>
+    <span class="chip">Ad Tech</span>
+    <span class="chip">CTV / Streaming</span>
+  </div>
+  <h1>Live Events Support</h1>
+  <p class="cs-hero-desc">Introducing live events as a first-class object in Magnite's DV+ platform — giving publishers a structured way to communicate live programming to the pacing engine, and giving the platform the metadata it needs to deliver ads reliably during burst-traffic moments.</p>
+  <div class="cs-meta-strip">
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-val">Product Designer (Lead UX)</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Platform</div>
+      <div class="cs-meta-val">Magnite DV+ · CTV / Streaming</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Timeline</div>
+      <div class="cs-meta-val">3 phases · All shipped to production</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Tools</div>
+      <div class="cs-meta-val">Figma · Magnite Design System</div>
+    </div>
+  </div>
+</div>
+
+<div class="cs-img" style="background:#0e1a2b; padding:48px 40px;">
+  <img src="img/live-events/hero.jpg" alt="Live Events — Listing Page and Create Live Event form">
+</div>
+
+<div class="cs-layout">
+  <aside class="cs-toc">
+    <div class="cs-toc-title">Contents</div>
+    <ol>
+      <li class="active" onclick="scrollTo('s1')">Context</li>
+      <li onclick="scrollTo('s2')">Problem</li>
+      <li onclick="scrollTo('s3')">Design Decisions</li>
+      <li onclick="scrollTo('s4')">Phases</li>
+      <li onclick="scrollTo('s5')">Outcome</li>
+    </ol>
+  </aside>
+
+  <div class="cs-content">
+
+    <div class="cs-section" id="s1">
+      <div class="cs-section-num">01 — Context</div>
+      <h2>Live TV Doesn't Behave Like On-Demand</h2>
+      <p>Magnite's DV+ platform is built for streaming — but streaming isn't a monolith. On-demand content delivers predictable, spread-out traffic. Live events — sports, breaking news, award shows, political coverage — deliver something completely different: synchronized viewership where millions of people tune in at once, ad breaks that hit simultaneously across the audience, and impression volumes that spike and drop on a schedule tied to real-world events.</p>
+      <p>The platform's pacing engine wasn't blind to this problem — it was just missing the information it needed to handle it well. Publishers knew when their live events were scheduled, what their expected audience looked like, and how many ad breaks they had planned. But there was no structured way for them to communicate any of that to the platform. Live events were treated as unmarked inventory, indistinguishable from any other stream until the traffic patterns revealed otherwise.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kn">0 → 1</div>
+          <div class="kl">Net-New Object Type</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">3</div>
+          <div class="kl">Phases Shipped</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">Live</div>
+          <div class="kl">All Phases in Production</div>
+        </div>
+      </div>
+
+      <h3>Why This Mattered for CTV</h3>
+      <p>Connected TV is where premium live inventory lives — and premium live events command some of the highest CPMs in programmatic advertising. Getting ad delivery right during a live event isn't just a technical concern; it's directly tied to publisher revenue and buyer confidence. A pacing engine working with accurate live event metadata can deliver ads reliably during high-value moments instead of under- or over-pacing based on assumptions built for on-demand content.</p>
+    </div>
+
+    <div class="cs-section" id="s2">
+      <div class="cs-section-num">02 — Problem</div>
+      <h2>Three Traffic Problems, One Missing Data Layer</h2>
+      <p>Live events create a set of conditions that standard pacing assumptions aren't built for. The platform was encountering all three without the context to distinguish them from ordinary traffic variation.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Problem 01</div>
+          <div class="ins-text"><strong>Burst traffic.</strong> Live events produce impressions in sharp spikes — not the gradual distribution of on-demand consumption. Pacing engines calibrated for smooth delivery either overpace early (exhausting budget before the best moments) or underpace during the burst (leaving impressions unfilled).</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Problem 02</div>
+          <div class="ins-text"><strong>Synchronized viewership.</strong> During a live event, ad breaks hit an entire audience simultaneously. This creates a different impression-per-minute density than anything the engine had been modeled against — and without a time window attached to the event, the engine had no way to anticipate it.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Problem 03</div>
+          <div class="ins-text"><strong>Alternating live and non-live periods.</strong> A live stream might go in and out of live programming — pre-show content, halftime breaks, post-game analysis. Use rates fluctuate significantly across these periods. Without event boundaries, the engine treated the entire stream as a single undifferentiated inventory type.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Publisher Gap</div>
+          <div class="ins-text"><strong>No structured input mechanism.</strong> Publishers had this information — event start/end times, expected audience size, break schedules — but no way to pass it to the platform in a structured, actionable form. It existed in spreadsheets, emails, and planning documents that the pacing engine never saw.</div>
+        </div>
+      </div>
+
+      <h3>What the Platform Needed</h3>
+      <p>The solution wasn't a settings toggle or a metadata flag. It required a purpose-built object that could capture rich event context, attach cleanly to existing ad delivery infrastructure, and give both the pacing engine and the reporting layer the structured data they needed to act on live events appropriately.</p>
+    </div>
+
+    <div class="cs-section" id="s3">
+      <div class="cs-section-num">03 — Design Decisions</div>
+      <h2>Designing a New Object from Scratch</h2>
+
+      <h3>Live Events as a First-Class Object</h3>
+      <p>The most fundamental decision was how to model a live event in the product. Two options were on the table: treat live events as a flag or attribute on existing objects (ad sources, deals), or give them their own dedicated object — on par with Ad Units, Ad Sources, and Deals in the platform hierarchy.</p>
+      <p>We went with first-class object. A flag would have been simpler to build, but it couldn't hold the richness of data the pacing engine needed: start and end times, timezone, estimated impressions, peak and average concurrent viewers, ad break count, total available ad minutes. That level of metadata only makes sense as a standalone object with its own lifecycle — creation, editing, deletion, and attachment to other objects.</p>
+
+      <div class="cs-img">
+        <img src="img/live-events/create-live-event-filled.png" alt="Create Live Event form — filled with event metadata including timing, estimated impressions, concurrents, and ad break details">
+        <div class="cs-img-caption">The Create Live Event form — capturing start/end datetime with timezone, estimated impression opportunities, peak and average concurrent viewers, and ad break count and total ad minutes. All fields are purpose-built for the pacing engine's consumption.</div>
+      </div>
+
+      <h3>Placement in the Navigation Hierarchy</h3>
+      <p>Because Live Events became a first-class seat-level object, they needed a home in the platform's navigation that reflected that status — not buried inside ad source settings or tucked under a miscellaneous section. The listing page and creation flow were designed to sit alongside other top-level inventory management objects, making it immediately clear to publishers that this is a first-party configuration surface, not an afterthought.</p>
+
+      <div class="cs-img">
+        <img src="img/live-events/listing-page.png" alt="Live Events listing page — table view of scheduled events with status, time range, and action controls">
+        <div class="cs-img-caption">The Live Events listing page — a table of scheduled events with timing, status, and inline action controls. The same patterns used across Ad Units, Ad Sources, Deals, and Content Metadata were applied here for consistency.</div>
+      </div>
+
+      <h3>Ad Source Attachment</h3>
+      <p>The integration point with the pacing engine is the ad source. Live Events attach to Programmatic Guaranteed ad sources using any of the standard pacing types — ASAP, Evenly, Front Loaded, or Custom. This attachment is what lets the engine consume the structured event metadata; it doesn't require a new pacing mode, just a new data input into existing pacing logic.</p>
+      <p>The relationship is many-to-one: a publisher can associate multiple live events with a single ad source, which matters for broadcast scenarios where a single PG deal spans several scheduled events. The design decision was where to surface this attachment. Rather than requiring publishers to navigate to the ad source and configure it there, the relationship is accessible from both directions — from the Live Event and from the Ad Source — so publishers can manage it in context of whichever object they're working in.</p>
+
+      <div class="cs-img">
+        <img src="img/live-events/ad-source-details.png" alt="Ad Source Details showing Live Event attachment with event timing and metadata summary">
+        <div class="cs-img-caption">Ad Source Details — showing the attached Live Event with event timing visible inline. The attachment gives the pacing engine the structured context it needs to handle delivery during the live window differently from surrounding non-live content.</div>
+      </div>
+
+      <h3>Labels and Targeting</h3>
+      <p>Beyond pacing, Live Events needed to be targetable, filterable in waterfall logic, and reportable. A new label property enables this across four surfaces: targeting, waterfall pre-filtering, reporting and dashboards, and forecasting and demand analysis. Each live event maps to exactly one label — a deliberate 1:1 constraint that keeps the targeting logic clean and prevents ambiguous associations across events.</p>
+      <p>Only labels specifically flagged for live event use can be associated with a live event. This prevents publishers from accidentally attaching general-purpose labels to event objects and ensures the label data downstream is clean for reporting.</p>
+
+      <h3>Advanced Labelling</h3>
+      <p>The more complex design challenge was Advanced Labelling — a mechanism to dynamically stamp ad requests with live event labels via targeting rules, rather than requiring publishers to pass labels manually on every request.</p>
+      <p>The way it works: when an ad request comes in, the platform evaluates matching Advanced Labelling rules. If a matched label is a live event label and the current time falls within the event's window, the label is automatically attached to the request. Publishers don't have to do anything per-request — they set up the rule once, and the platform handles the stamping during the live window. This was the key operational unlock for publishers with high event volumes who couldn't instrument every stream manually.</p>
+
+      <div class="cs-img">
+        <img src="img/live-events/event-details-drawer.png" alt="Event Details side drawer showing event metadata, label assignment, and ad source attachment summary">
+        <div class="cs-img-caption">The Event Details side drawer — a quick-access summary of event metadata, label assignment, and ad source attachment. Designed for publishers who need to check event status without leaving the listing view.</div>
+      </div>
+
+      <h3>Error States and Validation</h3>
+      <p>Live events are time-bound and high-stakes. An event with incorrect timing or conflicting configuration can't just fail silently — publishers need to know what's wrong and be able to fix it before the event starts. Several system constraints had to surface clearly in the UI: events are capped at 8 hours, peak concurrent viewer estimates must be greater than or equal to average concurrent estimates, and attachment is restricted to PG ad source types with compatible pacing configurations. Validation was built to surface these conflicts inline with specific messages identifying the problem field, rather than generic submission errors that leave publishers guessing.</p>
+
+      <div class="cs-img">
+        <img src="img/live-events/edit-live-event-error.png" alt="Edit Live Event — inline validation error showing a field-level conflict with a specific explanatory message">
+        <div class="cs-img-caption">Edit Live Event — field-level validation errors surface inline with specific messages. For time-sensitive objects like live events, clear error recovery is critical: publishers need to diagnose and fix problems before their event window opens.</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s4">
+      <div class="cs-section-num">04 — Phases</div>
+      <h2>Shipped in Three Phases</h2>
+      <p>The feature was scoped into three phases — not as separate projects, but as a deliberate sequencing of capabilities that let the platform and publishers start deriving value before every feature was built.</p>
+
+      <h3>Phase 0 — Core Infrastructure (Q3–Q4 2024)</h3>
+      <p>The first phase established the Live Event object itself: CRUD operations via both the UI and the internal API, ad source attachment, and pacing engine consumption of the new metadata. This was the minimum viable version — publishers could create and manage events, and the pacing engine could act on them. Everything in subsequent phases built on this foundation.</p>
+
+      <h3>Phase 1 — Richer Metadata and Ingestion (Q4 2024–Q1 2025)</h3>
+      <p>Phase 1 expanded the metadata fields available on each event — adding ad request pattern context, originating regions, and timeout windows — and introduced two new ingestion paths: a public API and CSV bulk upload. For publishers managing a high volume of live events — a sports network, a news channel — manual entry via the UI isn't scalable. The API and bulk upload paths let publishers integrate event scheduling into their existing operational workflows. Live event labels were also introduced in this phase, enabling targeting, waterfall pre-filtering, and reporting against live inventory.</p>
+
+      <h3>Phase 2 — Advanced Labelling and Reporting (Q2 2025)</h3>
+      <p>The final phase introduced Advanced Label Application — the time-window-based dynamic stamping mechanism described above. Label logging was extended to cover live event labels regardless of how they were attached (request param, advanced labelling, or static association), enabling live event dashboards and forecasting to derive data from ad stats records. Brand safety rules scoped to live event inventory rounded out the feature set.</p>
+
+      <div class="pull-quote">
+        <p>Phasing this way let publishers start using live events immediately, while giving the platform time to build the more complex labeling and reporting infrastructure the feature ultimately needed.</p>
+        <cite>— On the phased delivery approach</cite>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s5">
+      <div class="cs-section-num">05 — Outcome</div>
+      <h2>All Three Phases Shipped and Live</h2>
+      <p>Live Events Support is fully in production across all three phases as of 2026. Publishers on DV+ now have a dedicated, structured way to communicate live programming to the platform — and the pacing engine has the metadata it needs to handle burst-traffic inventory appropriately.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kn">3 / 3</div>
+          <div class="kl">Phases in Production</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">API + CSV</div>
+          <div class="kl">Bulk Ingestion Paths</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">First-Class</div>
+          <div class="kl">Object Status in DV+</div>
+        </div>
+      </div>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Learning 01</div>
+          <div class="ins-text">The decision to model Live Events as a first-class object rather than a flag paid off across every subsequent phase. Each new capability — labels, advanced labeling, reporting — had a clean object to attach to. A flag would have required retrofitting the data model to hold information it was never designed to carry.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 02</div>
+          <div class="ins-text">Phased delivery works best when Phase 0 ships something genuinely useful, not just infrastructure. Publishers could create and manage live events from day one — which meant real feedback and real usage data before the more complex labeling features were built.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 03</div>
+          <div class="ins-text">Reducing publisher operational burden — like removing the need to manually pass labels on every request via Advanced Labelling — often matters as much as the feature itself. The best integrations are the ones publishers don't have to think about.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Mayank Gupta</span>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/mayankvgupta" target="_blank">LinkedIn</a>
+      <a href="mailto:mayankvgupta1997@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function scrollTo(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  document.querySelectorAll('.cs-toc li').forEach(li => li.classList.remove('active'));
+  event.target.classList.add('active');
+}
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('.cs-section');
+  const tocItems = document.querySelectorAll('.cs-toc li');
+  let current = 0;
+  sections.forEach((s, i) => {
+    if (window.scrollY >= s.offsetTop - 120) current = i;
+  });
+  tocItems.forEach(li => li.classList.remove('active'));
+  if (tocItems[current]) tocItems[current].classList.add('active');
+});
+</script>
+
+</body>
+</html>
