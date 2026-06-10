@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curator Deals Management — Mayank Gupta</title>
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">Mayank <em>Gupta</em></a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#resume" class="nav-link">Resume</a>
+    <a href="index.html#writing" class="nav-link">Writing</a>
+  </div>
+  <a href="mailto:mayankvgupta1997@gmail.com" class="nav-cta">Get in touch</a>
+</nav>
+
+<div class="cs-back">
+  <a href="index.html">&#8592; All Work</a>
+  <span class="cs-back-index">01 / 05</span>
+</div>
+
+<div class="cs-hero">
+  <div class="cs-hero-kicker">
+    <span class="chip">Product Design</span>
+    <span class="chip">B2B SaaS</span>
+    <span class="chip">Ad Tech</span>
+    <span class="chip">Programmatic Advertising</span>
+  </div>
+  <h1>Curator Deals Management</h1>
+  <p class="cs-hero-desc">A net-new deal creation and management interface for Magnite's DV+ platform — replacing an API-only workflow with a self-serve UI that lets third-party marketplace operators configure, launch, and manage programmatic deals at scale. Shipped to production across three iteration cycles.</p>
+  <div class="cs-meta-strip">
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-val">Product Designer (Lead UX)</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Team</div>
+      <div class="cs-meta-val">Kelsey Davey · Steve Hulkower (PM) · Zach Lester · Young Blom · Wei Wu (Design)</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Timeline</div>
+      <div class="cs-meta-val">2022 – 2024 · 3 iteration cycles</div>
+    </div>
+    <div class="cs-meta-item">
+      <div class="cs-meta-label">Tools</div>
+      <div class="cs-meta-val">Figma · Adobe XD · Magnite Design System</div>
+    </div>
+  </div>
+</div>
+
+<div class="cs-img" style="background:#16102a; padding:48px 40px;">
+  <img src="img/deal-management/hero.jpg" alt="Curator Deals Management — Create Deal and Deals Listing screens">
+</div>
+
+<div class="cs-layout">
+  <aside class="cs-toc">
+    <div class="cs-toc-title">Contents</div>
+    <ol>
+      <li class="active" onclick="scrollTo('s1')">Context</li>
+      <li onclick="scrollTo('s2')">Problem</li>
+      <li onclick="scrollTo('s3')">Design Decisions</li>
+      <li onclick="scrollTo('s4')">Iteration</li>
+      <li onclick="scrollTo('s5')">Outcome</li>
+    </ol>
+  </aside>
+
+  <div class="cs-content">
+
+    <div class="cs-section" id="s1">
+      <div class="cs-section-num">01 — Context</div>
+      <h2>From API Calls to a Self-Serve Platform</h2>
+      <p>Magnite's DV+ platform sits at the center of programmatic advertising — connecting publishers who have inventory to sell with buyers who want to reach specific audiences. The Curator Marketplace extends this further, allowing third-party marketplace operators to build curated deals: packaging publisher inventory with their own targeting, pricing, and audience data, then making those deals available to DSPs and buyers.</p>
+      <p>Before this project, configuring a curated deal required direct API access or manual intervention by Magnite's internal teams. There was no UI. Third-party operators — buyers, publishers, DSPs, creative agencies, sales houses, audience data companies — had to work through workarounds that didn't scale. Multiple operators had explicitly asked for a self-serve interface. This project was the answer.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kn">0 → 1</div>
+          <div class="kl">Net-New Product</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">3</div>
+          <div class="kl">Iteration Cycles</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">114%</div>
+          <div class="kl">Ad Spend Increase</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">Live</div>
+          <div class="kl">Shipped to Production</div>
+        </div>
+      </div>
+
+      <h3>Who Are Marketplace Operators?</h3>
+      <p>The primary users of Curator Deals Management are third-party marketplace operators — entities permitted to build and manage curated deals on publisher inventory. This spans a diverse set of business types: buyers, publishers, DSPs, creative agencies, sales houses, and audience data companies. Their technical sophistication varies, but they share a common need: to configure deals independently, without requiring Magnite to intervene on their behalf.</p>
+      <p>A secondary persona is internal Magnite users, who have access to additional administrative capabilities — including creating deals for Magnite-owned marketplaces and managing curator assignments.</p>
+    </div>
+
+    <div class="cs-section" id="s2">
+      <div class="cs-section-num">02 — Problem</div>
+      <h2>A Complex Configuration Surface with No Good Precedent</h2>
+      <p>Designing the deal creation flow meant resolving several competing tensions from the start. A deal involves a significant number of configurable parameters: marketplace selection, deal naming, DSP and buyer assignment, publisher targeting, inventory formats, pricing strategy, scheduling, and an advanced targeting tree that can span geography, DMP segments, and nested audience logic.</p>
+      <p>Three core tensions shaped the design problem:</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Tension 01</div>
+          <div class="ins-text"><strong>Linear vs. non-linear setup.</strong> Operators don't always configure deals sequentially — particularly when creating "shell deals" where only partial details are filled in and saved as drafts to be completed later. A step-by-step wizard would force a linear path that doesn't match real behavior.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Tension 02</div>
+          <div class="ins-text"><strong>Complexity vs. clarity in targeting.</strong> Advanced targeting trees can become deeply nested — AND groups containing OR subgroups across multiple DMP and geography conditions. Showing all of this inline risked making the form feel unmanageable, but hiding it risked errors.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Tension 03</div>
+          <div class="ins-text"><strong>Static form vs. live feedback.</strong> Operators need to understand the estimated reach impact of their publisher and targeting selections before submitting — but running a query every time a field changes would be disruptive and slow.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Research Finding</div>
+          <div class="ins-text"><strong>Stepper flows were rejected in user research.</strong> Participants in early sessions explicitly said they don't follow a linear path when setting up deals. Scrolling through a single-page form was strongly preferred over navigating back and forth through wizard steps.</div>
+        </div>
+      </div>
+
+      <h3>Three Pricing Strategies, One Form</h3>
+      <p>Adding to the complexity: operators can choose from multiple pricing strategies when configuring a deal, each with different implications for how the pricing fields behave and what validation is required. The UI had to present these options clearly enough that operators could select the right one without misunderstanding the downstream financial implications — while also enforcing system-level pricing constraints without exposing internal fee logic.</p>
+    </div>
+
+    <div class="cs-section" id="s3">
+      <div class="cs-section-num">03 — Design Decisions</div>
+      <h2>Four Choices That Defined the Form</h2>
+
+      <h3>1. Single-Page Form Over a Stepped Wizard</h3>
+      <p>The research finding was unambiguous: operators don't follow a linear path. The single-page form with collapsible sections — General, Format & Sizes, Targeting — let users jump to any part of the deal at any time, save partial configurations as drafts, and return without losing context. No back buttons, no losing progress on step 3 to change something on step 1.</p>
+      <p>Collapsible sections kept the page manageable without hiding required fields behind pagination. Each section could be independently expanded or collapsed without affecting the rest of the form state.</p>
+
+      <div class="cs-img">
+        <img src="img/deal-management/deal-mgmt-create-deal.png" alt="Create Deal — single-page form with collapsible sections and persistent Forecasting panel">
+        <div class="cs-img-caption">The Create Deal form: collapsible sections on the left with Simple / Advanced targeting toggle, and the persistent Forecasting panel fixed to the right. Both Simple and Advanced targeting modes are accessible from the same page.</div>
+      </div>
+
+      <h3>2. Persistent Forecasting Sidebar</h3>
+      <p>The Forecasting panel was a product requirement — it shows a 7-day estimated summary of impressions, uniques, and viewability based on the operator's current publisher selection. The design decision was where to put it.</p>
+      <p>I placed it in a fixed right-side panel rather than inline below the targeting section. The reason: the forecasting numbers update as operators interact with the publisher selection — not just the targeting fields. Keeping it in a persistent sidebar meant the estimates were always in view regardless of which section the operator was working in or how far they'd scrolled. An inline placement would have buried it during General or Format setup, defeating the purpose of live feedback.</p>
+
+      <h3>3. Two-Mode Targeting: Simple and Advanced</h3>
+      <p>Targeting complexity varies significantly across operator types. To accommodate both straightforward deals and complex multi-condition setups, the form offers a Simple mode and an Advanced mode — toggled from the same section without leaving the page.</p>
+      <p>Advanced targeting uses an AND/OR logic tree that can nest geography, DMP segment conditions, and audience logic across multiple groups. We already had an established component pattern for this, but user testing showed operators losing track of which conditions belonged to which group when trees became complex. I refined the visual hierarchy — indentation, border styling, and badge placement on AND/OR nodes — to make the group structure scannable at a glance without reading every condition.</p>
+
+      <div class="cs-img">
+        <img src="img/deal-management/dm-03-deal-details.png" alt="Deal Details showing AND/OR targeting tree with nested DMP segment and geography conditions">
+        <div class="cs-img-caption">Deal Details — the targeting tree with nested AND/OR logic. The refined visual treatment uses indentation depth and border styling to clarify which conditions belong to which group, reducing the cognitive load of parsing complex multi-level targeting.</div>
+      </div>
+
+      <h3>4. Lifecycle-First Design: Edit, Copy, Validate</h3>
+      <p>Deal creation was only part of the problem. Operators also needed to manage deals after launch — editing pricing without disrupting targeting, cloning successful deals for rapid scaling, and resolving validation errors (such as publisher pricing floor conflicts) without abandoning the deal entirely.</p>
+      <p>Editing was split into two distinct modes: one for deal details (general settings, formats, targeting) and one for publishers and pricing (CPM, revenue share, publisher additions/removals). This separation prevented a common mistake — inadvertently changing pricing while intending to update targeting — and made each edit surface more focused. The copy flow pre-populated all fields from the original deal, enabling operators to spin up variations quickly.</p>
+    </div>
+
+    <div class="cs-section" id="s4">
+      <div class="cs-section-num">04 — Iteration</div>
+      <h2>Three Cycles, Each Closing a Different Set of Gaps</h2>
+
+      <h3>Cycle 1 — Core Launch (2022)</h3>
+      <p>The first version established the foundational deal creation and management flows: Deal Health, Deal Listing, Create Deal, Deal Details. The single-page form and persistent forecasting panel were validated by early users. PM Kelsey Davey worked closely through this cycle — from initial mocks to launch — and the product was well received, particularly by operators who had been waiting for a self-serve alternative to the API workflow.</p>
+
+      <div class="cs-img">
+        <img src="img/deal-management/dm-04-deals-listing-final.png" alt="Deals Listing — filterable table with status badges, deal types, and action controls">
+        <div class="cs-img-caption">The Deal Listing view: a filterable table showing all deals across marketplace, deal label (MP/PMP/PG), DSP/buyer attribution, pricing behavior, and inline status controls. 125 total deals shown across paginated results.</div>
+      </div>
+
+      <h3>Cycle 2 — Review and Refinement (2023–2024)</h3>
+      <p>A second round of user research uncovered gaps in the product. Several of these were already on the roadmap — the research confirmed that the prioritization was correct rather than revealing surprises. This cycle used design annotations to surface specific interaction questions (like action button ordering and edit entry points) for structured team review before implementation.</p>
+
+      <div class="pull-quote">
+        <p>The second user study confirmed what we already knew — it wasn't a surprise, it was validation that our roadmap was correctly prioritized.</p>
+        <cite>— Reflection on the iteration process</cite>
+      </div>
+
+      <div class="cs-img">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div>
+            <img src="img/deal-management/dm-02-deals-listing.png" alt="Deals Listing — iteration version with design annotation badge">
+            <p style="font-size:12px;color:#888;margin-top:8px;text-align:center;">Cycle 2 — annotated for team review</p>
+          </div>
+          <div>
+            <img src="img/deal-management/dm-04-deals-listing-final.png" alt="Deals Listing — final shipped version">
+            <p style="font-size:12px;color:#888;margin-top:8px;text-align:center;">Cycle 3 — shipped version</p>
+          </div>
+        </div>
+        <div class="cs-img-caption">The annotated iteration version vs. the refined shipped version of the Deal Listing. Action column order and inline edit affordances were updated based on the review cycle.</div>
+      </div>
+
+      <h3>Cycle 3 — Platform Expansion (2024)</h3>
+      <p>Following the core launch, Marketplace Management and bulk upload capabilities were added to the surface. This expanded Curator Deals Management from a deal creation tool into a broader marketplace operations platform. The Deal Details view was refined with clearer section hierarchy and updated action placements to support the new administrative workflows brought in from Cycle 3 features.</p>
+
+      <div class="cs-img">
+        <img src="img/deal-management/dm-05-deal-details-final.png" alt="Final Deal Details page showing full deal view with Health, Details, and Publishers tabs">
+        <div class="cs-img-caption">The refined Deal Details view — tabbed navigation across Health, Details, and Publishers; collapsible targeting section; updated Edit Deal Details and Edit Pubs & Pricing action buttons that were separated to reduce accidental edits across the two surfaces.</div>
+      </div>
+    </div>
+
+    <div class="cs-section" id="s5">
+      <div class="cs-section-num">05 — Outcome</div>
+      <h2>Shipped, Adopted, and Grown</h2>
+      <p>Curator Deals Management shipped to production and is live today. The platform replaced a manual, API-dependent workflow with a self-serve UI that third-party marketplace operators can use directly — without Magnite's involvement in each deal configuration. The DV+ Marketplace overall contributed to a 114% increase in ad spend, with the deal creation surface at the core of that growth.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kn">114%</div>
+          <div class="kl">Ad Spend Increase</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">API → UI</div>
+          <div class="kl">Workflow Replaced</div>
+        </div>
+        <div class="kpi">
+          <div class="kn">3+</div>
+          <div class="kl">Features Added Post-Launch</div>
+        </div>
+      </div>
+
+      <p>Post-launch iterations added Marketplace Management, bulk upload, and expanded administrative capabilities — features that extended the original scope without requiring structural changes to the creation flow. This validated the architecture: the single-page form was flexible enough to absorb new functionality without a redesign.</p>
+
+      <div class="insight-grid">
+        <div class="insight">
+          <div class="ins-num">Learning 01</div>
+          <div class="ins-text">Research that confirms the roadmap is still valuable — it's evidence that prioritization is correct, not a signal that the team missed something. Framing it this way to stakeholders shifted the conversation from "what went wrong" to "what comes next."</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 02</div>
+          <div class="ins-text">Persistent UI elements earn their real estate when their information actively changes with user behavior. The forecasting sidebar isn't decoration — it's a live feedback loop that changes with every publisher selection. That distinction drove the placement decision.</div>
+        </div>
+        <div class="insight">
+          <div class="ins-num">Learning 03</div>
+          <div class="ins-text">Designing for non-linear workflows requires early thinking about draft state and partial saves. The investment in single-page form architecture paid back across every subsequent feature addition — because the flexibility was built in from the start.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Mayank Gupta</span>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/mayankvgupta" target="_blank">LinkedIn</a>
+      <a href="mailto:mayankvgupta1997@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function scrollTo(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  document.querySelectorAll('.cs-toc li').forEach(li => li.classList.remove('active'));
+  event.target.classList.add('active');
+}
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('.cs-section');
+  const tocItems = document.querySelectorAll('.cs-toc li');
+  let current = 0;
+  sections.forEach((s, i) => {
+    if (window.scrollY >= s.offsetTop - 120) current = i;
+  });
+  tocItems.forEach(li => li.classList.remove('active'));
+  if (tocItems[current]) tocItems[current].classList.add('active');
+});
+</script>
+
+</body>
+</html>
