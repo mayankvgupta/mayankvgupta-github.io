@@ -113,7 +113,7 @@
       <div class="insight-grid">
         <div class="insight">
           <div class="ins-num">Tension 01</div>
-          <div class="ins-text"><strong>Linear vs. non-linear setup.</strong> Operators don't always configure deals sequentially — particularly when creating "shell deals" where only partial details are filled in and saved as drafts to be completed later. A step-by-step wizard would force a linear path that doesn't match real behavior.</div>
+          <div class="ins-text"><strong>Single-page vs. stepped wizard.</strong> Users wanted to see all form fields in one view — not step through them. Navigating back and forth between wizard steps felt unnatural for a form of this complexity. The added challenge: some sections conditionally enable or disable fields based on inputs in other sections, which is difficult to communicate clearly when those dependencies are split across separate steps.</div>
         </div>
         <div class="insight">
           <div class="ins-num">Tension 02</div>
@@ -123,10 +123,11 @@
           <div class="ins-num">Tension 03</div>
           <div class="ins-text"><strong>Static form vs. live feedback.</strong> Operators need to understand the estimated reach impact of their publisher and targeting selections before submitting — but running a query every time a field changes would be disruptive and slow.</div>
         </div>
-        <div class="insight">
-          <div class="ins-num">Research Finding</div>
-          <div class="ins-text"><strong>Stepper flows were rejected in user research.</strong> Participants in early sessions explicitly said they don't follow a linear path when setting up deals. Scrolling through a single-page form was strongly preferred over navigating back and forth through wizard steps.</div>
-        </div>
+      </div>
+
+      <div class="pull-quote">
+        <p>Participants in early sessions explicitly said they wanted to see the whole form at once. Navigating back and forth through steps — especially to fix something that affected a later field — was the main frustration with stepper-style flows.</p>
+        <cite>— User research finding, early discovery sessions</cite>
       </div>
 
       <h3>Three Pricing Strategies, One Form</h3>
@@ -138,8 +139,9 @@
       <h2>Four Choices That Defined the Form</h2>
 
       <h3>1. Single-Page Form Over a Stepped Wizard</h3>
-      <p>The research finding was unambiguous: operators don't follow a linear path. The single-page form with collapsible sections — General, Format & Sizes, Targeting — let users jump to any part of the deal at any time, save partial configurations as drafts, and return without losing context. No back buttons, no losing progress on step 3 to change something on step 1.</p>
-      <p>Collapsible sections kept the page manageable without hiding required fields behind pagination. Each section could be independently expanded or collapsed without affecting the rest of the form state.</p>
+      <p>The research finding was clear: users wanted to see the entire form in one view. A stepper would have fragmented the configuration across multiple screens — making it hard to understand the full scope of a deal, and harder still to navigate back when something earlier needed to change.</p>
+      <p>The more significant problem with a stepper was cross-section dependencies: some fields in the form conditionally enable or disable based on inputs made elsewhere. When those relationships span steps, users lose the visual connection between cause and effect. A single scrollable page keeps dependent fields visible and in context — the relationship between an input and what it unlocks is immediate rather than something the user has to hold in memory while moving through steps.</p>
+      <p>Collapsible sections — General, Format & Sizes, Targeting — kept the page manageable without hiding required fields behind pagination. Each section could be independently expanded or collapsed without affecting the rest of the form state.</p>
 
       <div class="cs-img">
         <img src="img/deal-management/deal-mgmt-create-deal.png" alt="Create Deal — single-page form with collapsible sections and persistent Forecasting panel">
