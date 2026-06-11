@@ -17,7 +17,6 @@
     <a href="index.html#work" class="nav-link">Work</a>
     <a href="index.html#about" class="nav-link">About</a>
     <a href="index.html#resume" class="nav-link">Resume</a>
-    <a href="index.html#writing" class="nav-link">Writing</a>
   </div>
   <a href="mailto:mayankvgupta1997@gmail.com" class="nav-cta">Get in touch</a>
 </nav>
@@ -35,7 +34,7 @@
     <span class="chip">CTV / Streaming</span>
   </div>
   <h1>Live Events Support</h1>
-  <p class="cs-hero-desc">Introducing live events as a first-class object in Magnite's DV+ platform — giving publishers a structured way to communicate live programming to the pacing engine, and giving the platform the metadata it needs to deliver ads reliably during burst-traffic moments.</p>
+  <p class="cs-hero-desc">Introducing live events as a first-class object in Magnite Streaming platform — giving publishers a structured way to communicate live programming to the pacing engine, and giving the platform the metadata it needs to deliver ads reliably during burst-traffic moments.</p>
   <div class="cs-meta-strip">
     <div class="cs-meta-item">
       <div class="cs-meta-label">Role</div>
@@ -43,7 +42,7 @@
     </div>
     <div class="cs-meta-item">
       <div class="cs-meta-label">Platform</div>
-      <div class="cs-meta-val">Magnite DV+ · CTV / Streaming</div>
+      <div class="cs-meta-val">Magnite CTV / Streaming</div>
     </div>
     <div class="cs-meta-item">
       <div class="cs-meta-label">Timeline</div>
@@ -64,11 +63,11 @@
   <aside class="cs-toc">
     <div class="cs-toc-title">Contents</div>
     <ol>
-      <li class="active" onclick="scrollTo('s1')">Context</li>
-      <li onclick="scrollTo('s2')">Problem</li>
-      <li onclick="scrollTo('s3')">Design Decisions</li>
-      <li onclick="scrollTo('s4')">Phases</li>
-      <li onclick="scrollTo('s5')">Outcome</li>
+      <li class="active" onclick="goTo('s1', this)">Context</li>
+      <li onclick="goTo('s2', this)">Problem</li>
+      <li onclick="goTo('s3', this)">Design Decisions</li>
+      <li onclick="goTo('s4', this)">Phases</li>
+      <li onclick="goTo('s5', this)">Outcome</li>
     </ol>
   </aside>
 
@@ -249,10 +248,10 @@
 </footer>
 
 <script>
-function scrollTo(id) {
+function goTo(id, el) {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   document.querySelectorAll('.cs-toc li').forEach(li => li.classList.remove('active'));
-  event.target.classList.add('active');
+  el.classList.add('active');
 }
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('.cs-section');

@@ -17,7 +17,6 @@
     <a href="index.html#work" class="nav-link">Work</a>
     <a href="index.html#about" class="nav-link">About</a>
     <a href="index.html#resume" class="nav-link">Resume</a>
-    <a href="index.html#writing" class="nav-link">Writing</a>
   </div>
   <a href="mailto:mgupta17@pratt.edu" class="nav-cta">Get in touch</a>
 </nav>
@@ -63,11 +62,11 @@
   <aside class="cs-toc">
     <div class="cs-toc-title">Contents</div>
     <ol>
-      <li class="active" onclick="scrollTo('s1')">Problem</li>
-      <li onclick="scrollTo('s2')">Data Work</li>
-      <li onclick="scrollTo('s3')">Visualizations</li>
-      <li onclick="scrollTo('s4')">UX Study</li>
-      <li onclick="scrollTo('s5')">Outcome</li>
+      <li class="active" onclick="goTo('s1', this)">Problem</li>
+      <li onclick="goTo('s2', this)">Data Work</li>
+      <li onclick="goTo('s3', this)">Visualizations</li>
+      <li onclick="goTo('s4', this)">UX Study</li>
+      <li onclick="goTo('s5', this)">Outcome</li>
     </ol>
   </aside>
 
@@ -241,7 +240,6 @@
     <h5>Work</h5>
     <a href="index.html">Portfolio</a>
     <a href="index.html#resume">Resume</a>
-    <a href="index.html#writing">Writing</a>
   </div>
   <div>
     <h5>Connect</h5>
@@ -269,7 +267,7 @@ const obs = new IntersectionObserver(entries => {
 }, { rootMargin: '-20% 0px -70% 0px' });
 sections.forEach(s => obs.observe(s));
 
-function scrollTo(id) {
+function goTo(id, el) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
