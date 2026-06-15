@@ -6,32 +6,177 @@
   <title>Curator Deals Management — Mayank Gupta</title>
   <link rel="shortcut icon" href="img/favicon.ico"/>
   <link rel="stylesheet" href="css/portfolio.css"/>
+  <style>
+    .cs-explore{max-width:1120px;margin:0 auto;padding:40px 48px 72px;border-top:1px solid var(--line);}
+    .cs-explore-kicker{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--v);margin-bottom:14px;}
+    .cs-explore-head{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;line-height:1.15;color:var(--ink);margin-bottom:10px;}
+    .cs-explore-sub{font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.6;color:var(--ink3);max-width:520px;margin-bottom:40px;}
+    .cs-explore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .ex-card{background:var(--bg);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:background .2s,box-shadow .2s;}
+    .ex-card:hover{background:var(--bg2);box-shadow:0 4px 24px rgba(0,0,0,.07);}
+    .ex-img{width:100%;aspect-ratio:16/9;background:var(--bg3);overflow:hidden;}
+    .ex-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+    .ex-card:hover .ex-img img{transform:scale(1.03);}
+    .ex-body{padding:22px 24px 24px;flex:1;display:flex;flex-direction:column;}
+    .ex-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+    .ex-title{font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.12;color:var(--ink);margin-bottom:8px;}
+    .ex-excerpt{font-family:'DM Sans',sans-serif;font-size:12.5px;color:var(--ink3);line-height:1.6;flex:1;}
+    .ex-footer{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);}
+    .ex-meta{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);line-height:1.6;}
+    .ex-arr{font-size:17px;color:var(--ink4);transition:color .2s,transform .2s;}
+    .ex-card:hover .ex-arr{color:var(--v);transform:translateX(4px);}
+    /* Gate: center auth + explore together, keep cards above the fold */
+    .gate-center{min-height:100%;display:flex;flex-direction:column;justify-content:center;padding:100px 48px 28px;box-sizing:border-box;}
+    .gate-explore{border-top:none;padding:0;margin:34px auto 0;max-width:1120px;width:100%;}
+    .gate-explore .cs-explore-kicker{margin-bottom:10px;}
+    .gate-explore .cs-explore-head{font-size:25px;margin-bottom:6px;}
+    .gate-explore .cs-explore-sub{margin-bottom:20px;}
+    .gate-explore .ex-img{aspect-ratio:16/7;}
+    .gate-explore .ex-body{padding:15px 18px 17px;}
+    .gate-explore .ex-tags{margin-bottom:10px;}
+    .gate-explore .ex-title{font-size:20px;margin-bottom:6px;}
+    .gate-explore .ex-excerpt{font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+    .gate-explore .ex-footer{margin-top:13px;padding-top:12px;}
+    @media (max-width:1024px){.cs-explore{padding:24px;}.cs-explore-grid{grid-template-columns:1fr;}.gate-center{padding:100px 24px 24px;}.gate-explore{margin-top:28px;}}
+  </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGEX2HKCPR"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGEX2HKCPR');</script>
 </head>
 <body>
 
 <!-- Password gate -->
-<div id="pw-gate" style="position:fixed;inset:0;z-index:9999;background:#faf9f6;display:flex;align-items:center;justify-content:center;padding:24px;">
-  <div style="width:100%;max-width:400px;">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:#141210;margin-bottom:8px;">Curator Deals Management</div>
-    <div style="font-family:'DM Sans',sans-serif;font-size:14px;color:#8c8880;margin-bottom:32px;line-height:1.6;">This case study is password protected. Enter the password to continue.</div>
-    <form id="pw-form" style="display:flex;flex-direction:column;gap:12px;">
-      <input
-        id="pw-input"
-        type="password"
-        placeholder="Password"
-        autocomplete="current-password"
-        style="width:100%;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;border:1px solid #e4e0d6;border-radius:2px;background:#fff;color:#141210;outline:none;transition:border-color .15s;"
-        onfocus="this.style.borderColor='#7c3aed'"
-        onblur="this.style.borderColor='#e4e0d6'"
-      >
-      <div id="pw-error" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#dc2626;display:none;">Incorrect password. Please try again.</div>
-      <button type="submit" style="padding:12px 24px;background:#7c3aed;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;border:none;border-radius:2px;cursor:pointer;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Enter</button>
-    </form>
-    <div style="margin-top:24px;border-top:1px solid #e4e0d6;padding-top:16px;">
-      <a href="index.html" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8c8880;text-decoration:none;">← Back to work</a>
+<div id="pw-gate" style="position:fixed;inset:0;z-index:9999;background:#faf9f6;overflow:auto;">
+  <div class="gate-center">
+  <div style="width:100%;max-width:400px;margin:0 auto;">
+
+    <!-- View 1: Enter password -->
+    <div id="pw-view-enter">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:#141210;margin-bottom:8px;">Curator Deals Management</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:14px;color:#8c8880;margin-bottom:32px;line-height:1.6;">This case study is password protected. Enter the password to continue.</div>
+      <form id="pw-form" style="display:flex;flex-direction:column;gap:12px;">
+        <input
+          id="pw-input"
+          type="password"
+          placeholder="Password"
+          autocomplete="current-password"
+          style="width:100%;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;border:1px solid #e4e0d6;border-radius:2px;background:#fff;color:#141210;outline:none;transition:border-color .15s;box-sizing:border-box;"
+          onfocus="this.style.borderColor='#7c3aed'"
+          onblur="this.style.borderColor='#e4e0d6'"
+        >
+        <div id="pw-error" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#dc2626;display:none;">Incorrect password. Please try again.</div>
+        <button type="submit" style="padding:12px 24px;background:#7c3aed;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;border:none;border-radius:2px;cursor:pointer;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Enter</button>
+      </form>
+      <div style="margin-top:20px;font-family:'DM Sans',sans-serif;font-size:13px;color:#8c8880;line-height:1.6;">
+        Don't have the password?
+        <a href="#" id="pw-show-request" style="color:#7c3aed;text-decoration:none;font-weight:500;">Request access →</a>
+      </div>
+      <div style="margin-top:24px;border-top:1px solid #e4e0d6;padding-top:16px;">
+        <a href="index.html" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8c8880;text-decoration:none;">← Back to work</a>
+      </div>
     </div>
+
+    <!-- View 2: Request access -->
+    <div id="pw-view-request" style="display:none;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:#141210;margin-bottom:8px;">Request access</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:14px;color:#8c8880;margin-bottom:28px;line-height:1.6;">Share a few details and I'll send you the password within 24 hours.</div>
+
+      <form id="req-form" style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label for="req-name" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#8c8880;">Name <span style="color:#dc2626;">*</span></label>
+          <input id="req-name" name="name" type="text" required placeholder="Your name"
+            style="width:100%;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;border:1px solid #e4e0d6;border-radius:2px;background:#fff;color:#141210;outline:none;transition:border-color .15s;box-sizing:border-box;"
+            onfocus="this.style.borderColor='#7c3aed'" onblur="this.style.borderColor='#e4e0d6'">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label for="req-email" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#8c8880;">Email <span style="color:#dc2626;">*</span></label>
+          <input id="req-email" name="email" type="email" required placeholder="you@company.com"
+            style="width:100%;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;border:1px solid #e4e0d6;border-radius:2px;background:#fff;color:#141210;outline:none;transition:border-color .15s;box-sizing:border-box;"
+            onfocus="this.style.borderColor='#7c3aed'" onblur="this.style.borderColor='#e4e0d6'">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label for="req-company" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#8c8880;">Company / role</label>
+          <input id="req-company" name="company_role" type="text" placeholder="Optional"
+            style="width:100%;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;border:1px solid #e4e0d6;border-radius:2px;background:#fff;color:#141210;outline:none;transition:border-color .15s;box-sizing:border-box;"
+            onfocus="this.style.borderColor='#7c3aed'" onblur="this.style.borderColor='#e4e0d6'">
+        </div>
+        <input type="hidden" name="_subject" value="Curator Deals Management — access request">
+        <div id="req-error" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#dc2626;display:none;">Something went wrong. Please try again, or email me directly below.</div>
+        <button type="submit" id="req-submit" disabled style="padding:12px 24px;background:#7c3aed;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;border:none;border-radius:2px;cursor:not-allowed;opacity:.45;transition:opacity .2s;">Request password</button>
+      </form>
+
+      <div id="req-success" style="display:none;font-family:'DM Sans',sans-serif;font-size:14px;color:#141210;line-height:1.6;background:#f1eeff;border:1px solid #e0d8ff;border-radius:2px;padding:16px;">
+        Thanks — your request is in. I'll send the password to your email within 24 hours.
+      </div>
+
+      <div style="margin-top:20px;font-family:'DM Sans',sans-serif;font-size:13px;color:#8c8880;line-height:1.6;">
+        Prefer email? Reach me directly at
+        <a href="mailto:mayankvgupta1997@gmail.com?subject=Curator%20Deals%20Management%20%E2%80%94%20access%20request" style="color:#7c3aed;text-decoration:none;font-weight:500;">mayankvgupta1997@gmail.com</a>
+        and I'll reply within 24 hours.
+      </div>
+
+      <div style="margin-top:24px;border-top:1px solid #e4e0d6;padding-top:16px;">
+        <a href="#" id="pw-show-enter" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8c8880;text-decoration:none;">← I have a password</a>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="cs-explore gate-explore">
+    <div class="cs-explore-kicker">No password needed</div>
+    <h2 class="cs-explore-head">Explore my open case studies</h2>
+    <p class="cs-explore-sub">These are open to everyone — dive in while you wait for access to this one.</p>
+    <div class="cs-explore-grid">
+
+      <a class="ex-card" href="met-eye-tracking.html">
+        <div class="ex-img"><img src="img/met-eye-tracking/portfolio-img.png" alt="The MET Eye Tracking Study" loading="lazy"></div>
+        <div class="ex-body">
+          <div class="ex-tags">
+            <span class="chip v">UX Research</span>
+            <span class="chip">Eye Tracking</span>
+          </div>
+          <div class="ex-title">The MET Eye Tracking Study</div>
+          <div class="ex-excerpt">Evaluative research on the Metropolitan Museum of Art's digital experience using eye-tracking technology to surface navigational pain points.</div>
+          <div class="ex-footer">
+            <div class="ex-meta">UX Research &amp; Design · 2021</div>
+            <div class="ex-arr">&#8594;</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="ex-card" href="covid-predicitve-analysis.html">
+        <div class="ex-img"><img src="img/covid-data-vis/mockup-covid-vis.png" alt="COVID-19 Predictive Spatial Analysis" loading="lazy"></div>
+        <div class="ex-body">
+          <div class="ex-tags">
+            <span class="chip v">Data Visualization</span>
+            <span class="chip">Dashboard</span>
+          </div>
+          <div class="ex-title">COVID-19 Predictive Spatial Analysis</div>
+          <div class="ex-excerpt">Interactive dashboard combining spatial analysis and predictive modelling to visualize COVID-19 spread patterns. Built with Carto.</div>
+          <div class="ex-footer">
+            <div class="ex-meta">Data Vis · Spatial Analysis · 2020</div>
+            <div class="ex-arr">&#8594;</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="ex-card" href="design-jedi.html">
+        <div class="ex-img"><img src="img/design-jedi/header-image.png" alt="Design Jedi" loading="lazy"></div>
+        <div class="ex-body">
+          <div class="ex-tags">
+            <span class="chip v">UX Research</span>
+            <span class="chip">Journey Mapping</span>
+          </div>
+          <div class="ex-title">Design Jedi</div>
+          <div class="ex-excerpt">End-to-end UX research and design combining user interviews, journey mapping, and comparative analysis to redesign a complex user flow.</div>
+          <div class="ex-footer">
+            <div class="ex-meta">UX &amp; Visual Design · 2021</div>
+            <div class="ex-arr">&#8594;</div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
   </div>
 </div>
 
@@ -275,6 +420,19 @@
   </div>
 </div>
 
+<div class="cs-nav-strip">
+  <a class="cs-nav-item prev" href="index.html">
+    <div class="cni-label">All Work</div>
+    <div class="cni-title">Back to Index</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+  <a class="cs-nav-item next" href="met-eye-tracking.html">
+    <div class="cni-label">Next Project</div>
+    <div class="cni-title">The MET Eye Tracking Study</div>
+    <div class="cni-arr">&#8594;</div>
+  </a>
+</div>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <span>© 2026 Mayank Gupta</span>
@@ -309,11 +467,32 @@ window.addEventListener('scroll', () => {
 (function() {
   const HASH = 'a69395fc6c96eaa2b9a25590f7d2ee08137442233a69108ca18807a2e8ccfeb3';
 
+  // ── Formspree endpoint ──────────────────────────────────────────────
+  // Replace YOUR_FORM_ID with the ID from your free Formspree form.
+  // (Create one at https://formspree.io → New Form → copy the endpoint.)
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mkoayyjp';
+  // ────────────────────────────────────────────────────────────────────
+
   function unlock() {
     document.getElementById('pw-gate').style.display = 'none';
     document.getElementById('pw-protected').style.display = 'block';
   }
 
+  // View toggling
+  const viewEnter = document.getElementById('pw-view-enter');
+  const viewRequest = document.getElementById('pw-view-request');
+  document.getElementById('pw-show-request').addEventListener('click', function(e) {
+    e.preventDefault();
+    viewEnter.style.display = 'none';
+    viewRequest.style.display = 'block';
+  });
+  document.getElementById('pw-show-enter').addEventListener('click', function(e) {
+    e.preventDefault();
+    viewRequest.style.display = 'none';
+    viewEnter.style.display = 'block';
+  });
+
+  // Password entry
   document.getElementById('pw-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const val = document.getElementById('pw-input').value;
@@ -324,6 +503,49 @@ window.addEventListener('scroll', () => {
     } else {
       document.getElementById('pw-error').style.display = 'block';
       document.getElementById('pw-input').style.borderColor = '#dc2626';
+    }
+  });
+
+  // Enable submit only when name + email are filled (email must look valid)
+  const reqName = document.getElementById('req-name');
+  const reqEmail = document.getElementById('req-email');
+  const reqBtn = document.getElementById('req-submit');
+  function refreshReqBtn() {
+    const ok = reqName.value.trim() !== '' && reqEmail.validity.valid && reqEmail.value.trim() !== '';
+    reqBtn.disabled = !ok;
+    reqBtn.style.cursor = ok ? 'pointer' : 'not-allowed';
+    reqBtn.style.opacity = ok ? '1' : '.45';
+  }
+  reqName.addEventListener('input', refreshReqBtn);
+  reqEmail.addEventListener('input', refreshReqBtn);
+  reqBtn.addEventListener('mouseover', function() { if (!reqBtn.disabled) reqBtn.style.opacity = '.85'; });
+  reqBtn.addEventListener('mouseout', function() { if (!reqBtn.disabled) reqBtn.style.opacity = '1'; });
+
+  // Access request form → Formspree
+  document.getElementById('req-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = document.getElementById('req-submit');
+    const err = document.getElementById('req-error');
+    err.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('req-success').style.display = 'block';
+      } else {
+        throw new Error('Request failed');
+      }
+    } catch (ex) {
+      err.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Request password';
     }
   });
 })();
